@@ -46,11 +46,11 @@
       font-family: 'Manrope', sans-serif;
     }
 
-    .tab-Contenu {
+    .tab-content {
       display: none;
     }
 
-    .tab-content.Actif {
+    .tab-content.active {
       display: block;
     }
 
@@ -81,11 +81,11 @@
         </nav>
       </div>
       <div class="flex items-center gap-6">
-        <div class="hidden lg:flex items-center bg-[#f0f2f4] dark:bg-gray-800 rounded-lg px-3 py-1.5 h-10 w-48">
+        <!-- <div class="hidden lg:flex items-center bg-[#f0f2f4] dark:bg-gray-800 rounded-lg px-3 py-1.5 h-10 w-48">
           <span class="material-symbols-outlined text-[#637288] text-sm">Rechercher</span>
           <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-[#637288]"
             placeholder="Recherche..." type="text" />
-        </div>
+        </div> -->
         <button
           class="flex items-center gap-2 bg-primary text-white text-xs font-extrabold px-4 py-2.5 rounded-lg hover:bg-primary/90 transition-all uppercase tracking-widest">
           <span class="material-symbols-outlined text-sm">translate</span>
@@ -424,17 +424,17 @@
   </footer>
   <script>
     function switchTab(tabId) {
-      // Masquer Tous contents
-      document.querySelectorAll('.tab-Contenu').forEach(tab => {
-        tab.classList.Retirer('Actif');
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
       });
       // Remove active state from all links
       document.querySelectorAll('.tab-link').forEach(link => {
         link.classList.remove('active');
-        link.classList.Ajouter('text-gray-500');
+        link.classList.add('text-gray-500');
         link.classList.remove('text-primary');
       });
-      // Afficher Sélectionné content
+      // Show selected content
       document.getElementById(tabId).classList.add('active');
       // Set active link
       const activeLink = document.getElementById('tab-' + tabId);

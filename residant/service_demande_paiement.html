@@ -48,7 +48,15 @@
         .payment-method-card.Inactif {
             @apply border-gray-100 dark:border-gray-800 hover:border-gray-200;
         }
-    </style>
+    
+    .dropdown-menu {
+        display: none;
+    }
+    .dropdown-container:hover .dropdown-menu {
+        display: block;
+    }
+
+  </style>
 </head>
 
 <body
@@ -112,7 +120,10 @@
           <p class="text-xs text-gray-500 font-medium uppercase tracking-widest mt-0.5">Étape 2 sur 3 : Règlement
             Sécurisé</p>
         </div>
-        <div class="flex items-center gap-4">
+        
+        <div class="relative dropdown-container">
+          <div class="flex items-center gap-4 cursor-pointer">
+
           <div class="flex flex-col items-end mr-2">
             <span class="text-sm font-bold text-gray-900 dark:text-white">Jean-Pierre Mokolo</span>
             <span class="text-[10px] text-gray-400 font-mono">ID: CG-RU-00124</span>
@@ -121,6 +132,19 @@
             class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-gray-200 dark:border-gray-700 overflow-hidden">
             <img alt="User avatar" class="w-full h-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+          </div>
+        
+          </div>
+          <div class="dropdown-menu absolute right-0 mt-2 w-56 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-700 rounded-lg shadow-xl z-30 py-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-gray-800 transition-colors" href="#profil">
+              <span class="material-symbols-outlined text-lg text-primary dark:text-white">account_circle</span>
+              Mon Profil
+            </a>
+            <div class="border-t border-slate-100 dark:border-gray-800 my-1"></div>
+            <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-accent-red hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors" href="../login.html">
+              <span class="material-symbols-outlined text-lg">logout</span>
+              Se déconnecter
+            </a>
           </div>
         </div>
       </header>
@@ -140,7 +164,7 @@
                 </div>
                 <div class="flex justify-between items-center">
                   <span class="text-gray-500">Référence :</span>
-                  <span class="font-mono text-gray-700 dark:text-gray-300">#PAS-2023-9912</span>
+                  <span class="font-mono text-gray-700 dark:text-gray-300">#PAS-2026-9912</span>
                 </div>
                 <hr class="border-gray-100 dark:border-gray-800" />
                 <div class="space-y-3">
@@ -283,7 +307,7 @@
                 <span class="material-symbols-outlined text-sm">arrow_back</span>
                 Retour aux informations
               </a>
-              <p>© 2023 Ambassade du Congo en Russie - Portail Citoyen</p>
+              <p>© 2026 Ambassade du Congo en Russie - Portail Citoyen</p>
             </div>
           </div>
         </div>
