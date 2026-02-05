@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Configuration d'Événement | Ambassade du Congo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "navy-blue": "#0A1D37",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "bg-light": "#F8FAFC",
+            "sidebar-text": "#FFFFFF",
+            "main-text": "#1E293B",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+            color: #FFFFFF;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 10px;
+        }
+        .rich-text-editor {
+            min-height: 300px;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="font-display bg-bg-light text-main-text antialiased">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-navy-blue flex flex-col py-6 shrink-0 shadow-xl z-20">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Ambassade du Congo</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-0.5 overflow-y-auto">
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Tableau de bord</span>
+          </a>
+          <details class="group" open>
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Site</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold font-bold text-accent-gold"
+                href="./events.html">Événements</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./news.html">Actualités</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./contact.html">Contacts</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Diaspora</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./liste_diaspora.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./enregistrements.html">Enregistrements</a>
+            </div>
+          </details>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./services.html">
+            <span class="material-symbols-outlined text-[20px]">list_alt</span>
+            <span>Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./annonce_et_opportunite.html">
+            <span class="material-symbols-outlined text-[20px]">newspaper</span>
+            <span>Annonces et opportunités</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./messages.html">
+            <span class="material-symbols-outlined text-[20px]">mail</span>
+            <span>Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./sos.html">
+            <span class="material-symbols-outlined text-[20px]">emergency</span>
+            <span>SOS</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./calendar.html">
+            <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+            <span>Calendrier</span>
+          </a>
+          <div class="mt-4 px-6 py-2">
+            <p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Administration</p>
+          </div>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Utilisateurs</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./users.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold" href="./roles.html">Rôles
+                et Permissions</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Paramètres</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+
+            </div>
+          </details>
+        </nav>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-slate-400">Évenements</span>
+          <span class="material-symbols-outlined text-sm text-slate-400">chevron_right</span>
+          <span class="font-bold text-navy-blue">Créer</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative dropdown-container">
+            <div class="flex items-center gap-3 cursor-pointer">
+              <div class="flex flex-col items-end">
+                <span class="text-sm font-bold text-navy-blue">Agent Consulaire #04</span>
+                <span class="text-[10px] text-accent-green font-mono uppercase font-semibold">En ligne • Moscou</span>
+              </div>
+              <div
+                class="size-10 rounded-lg bg-slate-100 flex items-center justify-center border border-slate-200 overflow-hidden shadow-sm">
+                <img alt="Agent avatar" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+              </div>
+            </div>
+            <div
+              class="dropdown-menu absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+                href="#profil">
+                <span class="material-symbols-outlined text-lg text-primary">account_circle</span>
+                Mon Profil
+              </a>
+              <div class="border-t border-slate-100 my-1"></div>
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-accent-red hover:bg-red-50 transition-colors"
+                href="./login.html">
+                <span class="material-symbols-outlined text-lg">logout</span>
+                Se déconnecter
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto p-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-8 flex justify-between items-end">
+            <div>
+              <h2 class="text-2xl font-black text-navy-blue uppercase tracking-tight">Configuration d'Événement</h2>
+              <p class="text-slate-500 text-sm mt-1">Planifiez et publiez un nouvel événement officiel pour la
+                communauté.</p>
+            </div>
+          </div>
+          <form class="grid grid-cols-12 gap-8 items-start mb-12">
+            <div class="col-span-12 lg:col-span-8 space-y-6">
+              <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden p-6 space-y-6">
+                <div>
+                  <label class="block text-[10px] text-slate-400 font-bold uppercase mb-2" for="event_title">Titre de
+                    l'événement</label>
+                  <input
+                    class="w-full bg-slate-50 border-slate-200 rounded-lg text-lg font-bold text-navy-blue focus:ring-primary focus:border-primary px-4 py-3"
+                    id="event_title" placeholder="Ex: Célébration de la Fête de l'Indépendance" type="text" />
+                </div>
+                <div>
+                  <label class="block text-[10px] text-slate-400 font-bold uppercase mb-2">Description détaillée</label>
+                  <div class="border border-slate-200 rounded-lg overflow-hidden">
+                    <div class="bg-slate-50 border-b border-slate-200 px-4 py-2 flex items-center gap-4">
+                      <button class="text-slate-600 hover:text-primary" type="button"><span
+                          class="material-symbols-outlined text-lg">format_bold</span></button>
+                      <button class="text-slate-600 hover:text-primary" type="button"><span
+                          class="material-symbols-outlined text-lg">format_italic</span></button>
+                      <button class="text-slate-600 hover:text-primary" type="button"><span
+                          class="material-symbols-outlined text-lg">format_list_bulleted</span></button>
+                      <button class="text-slate-600 hover:text-primary" type="button"><span
+                          class="material-symbols-outlined text-lg">link</span></button>
+                    </div>
+                    <textarea class="w-full border-none focus:ring-0 text-sm px-4 py-4 rich-text-editor"
+                      placeholder="Saisissez le contenu de votre événement ici..."></textarea>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-[10px] text-slate-400 font-bold uppercase mb-2" for="event_date">Date et
+                      Heure</label>
+                    <div class="relative">
+                      <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">calendar_today</span>
+                      <input
+                        class="w-full bg-slate-50 border-slate-200 rounded-lg text-sm pl-11 pr-4 py-2.5 focus:ring-primary focus:border-primary"
+                        id="event_date" type="datetime-local" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-[10px] text-slate-400 font-bold uppercase mb-2" for="event_location">Lieu /
+                      Lien</label>
+                    <div class="relative">
+                      <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">location_on</span>
+                      <input
+                        class="w-full bg-slate-50 border-slate-200 rounded-lg text-sm pl-11 pr-4 py-2.5 focus:ring-primary focus:border-primary"
+                        id="event_location" placeholder="Moscou, Russie ou URL Zoom" type="text" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-12 lg:col-span-4 space-y-6">
+              <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                <div class="px-6 py-4 border-b border-slate-100 bg-slate-50/50">
+                  <h3 class="font-bold text-navy-blue text-[10px] uppercase tracking-wider">Image de l'événement</h3>
+                </div>
+                <div class="p-6">
+                  <div
+                    class="border-2 border-dashed border-slate-200 rounded-xl aspect-video flex flex-col items-center justify-center bg-slate-50 hover:bg-slate-100 transition-colors cursor-pointer group">
+                    <span
+                      class="material-symbols-outlined text-slate-300 group-hover:text-primary text-4xl mb-2">image</span>
+                    <p class="text-xs text-slate-400 font-medium">Glissez ou cliquez pour uploader</p>
+                    <p class="text-[9px] text-slate-300 mt-1 uppercase">PNG, JPG (Max 2MB)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden p-6 space-y-5">
+                <div>
+                  <label class="block text-[10px] text-slate-400 font-bold uppercase mb-2"
+                    for="category">category</label>
+                  <select
+                    class="w-full bg-slate-50 border-slate-200 rounded-lg text-sm focus:ring-primary focus:border-primary px-4 py-2.5"
+                    id="category">
+                    <option>Culturel</option>
+                    <option>Diplomatique</option>
+                    <option>Service Consulaire</option>
+                    <option>Diaspora</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-[10px] text-slate-400 font-bold uppercase mb-2" for="capacity">Capacité
+                    max.</label>
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">group</span>
+                    <input
+                      class="w-full bg-slate-50 border-slate-200 rounded-lg text-sm pl-11 pr-4 py-2.5 focus:ring-primary focus:border-primary"
+                      id="capacity" placeholder="Illimitée" type="number" />
+                  </div>
+                </div>
+                <div class="pt-4 border-t border-slate-100">
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <div class="relative flex items-center">
+                      <input checked=""
+                        class="w-5 h-5 border-slate-200 rounded text-accent-green focus:ring-accent-green"
+                        type="checkbox" />
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-sm font-bold text-navy-blue group-hover:text-primary transition-colors">Notifier
+                        la diaspora</span>
+                      <span class="text-[10px] text-slate-400">Envoyer une alerte par Email et mobile</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer class="bg-white border-t border-slate-200 px-8 py-4 flex justify-between items-center shrink-0">
+        <button
+          class="px-6 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:bg-slate-50 transition-all border border-transparent"
+          type="button">
+          Annuler
+        </button>
+        <div class="flex items-center gap-4">
+          <button
+            class="px-6 py-2.5 rounded-lg text-sm font-bold text-primary hover:bg-blue-50 transition-all flex items-center gap-2 border border-slate-200"
+            type="button">
+            <span class="material-symbols-outlined text-lg">visibility</span>
+            Prévisualiser
+          </button>
+          <button
+            class="px-8 py-2.5 bg-accent-green hover:bg-green-700 text-white rounded-lg font-bold text-sm shadow-md transition-all flex items-center gap-2"
+            type="submit">
+            <span class="material-symbols-outlined text-lg">send</span>
+            Publier l'événement
+          </button>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+</body>
+
+</html>

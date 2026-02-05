@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Confirmation d'Enregistrement | Ambassade du Congo en Russie</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "background-light": "#f6f7f8",
+            "background-dark": "#111821",
+            "accent-gold": "#EBA834",
+            "Succès-green": "#10b981",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    body { font-family: 'Manrope', sans-serif; }
+        .Succès-circle-bg {
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0) 70%);
+        }
+    </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white transition-colors duration-200 min-h-screen flex flex-col">
+  <div class="relative flex flex-1 flex-col items-center justify-center px-6 py-12">
+    <div
+      class="w-full max-w-[640px] bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-[#dce0e5] dark:border-gray-800 overflow-hidden">
+      <div class="bg-primary px-8 py-6 flex items-center justify-center gap-4 text-white">
+        <div class="size-10 flex items-center justify-center bg-white/20 rounded-lg backdrop-blur-sm">
+          <span class="material-symbols-outlined text-2xl">account_balance</span>
+        </div>
+        <div class="text-left">
+          <h2 class="text-white text-base font-extrabold leading-tight tracking-tight">Ambassade du Congo</h2>
+          <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold">Fédération de Russie</p>
+        </div>
+      </div>
+      <div class="p-10 md:p-16 flex flex-col items-center text-center">
+        <div class="relative mb-8">
+          <div class="absolute inset-0 animate-ping rounded-full bg-success-green/20 scale-150"></div>
+          <div class="relative size-24 md:size-32 bg-success-green/10 rounded-full flex items-center justify-center">
+            <span
+              class="material-symbols-outlined text-success-green text-6xl md:text-8xl font-bold">check_circle</span>
+          </div>
+        </div>
+        <h1 class="text-2xl md:text-3xl font-black text-[#111418] dark:text-white mb-4">Enregistrement Réussi</h1>
+        <p class="text-lg text-[#637288] dark:text-gray-400 font-medium leading-relaxed max-w-md mx-auto">
+          Votre enregistrement a été bien envoyé. Vous recevrez un mail de validation pour valider votre compte.
+        </p>
+        <div
+          class="mt-10 p-6 bg-background-light dark:bg-gray-800/50 rounded-xl border border-dashed border-[#dce0e5] dark:border-gray-700 w-full">
+          <p class="text-[10px] font-bold text-[#637288] dark:text-gray-500 uppercase tracking-widest mb-1">Numéro de
+            Référence</p>
+          <p class="text-2xl font-mono font-black text-primary dark:text-accent-gold tracking-wider">CG-MOS-2024-8842
+          </p>
+          <p class="mt-2 text-xs text-[#637288] dark:text-gray-400">Veuillez conserver ce numéro pour toute
+            correspondance future.</p>
+        </div>
+        <div class="mt-10 w-full flex flex-col sm:flex-row gap-4">
+          <a class="flex-1 flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            href="/">
+            <span class="material-symbols-outlined text-xl">Accueil</span>
+            Retour à l'accueil
+          </a>
+          <button
+            class="flex items-center justify-center gap-2 px-6 py-4 border border-[#dce0e5] dark:border-gray-700 text-[#111418] dark:text-white font-bold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            onclick="window.print()">
+            <span class="material-symbols-outlined text-xl">Imprimer</span>
+            Imprimer le reçu
+          </button>
+        </div>
+      </div>
+      <div
+        class="bg-background-light/50 dark:bg-gray-800/30 px-8 py-6 border-t border-[#dce0e5] dark:border-gray-800 flex items-start gap-4">
+        <span class="material-symbols-outlined text-primary dark:text-accent-gold">verified_user</span>
+        <div class="text-left">
+          <p class="text-xs font-bold text-[#111418] dark:text-white">Portail Diplomatique Sécurisé</p>
+          <p class="text-[11px] text-[#637288] dark:text-gray-400 leading-tight">Vos données sont traitées conformément
+            aux protocoles de sécurité de la Chancellerie de l'Ambassade du Congo à Moscou.</p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-8 text-sm text-[#637288] dark:text-gray-400">
+      Besoin d'assistance ? Contactez-nous à <a class="text-primary dark:text-accent-gold font-bold underline"
+        href="mailto:support@ambardc.ru">support@ambardc.ru</a>
+    </p>
+  </div>
+  <footer class="py-10 px-6 border-t border-[#dce0e5] dark:border-gray-800 bg-white dark:bg-background-dark">
+    <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-2">
+        <span class="text-[10px] font-bold text-[#637288] uppercase tracking-widest">© 2024 Ambassade de la République
+          du Congo en Fédération de Russie</span>
+      </div>
+      <div class="flex gap-8 text-[10px] font-extrabold text-[#637288] uppercase tracking-widest">
+        <a class="hover:text-primary transition-colors" href="#">Politique de Confidentialité</a>
+        <a class="hover:text-primary transition-colors" href="#">Frais Consulaires</a>
+        <a class="hover:text-primary transition-colors" href="#">Conditions d'Utilisation</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Gestion des Rôles et Permissions | Ambassade du Congo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "navy-blue": "#0A1D37",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "bg-light": "#F8FAFC",
+            "sidebar-text": "#FFFFFF",
+            "main-text": "#1E293B",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+            color: #FFFFFF;
+        }
+        .Rôle-card {
+            @apply bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 10px;
+        }
+        .badge-read { @apply bg-blue-50 text-blue-700 border border-blue-100; }
+        .badge-write { @apply bg-amber-50 text-amber-700 border border-amber-100; }
+        .badge-Supprimer { @apply bg-red-50 text-red-700 border border-red-100; }
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="font-display bg-bg-light text-main-text antialiased">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-navy-blue flex flex-col py-6 shrink-0 shadow-xl z-20">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Ambassade du Congo</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-0.5 overflow-y-auto">
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Tableau de bord</span>
+          </a>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Site</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./events.html">Événements</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./news.html">Actualités</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./contact.html">Contacts</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Diaspora</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./liste_diaspora.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./enregistrements.html">Enregistrements</a>
+            </div>
+          </details>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./services.html">
+            <span class="material-symbols-outlined text-[20px]">list_alt</span>
+            <span>Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./annonce_et_opportunite.html">
+            <span class="material-symbols-outlined text-[20px]">newspaper</span>
+            <span>Annonces et opportunités</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./messages.html">
+            <span class="material-symbols-outlined text-[20px]">mail</span>
+            <span>Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./sos.html">
+            <span class="material-symbols-outlined text-[20px]">emergency</span>
+            <span>SOS</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./calendar.html">
+            <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+            <span>Calendrier</span>
+          </a>
+          <div class="mt-4 px-6 py-2">
+            <p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Administration</p>
+          </div>
+          <details class="group" open>
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Utilisateurs</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./users.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold font-bold text-accent-gold"
+                href="./roles.html">Rôles et Permissions</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Paramètres</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+
+            </div>
+          </details>
+        </nav>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-slate-400">Administration</span>
+          <span class="material-symbols-outlined text-sm text-slate-400">chevron_right</span>
+          <span class="text-slate-400">Utilisateurs</span>
+          <span class="material-symbols-outlined text-sm text-slate-400">chevron_right</span>
+          <span class="font-bold text-navy-blue">Rôles &amp; Permissions</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-3">
+            <div class="flex flex-col items-end">
+              <span class="text-sm font-bold text-navy-blue">Admin Principal</span>
+              <span class="text-[10px] text-accent-green font-mono uppercase font-semibold">En ligne • Moscou</span>
+            </div>
+            <div
+              class="size-10 rounded-lg bg-slate-100 flex items-center justify-center border border-slate-200 overflow-hidden shadow-sm">
+              <img alt="Agent avatar" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto p-8 space-y-8">
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-2xl font-black text-navy-blue">Gestion des Rôles et Permissions</h1>
+            <p class="text-slate-500 text-sm">Contrôlez les accès au système en définissant les droits par groupe
+              d'utilisateurs.</p>
+          </div>
+          <button
+            class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-lg shadow-blue-100 hover:bg-navy-blue transition-all">
+            <span class="material-symbols-outlined text-lg">add_circle</span>
+            <span>Nouveau Rôle</span>
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="role-card">
+            <div class="p-6 border-b border-slate-100">
+              <div class="flex justify-between items-start mb-4">
+                <div class="size-12 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold">
+                  <span class="material-symbols-outlined text-3xl">verified_user</span>
+                </div>
+                <span
+                  class="text-[10px] font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded uppercase">Système</span>
+              </div>
+              <h3 class="text-lg font-bold text-navy-blue">Superviseur</h3>
+              <p class="text-xs text-slate-500 mt-1">Accès complet à tous les modules et configurations administratives.
+              </p>
+            </div>
+            <div class="p-6 flex-1 space-y-4">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Module</span>
+                  <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Droits</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-50">
+                  <span class="text-sm font-medium text-navy-blue">Rendez-vous</span>
+                  <div class="flex gap-1">
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-read">L</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-write">É</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-delete">S</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-50">
+                  <span class="text-sm font-medium text-navy-blue">Utilisateurs</span>
+                  <div class="flex gap-1">
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-read">L</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-write">É</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-delete">S</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-50">
+                  <span class="text-sm font-medium text-navy-blue">Demandes</span>
+                  <div class="flex gap-1">
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-read">L</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-write">É</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-delete">S</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50 mt-auto flex justify-end gap-2 border-t border-slate-100">
+              <button class="p-2 text-slate-400 hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-xl">edit</span></button>
+              <button class="p-2 text-slate-400 hover:text-accent-red transition-colors"><span
+                  class="material-symbols-outlined text-xl">delete</span></button>
+            </div>
+          </div>
+          <div class="role-card">
+            <div class="p-6 border-b border-slate-100">
+              <div class="flex justify-between items-start mb-4">
+                <div class="size-12 rounded-xl bg-accent-green/10 flex items-center justify-center text-accent-green">
+                  <span class="material-symbols-outlined text-3xl">person_search</span>
+                </div>
+              </div>
+              <h3 class="text-lg font-bold text-navy-blue">Agent Consulaire</h3>
+              <p class="text-xs text-slate-500 mt-1">Gestion des rendez-vous et traitement des demandes citoyens.</p>
+            </div>
+            <div class="p-6 flex-1 space-y-4">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Module</span>
+                  <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Droits</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-50">
+                  <span class="text-sm font-medium text-navy-blue">Rendez-vous</span>
+                  <div class="flex gap-1">
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-read">L</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-write">É</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-50">
+                  <span class="text-sm font-medium text-navy-blue">Utilisateurs</span>
+                  <div class="flex gap-1">
+                    <span
+                      class="text-[9px] px-1.5 py-0.5 rounded font-bold border border-slate-100 text-slate-300">L</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-50">
+                  <span class="text-sm font-medium text-navy-blue">Demandes</span>
+                  <div class="flex gap-1">
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-read">L</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-write">É</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50 mt-auto flex justify-end gap-2 border-t border-slate-100">
+              <button class="p-2 text-slate-400 hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-xl">edit</span></button>
+              <button class="p-2 text-slate-400 hover:text-accent-red transition-colors"><span
+                  class="material-symbols-outlined text-xl">delete</span></button>
+            </div>
+          </div>
+          <div class="role-card">
+            <div class="p-6 border-b border-slate-100">
+              <div class="flex justify-between items-start mb-4">
+                <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-3xl">campaign</span>
+                </div>
+              </div>
+              <h3 class="text-lg font-bold text-navy-blue">Admin Comm</h3>
+              <p class="text-xs text-slate-500 mt-1">Édition des Actualités, événements et Messages officiels.</p>
+            </div>
+            <div class="p-6 flex-1 space-y-4">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Module</span>
+                  <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Droits</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-50">
+                  <span class="text-sm font-medium text-navy-blue">Actualités &amp; SOS</span>
+                  <div class="flex gap-1">
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-read">L</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-write">É</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-delete">S</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-50">
+                  <span class="text-sm font-medium text-navy-blue">Événements</span>
+                  <div class="flex gap-1">
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-read">L</span>
+                    <span class="text-[9px] px-1.5 py-0.5 rounded font-bold badge-write">É</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-50">
+                  <span class="text-sm font-medium text-navy-blue">Rendez-vous</span>
+                  <div class="flex gap-1">
+                    <span
+                      class="text-[9px] px-1.5 py-0.5 rounded font-bold border border-slate-100 text-slate-300">L</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-slate-50 mt-auto flex justify-end gap-2 border-t border-slate-100">
+              <button class="p-2 text-slate-400 hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-xl">edit</span></button>
+              <button class="p-2 text-slate-400 hover:text-accent-red transition-colors"><span
+                  class="material-symbols-outlined text-xl">delete</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-6 flex gap-6 items-center">
+          <div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+            <span class="material-symbols-outlined text-3xl">security</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-primary mb-1">Légende des Permissions</h5>
+            <div class="flex gap-4 mt-2">
+              <div class="flex items-center gap-1.5">
+                <span class="text-[10px] px-1.5 py-0.5 rounded font-bold badge-read">L</span>
+                <span class="text-xs text-slate-600">Lecture</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-[10px] px-1.5 py-0.5 rounded font-bold badge-write">É</span>
+                <span class="text-xs text-slate-600">Écriture / Modification</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-[10px] px-1.5 py-0.5 rounded font-bold badge-delete">S</span>
+                <span class="text-xs text-slate-600">Suppression</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

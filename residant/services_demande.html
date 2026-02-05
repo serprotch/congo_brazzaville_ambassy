@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Formulaire de Demande de Service | Ambassade du Congo en Russie</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "background-light": "#f8fafc",
+            "background-dark": "#111821",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+        }
+        .form-section {
+            @apply bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-8 rounded-xl shadow-sm mb-6;
+        }
+        .input-group {
+            @apply flex flex-col gap-1.5;
+        }
+        .input-label {
+            @apply text-sm font-bold text-gray-700 dark:text-gray-300;
+        }
+        .input-field {
+            @apply border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2.5 bg-gray-50/50 dark:bg-gray-800 text-sm focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none;
+        }
+        .input-field:disabled {
+            @apply bg-gray-100 dark:bg-gray-800/50 text-gray-500 cursor-not-allowed;
+        }
+    </style>
+</head>
+
+<body
+  class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-primary flex flex-col py-6 shrink-0">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Ambassade du Congo</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Fédération de Russie</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-1">
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="text-sm font-medium">Tableau de Bord</span>
+          </a>
+          <a class="sidebar-active flex items-center gap-4 px-6 py-3 text-white transition-all" href="./services.html">
+            <span class="material-symbols-outlined">description</span>
+            <span class="text-sm font-medium">Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./message.html">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="text-sm font-medium">Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./sos.html">
+            <span class="material-symbols-outlined">emergency</span>
+            <span class="text-sm font-medium">SOS</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./notification.html">
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="text-sm font-medium">Notifications</span>
+          </a>
+        </nav>
+        <div class="mt-auto px-6">
+          <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+            <p class="text-xs text-white/60 mb-2">Besoin d'aide ?</p>
+            <button
+              class="w-full py-2 bg-accent-gold text-primary text-xs font-bold rounded-lg hover:bg-opacity-90 transition-all">Support
+              Technique</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header
+        class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 px-8 py-5 flex justify-between items-center shrink-0">
+        <div class="flex flex-col">
+          <h2 class="text-2xl font-black text-primary dark:text-white tracking-tight">Demande de Passeport Biométrique
+          </h2>
+          <nav class="flex text-[11px] font-bold text-gray-400 uppercase tracking-widest mt-1">
+            <a class="hover:text-primary" href="#">Services</a>
+            <span class="mx-2">/</span>
+            <span class="text-accent-gold">Nouveau Passeport</span>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="flex flex-col items-end mr-2">
+            <span class="text-sm font-bold text-gray-900 dark:text-white">Jean-Pierre Mokolo</span>
+            <span class="text-[10px] text-gray-400 font-mono">ID: CG-RU-00124</span>
+          </div>
+          <div
+            class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <img alt="User avatar" class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto p-8 bg-gray-50 dark:bg-background-dark/50">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
+          <div class="flex-1">
+            <div
+              class="mb-8 bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-bold text-primary dark:text-white">Étape 1: Informations &amp;
+                  Documents</span>
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-tighter">Étape 1 sur 3</span>
+              </div>
+              <div class="w-full h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                <div class="w-1/3 h-full bg-accent-gold"></div>
+              </div>
+            </div>
+            <form class="flex flex-col">
+              <div class="form-section">
+                <div class="flex items-center gap-3 mb-6 border-b border-gray-50 pb-4 dark:border-gray-800">
+                  <span class="material-symbols-outlined text-accent-gold">account_circle</span>
+                  <h3 class="font-bold text-gray-900 dark:text-white">Informations d'Identité</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="input-group">
+                    <label class="input-label">Nom de famille</label>
+                    <input class="input-field" disabled="" type="text" value="Mokolo" />
+                  </div>
+                  <div class="input-group">
+                    <label class="input-label">Prénom(s)</label>
+                    <input class="input-field" disabled="" type="text" value="Jean-Pierre" />
+                  </div>
+                  <div class="input-group">
+                    <label class="input-label">Date de naissance</label>
+                    <input class="input-field" disabled="" type="text" value="12/05/1985" />
+                  </div>
+                  <div class="input-group">
+                    <label class="input-label">Lieu de naissance</label>
+                    <input class="input-field" disabled="" type="text" value="Brazzaville, Congo" />
+                  </div>
+                </div>
+                <p class="mt-4 text-[11px] text-gray-400 italic">Ces informations sont extraites de votre profil
+                  consulaire. Contactez l'ambassade pour toute modification.</p>
+              </div>
+              <div class="form-section">
+                <div class="flex items-center gap-3 mb-6 border-b border-gray-50 pb-4 dark:border-gray-800">
+                  <span class="material-symbols-outlined text-accent-gold">travel</span>
+                  <h3 class="font-bold text-gray-900 dark:text-white">Détails de la demande</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="input-group">
+                    <label class="input-label">Motif de la demande</label>
+                    <select class="input-field">
+                      <option>Renouvellement (Expiration)</option>
+                      <option>Perte ou vol</option>
+                      <option>Détérioration</option>
+                      <option>Première demande</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <label class="input-label">Ancien numéro de passeport</label>
+                    <input class="input-field" placeholder="Ex: CG123456" type="text" />
+                  </div>
+                  <div class="input-group">
+                    <label class="input-label">Taille (en cm)</label>
+                    <input class="input-field" placeholder="175" type="number" />
+                  </div>
+                  <div class="input-group">
+                    <label class="input-label">Couleur des yeux</label>
+                    <select class="input-field">
+                      <option>Marrons</option>
+                      <option>Noirs</option>
+                      <option>Verts</option>
+                      <option>Bleus</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-section">
+                <div class="flex items-center gap-3 mb-6 border-b border-gray-50 pb-4 dark:border-gray-800">
+                  <span class="material-symbols-outlined text-accent-gold">upload_file</span>
+                  <h3 class="font-bold text-gray-900 dark:text-white">Documents Justificatifs</h3>
+                </div>
+                <div class="flex flex-col gap-4">
+                  <label class="input-label">Scan de l'ancien passeport (Pages 1 &amp; 2)</label>
+                  <div
+                    class="border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-xl p-8 flex flex-col items-center justify-center bg-gray-50/30 dark:bg-gray-800/20 hover:border-accent-gold transition-colors cursor-pointer group">
+                    <span
+                      class="material-symbols-outlined text-4xl text-gray-300 group-hover:text-accent-gold mb-2">cloud_upload</span>
+                    <p class="text-sm font-bold text-gray-600 dark:text-gray-300">Cliquez pour téléverser ou
+                      glissez-déposez</p>
+                    <p class="text-xs text-gray-400 mt-1">PDF, JPG ou PNG (Max. 5 Mo)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4 mb-12">
+                <button
+                  class="px-8 py-3 rounded-lg border border-gray-200 dark:border-gray-700 font-bold text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                  type="button">
+                  Sauvegarder le brouillon
+                </button>
+                <a href="./service_demande_paiement.html"
+                  class="px-10 py-3 rounded-lg bg-primary text-white font-bold hover:bg-opacity-90 shadow-lg shadow-primary/20 flex items-center gap-2"
+                  type="button">
+                  Étape Suivante <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </form>
+          </div>
+          <aside class="w-full lg:w-80 shrink-0">
+            <div class="sticky top-8 flex flex-col gap-6">
+              <div class="bg-primary rounded-xl p-6 text-white shadow-xl relative overflow-hidden">
+                <div class="relative z-10">
+                  <h4 class="font-bold text-lg mb-6 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-accent-gold">receipt_long</span>
+                    Résumé de la demande
+                  </h4>
+                  <div class="flex flex-col gap-4 mb-6">
+                    <div class="flex justify-between items-center text-sm">
+                      <span class="text-white/70">Frais de dossier</span>
+                      <span class="font-bold">100 USD</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                      <span class="text-white/70">Équivalent RUB</span>
+                      <span class="font-bold">~ 9 200 RUB</span>
+                    </div>
+                    <div class="h-px bg-white/10 w-full my-2"></div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-sm font-bold">Total à payer</span>
+                      <span class="text-xl font-black text-accent-gold">100 USD</span>
+                    </div>
+                  </div>
+                  <div class="bg-white/10 rounded-lg p-4 border border-white/10 flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-accent-gold text-lg">timer</span>
+                      <div class="flex flex-col">
+                        <p class="text-[10px] uppercase font-bold text-white/50 tracking-wider leading-none mb-1">Délai
+                          de traitement</p>
+                        <p class="text-sm font-bold">15 à 21 jours ouvrés</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-accent-gold text-lg">location_on</span>
+                      <div class="flex flex-col">
+                        <p class="text-[10px] uppercase font-bold text-white/50 tracking-wider leading-none mb-1">Lieu
+                          de retrait</p>
+                        <p class="text-sm font-bold">Ambassade (Moscou)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined absolute -right-6 -bottom-6 text-white/5 text-[120px] pointer-events-none">payments</span>
+              </div>
+              <div
+                class="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm">
+                <h5 class="font-bold text-primary dark:text-white mb-4 text-sm uppercase tracking-wider">Aide &amp;
+                  Support</h5>
+                <div class="flex flex-col gap-4">
+                  <a class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined text-lg">help</span>
+                    Guide des pièces à fournir
+                  </a>
+                  <a class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined text-lg">contact_support</span>
+                    Contacter un agent
+                  </a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

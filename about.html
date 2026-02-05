@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>L'Ambassade - Ambassade de la République du Congo en Fédération de Russie</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "background-light": "#f6f7f8",
+            "background-dark": "#111821",
+            "congolese-green": "#009543",
+            "congolese-yellow": "#FBDE4A",
+            "congolese-red": "#DC241F",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .tab-Contenu {
+      display: none;
+    }
+
+    .tab-content.Actif {
+      display: block;
+    }
+
+    .tab-link.active {
+      border-bottom: 3px solid #009543;
+      color: #0d3368;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white antialiased">
+  <header
+    class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-10">
+        <a class="flex items-center gap-3" href="./index.html">
+          <img src="./images/logo_ambassy.png" alt="" class="w-14">
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+            href="./news_detail.html">Services</a>
+          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+            href="./news.html">Actualités</a>
+          <a class="text-sm font-bold text-primary dark:text-congolese-yellow border-b-2 border-congolese-green pb-1"
+            href="./about.html">Ambassade</a>
+          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+            href="./contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-6">
+        <div class="hidden lg:flex items-center bg-[#f0f2f4] dark:bg-gray-800 rounded-lg px-3 py-1.5 h-10 w-48">
+          <span class="material-symbols-outlined text-[#637288] text-sm">Rechercher</span>
+          <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-[#637288]"
+            placeholder="Recherche..." type="text" />
+        </div>
+        <button
+          class="flex items-center gap-2 bg-primary text-white text-xs font-extrabold px-4 py-2.5 rounded-lg hover:bg-primary/90 transition-all uppercase tracking-widest">
+          <span class="material-symbols-outlined text-sm">translate</span>
+          <span>RU / FR</span>
+        </button>
+      </div>
+    </div>
+    <div class="flex h-1 w-full">
+      <div class="flex-1 bg-congolese-green"></div>
+      <div class="flex-1 bg-congolese-yellow"></div>
+      <div class="flex-1 bg-congolese-red"></div>
+    </div>
+  </header>
+  <main>
+    <section class="relative h-[400px] flex items-center">
+      <div class="absolute inset-0 z-0">
+        <img alt="Ambassade du Congo à Moscou" class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvPSlbHyJ9jZtPuMmjL8yCKAxcQ_scU-5Gqros9QpRc54eSskGJYmXNi-a_rh2j7Icha9p-btWjPdpuSEFNYfaR7imb2qqSt8S-kmPHRLssBrFNRFPLGzCSLvJMEJ53mUKhN2x70lqoFAl3VD6Rme_1W85__RzgjWgVPxY9ce_hP6_JtHe9jvapyaB5os78KZl7FqJl7E2Yid6J6ZycGVtBzhkxuRfzsFbXNINPuYDuiNTIG784Q6gILrlgvvzQFKHuEAVHQYYHKw" />
+        <div class="absolute inset-0 bg-primary/60 backdrop-blur-[2px]"></div>
+      </div>
+      <div class="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-10 w-full text-white">
+        <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-4 opacity-80">
+          <a class="hover:text-congolese-yellow" href="/">Accueil</a>
+          <span class="material-symbols-outlined text-[12px]">chevron_right</span>
+          <span>Institution</span>
+        </nav>
+        <h2 class="text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight">L'Ambassade du Congo en
+          Russie</h2>
+        <p class="mt-4 text-lg text-white/80 max-w-2xl font-medium">Représentation diplomatique et trait d'union
+          entre la République du Congo et la Fédération de Russie.</p>
+      </div>
+    </section>
+    <div class="sticky top-[73px] z-40 bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
+        <div class="flex flex-nowrap overflow-x-auto gap-8 no-scrollbar">
+          <button
+            class="tab-link active py-5 text-sm font-bold whitespace-nowrap transition-all flex items-center gap-2"
+            id="tab-mot-ambassadeur" onclick="switchTab('mot-ambassadeur')">
+            <span class="material-symbols-outlined text-xl">person</span> Mot de l'Ambassadeur
+          </button>
+          <button
+            class="tab-link py-5 text-sm font-bold text-gray-500 hover:text-primary dark:hover:text-white whitespace-nowrap transition-all flex items-center gap-2"
+            id="tab-missions-vision" onclick="switchTab('missions-vision')">
+            <span class="material-symbols-outlined text-xl">flag</span> Missions &amp; Vision
+          </button>
+          <button
+            class="tab-link py-5 text-sm font-bold text-gray-500 hover:text-primary dark:hover:text-white whitespace-nowrap transition-all flex items-center gap-2"
+            id="tab-organisation" onclick="switchTab('organisation')">
+            <span class="material-symbols-outlined text-xl">account_tree</span> Organisation
+          </button>
+          <button
+            class="tab-link py-5 text-sm font-bold text-gray-500 hover:text-primary dark:hover:text-white whitespace-nowrap transition-all flex items-center gap-2"
+            id="tab-relations" onclick="switchTab('relations')">
+            <span class="material-symbols-outlined text-xl">handshake</span> Relations Bilatérales
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-16">
+      <div class="max-w-4xl mx-auto">
+        <div class="tab-content active space-y-12" id="mot-ambassadeur">
+          <div class="flex flex-col md:flex-row gap-12 items-start">
+            <div class="w-full md:w-1/3 flex-shrink-0">
+              <div class="relative group">
+                <div
+                  class="absolute -inset-2 bg-gradient-to-tr from-congolese-green via-congolese-yellow to-congolese-red rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity">
+                </div>
+                <img alt="Portrait de l'Ambassadeur" class="relative rounded-xl w-full h-auto object-cover shadow-2xl"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPRCLCnT6J_xZM_li21iiUW4uW_jFA39k0s7darcPlfd7WAp3xMzcngiqWkrQ2zNmUXp0AhaV37f36SQegCU7QpaoUDua01dRw480BM3FaAjujMN1NU60qQ7lT1mMxXetYD3pGzK0ExD366msj5m-ENXX62ZLRx7u5DOyR9bUeX7_kbsRTBgA_F9TxYYY_NEGvvgQ7AcCVe3v73TVBcNPeekPX1tcsyBsyUYyafGDq16Hb6csTRyJEg9wB5LgyNMUyrLC38WiBqh8" />
+              </div>
+              <div class="mt-6 text-center md:text-left">
+                <h4 class="text-xl font-extrabold text-primary dark:text-white">S.E.M. L'Ambassadeur
+                </h4>
+                <p class="text-sm font-bold text-congolese-green uppercase tracking-widest mt-1">
+                  Plénipotentiaire</p>
+              </div>
+            </div>
+            <div class="w-full md:w-2/3">
+              <span class="material-symbols-outlined text-6xl text-primary/10 mb-4 block">format_quote</span>
+              <h3 class="text-3xl font-extrabold mb-6 text-primary dark:text-white">Bienvenue à
+                l'Ambassade</h3>
+              <div class="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+                <p>C'est avec un immense honneur que je vous souhaite la bienvenue sur le portail
+                  numérique de la mission diplomatique de la République du Congo en Fédération de
+                  Russie.</p>
+                <p>Notre mission s'inscrit dans la volonté de renforcer les liens historiques et
+                  stratégiques qui unissent Brazzaville et Moscou. À travers ce site, nous souhaitons
+                  offrir à la communauté congolaise vivant en Russie, ainsi qu'aux partenaires russes,
+                  un outil moderne et efficace pour faciliter les démarches administratives et
+                  promouvoir les opportunités de coopération.</p>
+                <p>La diplomatie congolaise œuvre sans relâche pour la promotion de la paix, du
+                  développement économique et des échanges culturels. Nous sommes à votre entière
+                  disposition pour vous accompagner dans vos projets et répondre à vos besoins
+                  consulaires.</p>
+              </div>
+              <div class="mt-10 pt-8 border-t border-gray-100 dark:border-gray-800">
+                <p class="italic font-bold text-primary dark:text-white">"La fraternité au service de la
+                  diplomatie et du progrès."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content space-y-16" id="missions-vision">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-extrabold text-primary dark:text-white mb-4">Notre Vision Stratégique
+            </h3>
+            <p class="text-gray-500 max-w-2xl mx-auto">Promouvoir les intérêts de la République du Congo et
+              assurer la protection de ses ressortissants sur le territoire de la Fédération de Russie.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
+              <div
+                class="w-14 h-14 bg-congolese-green/10 text-congolese-green rounded-xl flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined text-3xl">policy</span>
+              </div>
+              <h4 class="text-xl font-extrabold mb-4">Action Diplomatique</h4>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Représenter le Chef de l'État et
+                le Gouvernement congolais auprès des autorités russes. Nous travaillons au maintien d'un
+                dialogue politique permanent et de haut niveau.</p>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
+              <div
+                class="w-14 h-14 bg-primary/10 text-primary dark:text-white rounded-xl flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined text-3xl">groups</span>
+              </div>
+              <h4 class="text-xl font-extrabold mb-4">Protection Consulaire</h4>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Assister nos concitoyens dans
+                leurs démarches administratives, assurer leur protection juridique et maintenir le lien
+                entre la diaspora et la patrie.</p>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
+              <div
+                class="w-14 h-14 bg-congolese-yellow/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined text-3xl">trending_up</span>
+              </div>
+              <h4 class="text-xl font-extrabold mb-4">Diplomatie Économique</h4>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Faciliter les partenariats entre
+                les secteurs privés des deux nations, encourager l'investissement direct étranger vers
+                le Congo et promouvoir nos produits d'exportation.</p>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
+              <div
+                class="w-14 h-14 bg-congolese-red/10 text-congolese-red rounded-xl flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined text-3xl">school</span>
+              </div>
+              <h4 class="text-xl font-extrabold mb-4">Coopération Culturelle</h4>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Gérer les programmes de bourses
+                d'études, organiser des événements culturels et favoriser les échanges académiques et
+                scientifiques entre universités.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="organisation">
+          <div
+            class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+            <div class="p-8 border-b border-gray-100 dark:border-gray-700 bg-primary text-white">
+              <h3 class="text-2xl font-extrabold">Structure de la Mission</h3>
+              <p class="text-white/70 text-sm mt-1">Répartition des départements et responsabilités</p>
+            </div>
+            <div class="p-8">
+              <div class="space-y-8">
+                <div class="flex gap-6 items-start">
+                  <div
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    1</div>
+                  <div>
+                    <h5 class="font-extrabold text-lg text-primary dark:text-white">La Chancellerie
+                      Diplomatique</h5>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Cœur de la mission,
+                      elle assure le suivi des dossiers politiques et la liaison avec le Ministère
+                      des Affaires Étrangères de la Fédération de Russie.</p>
+                  </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                  <div
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    2</div>
+                  <div>
+                    <h5 class="font-extrabold text-lg text-primary dark:text-white">Le Service
+                      Consulaire</h5>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Délivrance des visas,
+                      passeports, cartes consulaires, actes de naissance et légalisation de
+                      Documents.</p>
+                  </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                  <div
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    3</div>
+                  <div>
+                    <h5 class="font-extrabold text-lg text-primary dark:text-white">Le Service
+                      Culturel &amp; Académique</h5>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Gestion des étudiants
+                      boursiers, suivi des inscriptions universitaires et promotion des échanges
+                      culturels.</p>
+                  </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                  <div
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    4</div>
+                  <div>
+                    <h5 class="font-extrabold text-lg text-primary dark:text-white">L'Attaché de
+                      Défense</h5>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Coordination de la
+                      coopération militaire et sécuritaire entre les deux pays.</p>
+                  </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                  <div
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    5</div>
+                  <div>
+                    <h5 class="font-extrabold text-lg text-primary dark:text-white">Le Service
+                      Administratif et Financier</h5>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Gestion interne des
+                      ressources humaines et du patrimoine de l'Ambassade.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content space-y-10" id="relations">
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            <h3 class="text-3xl font-extrabold text-primary dark:text-white mb-8">Plus de 60 ans de
+              Coopération Fraternelle</h3>
+            <div class="bg-primary/5 border-l-4 border-congolese-yellow p-8 rounded-r-2xl mb-10">
+              <p class="text-primary dark:text-white font-bold leading-relaxed">Les relations
+                diplomatiques entre la République du Congo et la Fédération de Russie (alors Union
+                Soviétique) ont été établies le 16 mars 1964.</p>
+            </div>
+            <div class="space-y-6 text-gray-600 dark:text-gray-300">
+              <p>Depuis lors, nos deux nations maintiennent des liens d'amitié fondés sur le respect
+                mutuel et une vision partagée des enjeux internationaux. La Russie demeure un partenaire
+                historique privilégié dans les domaines de l'éducation, de la santé, de l'énergie et de
+                la défense.</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+                <div class="h-64 rounded-2xl overflow-hidden shadow-lg">
+                  <img alt="Archives diplomatiques" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFBj8LzyGQ1klQxHj5rAG_zrRs8iQaXnRyBw7qdOAo-50cOGRFWmArBHQBNVmn-og69G0-3dnua0NUTHzGohZ0cro3iOQ79HR6LsRl5xTKzrYJ1Oo9Rfcm13iGNZ9VrhdKOVXUXBiw-mp0WvvkShb_Agh2e14SPSTSNk5-xG6FwJyJI4u9WLjGrxltUnr0hZ17Y1lLsD4vRjYLUpbmZRE02rUSw4SFLk51rPo9nd7Elv4Dmn1I6iDLDWKHPMdeEF47ui5PqCsRPdI" />
+                </div>
+                <div class="h-64 rounded-2xl overflow-hidden shadow-lg">
+                  <img alt="Célébrations officielles" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA93xoGioEFYDK8EtfuTZyA52ZJMN6ZaKQh27N2we8K48JnDbiv3gcmw5ILhab9drTWfl4LpCSC0XyUJIAcFpUwcvjJF0fzPPKavcSvA70hsGBb8NlgQt5QbTZKHHPNPEkH5ssGeBBCTpHGiWfBJUGOHdZ3ty1T2rWeLwnWLI74OO5pC-1yZm7fy86Oyj3q7rJvSy3H_QIZ6zpU6fbd5ELL96KAOiKE-025IYGDrpOCZKlBOsp0YpTzDuxJKMIQ6TWqj-V54CxGxK4" />
+                </div>
+              </div>
+              <p>Au cours des dernières années, un nouvel élan a été donné à cette coopération par des
+                visites officielles de haut niveau, notamment celle de Son Excellence Denis Sassou
+                N'Guesso à Moscou, renforçant les accords cadres dans les domaines pétrolier et minier.
+              </p>
+              <p>Aujourd'hui, des milliers de Congolais ont été formés dans les universités russes,
+                constituant un pont intellectuel et technique précieux pour le développement de notre
+                pays. L'Ambassade s'attèle quotidiennement à moderniser ce partenariat pour répondre aux
+                défis du XXIème siècle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="bg-white dark:bg-background-dark/50 border-y border-gray-200 dark:border-gray-800 py-16">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 text-center">
+        <h3 class="text-2xl font-extrabold mb-8">Une question spécifique ?</h3>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a class="inline-flex items-center gap-2 bg-primary text-white font-bold py-4 px-8 rounded-lg hover:scale-105 transition-all"
+            href="./contact.html">
+            <span class="material-symbols-outlined">mail</span> Contactez-nous
+          </a>
+          <a class="inline-flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-primary dark:text-white font-bold py-4 px-8 rounded-lg hover:bg-gray-50 transition-all"
+            href="./contact.html">
+            <span class="material-symbols-outlined">help</span> Foire aux Questions
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-gray-100 dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 py-12">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="size-8 text-primary dark:text-white">
+              <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4L6 17V31H24V44H42V17L24 4Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <h6 class="text-lg font-extrabold uppercase tracking-tight">Ambassade du Congo</h6>
+          </div>
+          <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm mb-6 leading-relaxed">
+            Mission diplomatique officielle de la République du Congo en Fédération de Russie. Committed to bilateral
+            excellence and serving our citizens abroad.
+          </p>
+          <div class="flex gap-4">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+              <span class="material-symbols-outlined text-xl">language</span>
+            </a>
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+              <span class="material-symbols-outlined text-xl">mail</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Liens Rapides</h6>
+          <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
+            <li><a class="hover:text-primary dark:hover:text-white" href="./services.html">Services</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="./news.html">Actualités</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="./about.html">A propos</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Légal</h6>
+          <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
+            <li><a class="hover:text-primary dark:hover:text-white" href="#">Politique de Confidentialité</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">© 2026 Ambassade de la République du Congo.
+          Tous rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <div class="h-1 w-6 bg-congolese-green"></div>
+          <div class="h-1 w-6 bg-congolese-yellow"></div>
+          <div class="h-1 w-6 bg-congolese-red"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function switchTab(tabId) {
+      // Masquer Tous contents
+      document.querySelectorAll('.tab-Contenu').forEach(tab => {
+        tab.classList.Retirer('Actif');
+      });
+      // Remove active state from all links
+      document.querySelectorAll('.tab-link').forEach(link => {
+        link.classList.remove('active');
+        link.classList.Ajouter('text-gray-500');
+        link.classList.remove('text-primary');
+      });
+      // Afficher Sélectionné content
+      document.getElementById(tabId).classList.add('active');
+      // Set active link
+      const activeLink = document.getElementById('tab-' + tabId);
+      activeLink.classList.add('active');
+      activeLink.classList.remove('text-gray-500');
+      activeLink.classList.add('text-primary');
+      // Smooth scroll to top of content if on mobile
+      if (window.innerWidth < 768) {
+        const tabsNav = document.querySelector('.sticky');
+        window.scrollTo({
+          top: tabsNav.offsetTop - 73,
+          behavior: 'smooth'
+        });
+      }
+    }
+  </script>
+
+</body>
+
+</html>

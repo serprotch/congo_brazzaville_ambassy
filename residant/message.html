@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Messagerie Interne et Consulaire | Ambassade du Congo en Russie</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "background-light": "#f8fafc",
+            "background-dark": "#111821",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+        }
+        .chat-bubble-sent {
+            @apply bg-accent-green text-white rounded-l-xl rounded-tr-xl p-3 shadow-sm max-w-[80%];
+        }
+        .chat-bubble-received {
+            @apply bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white rounded-r-xl rounded-tl-xl p-3 shadow-sm max-w-[80%];
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body
+  class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-primary flex flex-col py-6 shrink-0">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Ambassade du Congo</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Fédération de Russie</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-1">
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="text-sm font-medium">Tableau de Bord</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./services.html">
+            <span class="material-symbols-outlined">description</span>
+            <span class="text-sm font-medium">Services</span>
+          </a>
+          <a class="sidebar-active flex items-center gap-4 px-6 py-3 text-white transition-all" href="./message.html">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="text-sm font-medium">Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./sos.html">
+            <span class="material-symbols-outlined">emergency</span>
+            <span class="text-sm font-medium">SOS</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./notification.html">
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="text-sm font-medium">Notifications</span>
+          </a>
+        </nav>
+        <div class="mt-auto px-6">
+          <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+            <p class="text-xs text-white/60 mb-2">Besoin d'aide ?</p>
+            <button
+              class="w-full py-2 bg-accent-gold text-primary text-xs font-bold rounded-lg hover:bg-opacity-90 transition-all">Support
+              Technique</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header
+        class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 px-8 py-5 flex justify-between items-center shrink-0">
+        <h2 class="text-2xl font-black text-primary dark:text-white tracking-tight">Messagerie</h2>
+        <div class="flex items-center gap-4">
+          <div class="flex flex-col items-end mr-2">
+            <span class="text-sm font-bold text-gray-900 dark:text-white">Jean-Pierre Mokolo</span>
+            <span class="text-[10px] text-gray-400 font-mono">ID: CG-RU-00124</span>
+          </div>
+          <div
+            class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <img alt="User avatar" class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 flex overflow-hidden">
+        <div class="w-96 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 flex flex-col">
+          <div class="p-4 flex flex-col gap-4">
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">Rechercher</span>
+              <input
+                class="w-full pl-10 pr-4 py-2 text-sm bg-gray-50 dark:bg-gray-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-gray-700 dark:text-white"
+                placeholder="Rechercher une discussion..." type="text" />
+            </div>
+            <div class="flex gap-2 p-1 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <button
+                class="flex-1 py-1.5 text-xs font-bold rounded-md bg-white dark:bg-gray-700 shadow-sm text-primary dark:text-white">Consulat</button>
+              <button
+                class="flex-1 py-1.5 text-xs font-bold rounded-md text-gray-500 hover:text-gray-700 dark:text-gray-400 transition-colors">Communauté</button>
+            </div>
+          </div>
+          <div class="flex-1 overflow-y-auto custom-scrollbar">
+            <div class="divide-y divide-gray-100 dark:divide-gray-800">
+              <button class="w-full p-4 flex items-center gap-3 bg-primary/5 border-l-4 border-primary text-left">
+                <div class="relative">
+                  <div
+                    class="size-12 rounded-full bg-white flex items-center justify-center p-1 border border-gray-200">
+                    <img alt="Embassy Icon" class="w-full h-full object-contain"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5u2tfTYzp6PRTXTYN8tY5KmaUweUJFTteZFyL3qxAjnrH3fVSTUEjUaKoX7WCgGLaiLZdATJA5Z_N1MDeTZzoM-LK5xDW8jluSHyc9uuQISq6Yi3XdF5QPUUoHok_1xyJdBBt-u44fgP9nP78D44lP5GANN4o-7VkoSkqdBhtKnNNs7-2FVHvWc7wHQuc4Dmn126X2XVvXhi7ucpa_1RVnyeusd6P0loFJcOInQgmuE8brJ1eLKvWpInZx_3g7bHo97frUXtHqXM" />
+                  </div>
+                  <div class="absolute bottom-0 right-0 size-3 bg-accent-green border-2 border-white rounded-full">
+                  </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex justify-between items-center mb-0.5">
+                    <h4 class="text-sm font-bold text-gray-900 dark:text-white truncate">Service Consulaire</h4>
+                    <span class="text-[10px] text-gray-400 font-medium">10:45</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <p class="text-xs text-primary font-bold truncate">Documents bien reçus...</p>
+                    <span
+                      class="size-5 bg-accent-green text-white text-[10px] flex items-center justify-center rounded-full font-bold">2</span>
+                  </div>
+                </div>
+              </button>
+              <button
+                class="w-full p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors text-left">
+                <div class="relative">
+                  <div class="size-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                    <img alt="User" class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDESRQl2vpo6U3lzmc1bW-exPtd6zeHQF03PAPc4Tbu89Oee7lNvW9I1bHN-Wd65pqsBu3a7Xc-P8NM6Fa840wEuN3lo1FgxwRCvHH6Qt9N0w5sI0i4CyQafVJgYjwj6tWxez-BYmhCskEjGr5385Y-g_HbYF4itkMWcmd-nUYAstAXI2TSjiOgA-JJ2VyIlhp5STCQ5woBa3xv-GcFmdG7I_n4yxVjM4xIE-qvqS3MCIf7x3YM4OOy2v6NF-tnnKrAv9M9vMfzZNA" />
+                  </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex justify-between items-center mb-0.5">
+                    <h4 class="text-sm font-bold text-gray-900 dark:text-white truncate">M. Ngolo (Visa)</h4>
+                    <span class="text-[10px] text-gray-400 font-medium">Hier</span>
+                  </div>
+                  <p class="text-xs text-gray-500 truncate">Merci pour les informations.</p>
+                </div>
+              </button>
+              <button
+                class="w-full p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors text-left">
+                <div class="size-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                  <img alt="User" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ2y9zK01igE5IVaaOpXPKZmmvThR4OR_DET9o2-4O1KfXl-nA4PtaxadrX-jDh8VKH3HnvOsuLDa0AIChSFBN-QSLtRmgPDIFmZmwpzK8Svu0__MDPUQPPtojosJ81RlA4aiFHtbdmXaGv6XGSVkwpWYnN1q7woppN8ToVU2Sga9BJ3OCG7858SZVe0HBz-QxmJIXSE2rQt4z8O9ePxJkdNq42Gwt1KonOt5m6t1SuQ0IriNVd2C77p8TbMyEHBXhRDPApUVj9CM" />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex justify-between items-center mb-0.5">
+                    <h4 class="text-sm font-bold text-gray-900 dark:text-white truncate">Assistance Sociale</h4>
+                    <span class="text-[10px] text-gray-400 font-medium">25 Oct.</span>
+                  </div>
+                  <p class="text-xs text-gray-500 truncate">L'entretien est confirmé.</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 flex flex-col bg-[#fcfdfe] dark:bg-background-dark">
+          <div
+            class="px-6 py-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 flex justify-between items-center shrink-0">
+            <div class="flex items-center gap-4">
+              <div class="size-10 rounded-full bg-white flex items-center justify-center p-1 border border-gray-100">
+                <img alt="Embassy Icon" class="w-full h-full object-contain"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5u2tfTYzp6PRTXTYN8tY5KmaUweUJFTteZFyL3qxAjnrH3fVSTUEjUaKoX7WCgGLaiLZdATJA5Z_N1MDeTZzoM-LK5xDW8jluSHyc9uuQISq6Yi3XdF5QPUUoHok_1xyJdBBt-u44fgP9nP78D44lP5GANN4o-7VkoSkqdBhtKnNNs7-2FVHvWc7wHQuc4Dmn126X2XVvXhi7ucpa_1RVnyeusd6P0loFJcOInQgmuE8brJ1eLKvWpInZx_3g7bHo97frUXtHqXM" />
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-gray-900 dark:text-white">Consulat du Congo - Officiel</h3>
+                  <span class="material-symbols-outlined text-primary text-sm">verified</span>
+                </div>
+                <span class="text-[10px] text-accent-green font-bold uppercase tracking-widest">En ligne</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full text-gray-500 transition-colors">
+                <span class="material-symbols-outlined">phone</span>
+              </button>
+              <button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full text-gray-500 transition-colors">
+                <span class="material-symbols-outlined">more_vert</span>
+              </button>
+            </div>
+          </div>
+          <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6 custom-scrollbar">
+            <div class="flex justify-center">
+              <span
+                class="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-[10px] font-bold text-gray-500 uppercase tracking-tighter">Aujourd'hui</span>
+            </div>
+            <div class="flex flex-col gap-1 items-start">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[10px] font-bold text-primary uppercase">Service Consulaire</span>
+                <div class="size-3 bg-white rounded-full flex items-center justify-center p-0.5 border border-gray-100">
+                  <img alt="Mini Crest" class="w-full h-full object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5u2tfTYzp6PRTXTYN8tY5KmaUweUJFTteZFyL3qxAjnrH3fVSTUEjUaKoX7WCgGLaiLZdATJA5Z_N1MDeTZzoM-LK5xDW8jluSHyc9uuQISq6Yi3XdF5QPUUoHok_1xyJdBBt-u44fgP9nP78D44lP5GANN4o-7VkoSkqdBhtKnNNs7-2FVHvWc7wHQuc4Dmn126X2XVvXhi7ucpa_1RVnyeusd6P0loFJcOInQgmuE8brJ1eLKvWpInZx_3g7bHo97frUXtHqXM" />
+                </div>
+              </div>
+              <div class="chat-bubble-received">
+                Bonjour M. Mokolo, nous avons bien reçu vos Documents pour le renouvellement de passeport. Cependant, la
+                copie de l'acte de naissance est légèrement floue.
+              </div>
+              <span class="text-[10px] text-gray-400 mt-1 ml-1">10:42</span>
+            </div>
+            <div class="flex flex-col gap-1 items-end">
+              <div class="chat-bubble-sent">
+                Désolé pour cela. Je vais renvoyer un scan de meilleure qualité immédiatement. Est-ce que le format PDF
+                convient ?
+              </div>
+              <div class="flex items-center gap-1 mt-1 mr-1">
+                <span class="text-[10px] text-gray-400">10:44</span>
+                <span class="material-symbols-outlined text-[14px] text-accent-green">done_all</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-1 items-start">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[10px] font-bold text-primary uppercase">Service Consulaire</span>
+                <div class="size-3 bg-white rounded-full flex items-center justify-center p-0.5 border border-gray-100">
+                  <img alt="Mini Crest" class="w-full h-full object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5u2tfTYzp6PRTXTYN8tY5KmaUweUJFTteZFyL3qxAjnrH3fVSTUEjUaKoX7WCgGLaiLZdATJA5Z_N1MDeTZzoM-LK5xDW8jluSHyc9uuQISq6Yi3XdF5QPUUoHok_1xyJdBBt-u44fgP9nP78D44lP5GANN4o-7VkoSkqdBhtKnNNs7-2FVHvWc7wHQuc4Dmn126X2XVvXhi7ucpa_1RVnyeusd6P0loFJcOInQgmuE8brJ1eLKvWpInZx_3g7bHo97frUXtHqXM" />
+                </div>
+              </div>
+              <div class="chat-bubble-received">
+                Oui, le format PDF est préférable. Merci de l'envoyer directement ici.
+              </div>
+              <span class="text-[10px] text-gray-400 mt-1 ml-1">10:45</span>
+            </div>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+            <div
+              class="bg-gray-50 dark:bg-gray-800 rounded-xl p-2 flex items-center gap-2 border border-gray-100 dark:border-gray-700">
+              <button class="p-2 text-gray-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined">add_circle</span>
+              </button>
+              <button class="p-2 text-gray-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined">mood</span>
+              </button>
+              <input class="flex-1 bg-transparent border-none focus:ring-0 text-sm text-gray-700 dark:text-white"
+                placeholder="Écrivez votre message ici..." type="text" />
+              <button
+                class="flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-opacity-90 transition-all shadow-md">
+                <span>send</span>
+                <span class="material-symbols-outlined text-sm">send</span>
+              </button>
+            </div>
+            <div class="mt-3 flex gap-4 overflow-x-auto">
+              <button
+                class="flex items-center gap-2 px-3 py-1.5 border border-gray-100 dark:border-gray-800 rounded-lg hover:border-accent-gold transition-all shrink-0">
+                <span class="material-symbols-outlined text-sm text-primary">upload_file</span>
+                <span class="text-[11px] font-bold text-gray-600 dark:text-gray-400">Joindre un document (PDF)</span>
+              </button>
+              <button
+                class="flex items-center gap-2 px-3 py-1.5 border border-gray-100 dark:border-gray-800 rounded-lg hover:border-accent-gold transition-all shrink-0">
+                <span class="material-symbols-outlined text-sm text-primary">photo_library</span>
+                <span class="text-[11px] font-bold text-gray-600 dark:text-gray-400">Photo / Galerie</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

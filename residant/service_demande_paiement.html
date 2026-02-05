@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Paiement des Frais Consulaires | Ambassade du Congo en Russie</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "background-light": "#f8fafc",
+            "background-dark": "#111821",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+        }
+        .payment-method-card {
+            @apply border-2 transition-all cursor-pointer rounded-xl p-4 flex items-center gap-4;
+        }
+        .payment-method-card.active {
+            @apply border-primary bg-primary/5;
+        }
+        .payment-method-card.Inactif {
+            @apply border-gray-100 dark:border-gray-800 hover:border-gray-200;
+        }
+    </style>
+</head>
+
+<body
+  class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-primary flex flex-col py-6 shrink-0">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Ambassade du Congo</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Fédération de Russie</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-1 text-sm">
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-medium">Tableau de Bord</span>
+          </a>
+          <a class="sidebar-active flex items-center gap-4 px-6 py-3 text-white transition-all" href="./services.html">
+            <span class="material-symbols-outlined text-accent-gold">description</span>
+            <span class="font-medium">Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./message.html">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="font-medium">Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./sos.html">
+            <span class="material-symbols-outlined">emergency</span>
+            <span class="font-medium">SOS</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./notification.html">
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="font-medium">Notifications</span>
+          </a>
+        </nav>
+        <div class="mt-auto px-6">
+          <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+            <p class="text-xs text-white/60 mb-2 font-medium">Assistance 24/7</p>
+            <button
+              class="w-full py-2 bg-accent-gold text-primary text-xs font-bold rounded-lg hover:bg-opacity-90 transition-all">Support
+              Technique</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header
+        class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 px-8 py-5 flex justify-between items-center shrink-0">
+        <div class="flex flex-col">
+          <h2 class="text-2xl font-black text-primary dark:text-white tracking-tight">Paiement des Frais Consulaires
+          </h2>
+          <p class="text-xs text-gray-500 font-medium uppercase tracking-widest mt-0.5">Étape 2 sur 3 : Règlement
+            Sécurisé</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="flex flex-col items-end mr-2">
+            <span class="text-sm font-bold text-gray-900 dark:text-white">Jean-Pierre Mokolo</span>
+            <span class="text-[10px] text-gray-400 font-mono">ID: CG-RU-00124</span>
+          </div>
+          <div
+            class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <img alt="User avatar" class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto p-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div class="lg:col-span-4 flex flex-col gap-6">
+            <div
+              class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
+              <div class="p-5 border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/50">
+                <h3 class="font-bold text-primary dark:text-white">Récapitulatif de la Demande</h3>
+              </div>
+              <div class="p-5 flex flex-col gap-4 text-sm">
+                <div class="flex justify-between items-start">
+                  <span class="text-gray-500">Service :</span>
+                  <span class="font-bold text-right text-gray-900 dark:text-white">Renouvellement de Passeport
+                    Biométrique</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-500">Référence :</span>
+                  <span class="font-mono text-gray-700 dark:text-gray-300">#PAS-2023-9912</span>
+                </div>
+                <hr class="border-gray-100 dark:border-gray-800" />
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-500">Frais de dossier</span>
+                    <span class="text-gray-900 dark:text-white">4 500 ₽</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-500">Taxe Consulaire</span>
+                    <span class="text-gray-900 dark:text-white">1 200 ₽</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-500">Frais de port (DHL)</span>
+                    <span class="text-gray-900 dark:text-white">850 ₽</span>
+                  </div>
+                </div>
+                <hr class="border-gray-100 dark:border-gray-800" />
+                <div class="flex justify-between items-center p-3 bg-primary/5 rounded-lg border border-primary/10">
+                  <span class="font-bold text-primary dark:text-accent-gold">Montant Total</span>
+                  <span class="text-xl font-black text-primary dark:text-white">6 550 ₽</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-accent-green/5 border border-accent-green/20 rounded-xl p-5 flex items-start gap-4">
+              <div class="bg-accent-green text-white p-2 rounded-lg">
+                <span class="material-symbols-outlined">verified_user</span>
+              </div>
+              <div>
+                <p class="font-bold text-accent-green text-sm">Paiement Sécurisé</p>
+                <p class="text-xs text-accent-green/80 mt-1 leading-relaxed">
+                  Vos transactions sont cryptées avec le protocole SSL 256 bits. Aucune donnée bancaire n'est stockée
+                  sur nos serveurs.
+                </p>
+                <div class="flex gap-2 mt-3">
+                  <span class="material-symbols-outlined text-gray-400 text-sm">lock</span>
+                  <span class="material-symbols-outlined text-gray-400 text-sm">security</span>
+                  <span class="material-symbols-outlined text-gray-400 text-sm">shield</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 flex flex-col gap-6">
+            <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800">
+              <div class="p-6 border-b border-gray-100 dark:border-gray-800">
+                <h3 class="font-bold text-lg text-primary dark:text-white">Sélectionnez votre mode de paiement</h3>
+              </div>
+              <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  <div class="payment-method-card active">
+                    <div class="size-5 rounded-full border-4 border-primary bg-white flex shrink-0"></div>
+                    <div class="flex-1">
+                      <p class="font-bold text-sm text-gray-900 dark:text-white">Carte de Crédit / Débit</p>
+                      <p class="text-xs text-gray-500">Visa, Mastercard, MIR</p>
+                    </div>
+                    <span class="material-symbols-outlined text-gray-400">credit_card</span>
+                  </div>
+                  <div class="payment-method-card inactive">
+                    <div class="size-5 rounded-full border-2 border-gray-300 bg-white flex shrink-0"></div>
+                    <div class="flex-1">
+                      <p class="font-bold text-sm text-gray-900 dark:text-white">Virement Bancaire</p>
+                      <p class="text-xs text-gray-500">Téléchargement du reçu</p>
+                    </div>
+                    <span class="material-symbols-outlined text-gray-400">account_balance</span>
+                  </div>
+                </div>
+                <div class="space-y-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="col-span-2 space-y-2">
+                      <label class="text-xs font-bold text-gray-500 uppercase">Nom sur la carte</label>
+                      <input
+                        class="w-full bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary"
+                        placeholder="JEAN PIERRE MOKOLO" type="text" />
+                    </div>
+                    <div class="col-span-2 space-y-2 relative">
+                      <label class="text-xs font-bold text-gray-500 uppercase">Numéro de carte</label>
+                      <div class="relative">
+                        <input
+                          class="w-full bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg p-3 pl-12 text-sm focus:ring-primary focus:border-primary"
+                          placeholder="•••• •••• •••• ••••" type="text" />
+                        <span
+                          class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg">credit_card</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <label class="text-xs font-bold text-gray-500 uppercase">Date d'expiration</label>
+                      <input
+                        class="w-full bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary"
+                        placeholder="MM / AA" type="text" />
+                    </div>
+                    <div class="space-y-2 relative">
+                      <label class="text-xs font-bold text-gray-500 uppercase">CVC / CVV</label>
+                      <div class="relative">
+                        <input
+                          class="w-full bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary"
+                          placeholder="•••" type="text" />
+                        <span
+                          class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg cursor-help"
+                          title="Code de sécurité au dos de votre carte">help_outline</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <input class="rounded text-primary focus:ring-primary" id="save-card" type="checkbox" />
+                    <label class="text-xs text-gray-600 dark:text-gray-400" for="save-card">Enregistrer cette carte pour
+                      de futurs paiements consulaires</label>
+                  </div>
+                  <a href="./services_demande_result.html"
+                    class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-3">
+                    <span>Payer 6 550,00 ₽</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                  </a>
+                  <div class="flex justify-center items-center gap-6 pt-4 grayscale opacity-60">
+                    <img alt="Visa" class="h-4"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdTTApXVPvoavI3H_uH1LpuwsCg6m-bLytk3NGoTwU_7NYbyJ4NzV-QEIzhBzbCoMuLafHcChCqvYHouDTRn8VP40RvJJjYOyQVbm9L1YM05CGOTg464m149Aqqv_VkDZJviMe8NQYksMNuCLNH27_jMyoghEjgwUUfkpmqL8369waeRlyp0a9IUGLyuRWWJ40B5fcCxJBFUcaEgGB8QiJKCGe-EZiaGkuddqHPgFgoR9KlOetPKQ-RSM3HiIGFczISMvCSqyhnKQ" />
+                    <img alt="Mastercard" class="h-6"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWntPk4ggEioYfHifnhf7r8psY1BgE55pexXWj3KzgZxwRj_JzEAO9WsVn-PB48-dBR2GsOpdt0rzgIc2mDFFpb-9Le1ky_rhgrXZm7NwgQlRZKsPh6VlVHEZ_S1oVlRAyPsmlZ-1NOPKe23wXMWifpofBEpLqOch_VDhcqw8qtZSXsT9RU--yn0OnvoCJgtgfpyz3D7ulhJ827hlh9Nu_yiH6GgH4RM6lLlhtorXCNUjyr-IT2Gm_uuiNqTi7rR1_YjC8bRmi5S4" />
+                    <img alt="MIR" class="h-4"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeFsEKKzvXEfMSNR0pbntNo4fH_Xky7sfIHD7DzA6BkEPj_Gz4ZRTPsSSSTSx1QCjAm_K6Vb73MbCvrI_jgZejHFGawVQBRKGf0cz0-Np5PqX2zYG8Gop0AF69DjW0RDpD2GspwJsw_j0DtO2Mj0b71u7fyM5oZikRQYjd1uaLsvoyd1hapbSTX0_R1dewA9p680_riSCm1cugvOZfA3w_1PNLGf_oiM5tG61jkkNb00HZgZWnH7vUSA4F3seph3C5sn0GEztchIc" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-6 border-2 border-dashed border-gray-200 dark:border-gray-800 rounded-xl flex flex-col items-center text-center gap-4">
+              <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-full">
+                <span class="material-symbols-outlined text-gray-400 text-3xl">upload_file</span>
+              </div>
+              <div>
+                <p class="font-bold text-gray-900 dark:text-white">Vous avez déjà effectué le virement ?</p>
+                <p class="text-sm text-gray-500 mt-1 max-w-md">Téléchargez votre reçu de paiement (format PDF ou image)
+                  pour que nos Services puissent valider votre demande.</p>
+              </div>
+              <button
+                class="px-6 py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all text-sm">
+                Télécharger un reçu
+              </button>
+            </div>
+            <div class="flex items-center justify-between text-xs text-gray-500 font-medium">
+              <a class="flex items-center gap-1 hover:text-primary transition-colors" href="#">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>
+                Retour aux informations
+              </a>
+              <p>© 2023 Ambassade du Congo en Russie - Portail Citoyen</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

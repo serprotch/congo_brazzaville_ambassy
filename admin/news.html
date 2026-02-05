@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Gestion des Actualités | Ambassade du Congo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "navy-blue": "#0A1D37",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "bg-light": "#F8FAFC",
+            "sidebar-text": "#FFFFFF",
+            "main-text": "#1E293B",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+            color: #FFFFFF;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 10px;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="font-display bg-bg-light text-main-text antialiased">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-navy-blue flex flex-col py-6 shrink-0 shadow-xl z-20">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Ambassade du Congo</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-0.5 overflow-y-auto">
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Tableau de bord</span>
+          </a>
+          <details class="group" open>
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Site</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./events.html">Événements</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold font-bold text-accent-gold"
+                href="./news.html">Actualités</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./contact.html">Contacts</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Diaspora</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./liste_diaspora.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./enregistrements.html">Enregistrements</a>
+            </div>
+          </details>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./services.html">
+            <span class="material-symbols-outlined text-[20px]">list_alt</span>
+            <span>Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./annonce_et_opportunite.html">
+            <span class="material-symbols-outlined text-[20px]">newspaper</span>
+            <span>Annonces et opportunités</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./messages.html">
+            <span class="material-symbols-outlined text-[20px]">mail</span>
+            <span>Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./sos.html">
+            <span class="material-symbols-outlined text-[20px]">emergency</span>
+            <span>SOS</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./calendar.html">
+            <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+            <span>Calendrier</span>
+          </a>
+          <div class="mt-4 px-6 py-2">
+            <p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Administration</p>
+          </div>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Utilisateurs</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./users.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold" href="./roles.html">Rôles
+                et Permissions</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Paramètres</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+
+            </div>
+          </details>
+        </nav>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-slate-400">Actualités</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative dropdown-container">
+            <div class="flex items-center gap-3 cursor-pointer">
+              <div class="flex flex-col items-end">
+                <span class="text-sm font-bold text-navy-blue">Agent Consulaire #04</span>
+                <span class="text-[10px] text-accent-green font-mono uppercase font-semibold">En ligne • Moscou</span>
+              </div>
+              <div
+                class="size-10 rounded-lg bg-slate-100 flex items-center justify-center border border-slate-200 overflow-hidden shadow-sm">
+                <img alt="Agent avatar" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+              </div>
+            </div>
+            <div
+              class="dropdown-menu absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+                href="#profil">
+                <span class="material-symbols-outlined text-lg text-primary">account_circle</span>
+                Mon Profil
+              </a>
+              <div class="border-t border-slate-100 my-1"></div>
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-accent-red hover:bg-red-50 transition-colors"
+                href="./login.html">
+                <span class="material-symbols-outlined text-lg">logout</span>
+                Se déconnecter
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto p-8 flex flex-col gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex items-center gap-4">
+            <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined">newspaper</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Articles</p>
+              <p class="text-2xl font-black text-navy-blue">142</p>
+            </div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex items-center gap-4">
+            <div class="size-12 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600">
+              <span class="material-symbols-outlined">edit_note</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Brouillons</p>
+              <p class="text-2xl font-black text-navy-blue">08</p>
+            </div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex items-center gap-4">
+            <div class="size-12 rounded-xl bg-green-100 flex items-center justify-center text-accent-green">
+              <span class="material-symbols-outlined">verified</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Articles Publiés</p>
+              <p class="text-2xl font-black text-navy-blue">134</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
+          <div class="relative w-full lg:flex-1 max-w-xl">
+            <span
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+            <input
+              class="w-full pl-12 pr-4 py-3 bg-white border-slate-200 rounded-xl text-sm focus:ring-primary focus:border-primary"
+              placeholder="Rechercher un article..." type="text" />
+          </div>
+          <div class="flex items-center gap-3 w-full lg:w-auto">
+            <button
+              class="flex-1 lg:flex-none px-6 py-3 bg-white hover:bg-slate-50 text-navy-blue border border-slate-200 font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all">
+              <span class="material-symbols-outlined">category</span>
+              <span>Catégories</span>
+            </button>
+            <button
+              class="flex-1 lg:flex-none px-6 py-3 bg-accent-green hover:bg-green-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-green-200 transition-all">
+              <span class="material-symbols-outlined">add</span>
+              <span>Nouvelle Actualité</span>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <table class="w-full text-left">
+            <thead class="bg-slate-50/50 border-b border-slate-100">
+              <tr>
+                <th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider w-24">Image</th>
+                <th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Titre</th>
+                <th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">category</th>
+                <th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Date</th>
+                <th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider text-center">Statut
+                </th>
+                <th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider text-right">Action
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50/50 transition-colors">
+                <td class="px-6 py-4">
+                  <div class="w-16 h-12 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shadow-sm">
+                    <img alt="News thumbnail" class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5u2tfTYzp6PRTXTYN8tY5KmaUweUJFTteZFyL3qxAjnrH3fVSTUEjUaKoX7WCgGLaiLZdATJA5Z_N1MDeTZzoM-LK5xDW8jluSHyc9uuQISq6Yi3XdF5QPUUoHok_1xyJdBBt-u44fgP9nP78D44lP5GANN4o-7VkoSkqdBhtKnNNs7-2FVHvWc7wHQuc4Dmn126X2XVvXhi7ucpa_1RVnyeusd6P0loFJcOInQgmuE8brJ1eLKvWpInZx_3g7bHo97frUXtHqXM" />
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <p class="text-sm font-bold text-navy-blue line-clamp-1">Visite officielle du Ministre des Affaires
+                    Étrangères à Moscou</p>
+                  <p class="text-[10px] text-slate-400 font-medium">Auteur: Communication Ambassade</p>
+                </td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full uppercase tracking-wider border border-blue-100">Diplomatie</span>
+                </td>
+                <td class="px-6 py-4 text-xs text-slate-500 font-medium">15 Nov 2024</td>
+                <td class="px-6 py-4">
+                  <div class="flex justify-center">
+                    <span
+                      class="flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold rounded-full uppercase border border-green-100">
+                      <span class="size-1.5 bg-green-600 rounded-full"></span>
+                      Publié
+                    </span>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <div class="relative inline-block dropdown-container">
+                    <button class="p-1 hover:bg-slate-200 rounded-lg transition-colors">
+                      <span class="material-symbols-outlined text-slate-400">more_vert</span>
+                    </button>
+                    <div
+                      class="dropdown-menu absolute right-0 mt-1 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm text-accent-gold">edit</span>
+                        Modifier
+                      </a>
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm text-primary">visibility</span>
+                        Voir l'article
+                      </a>
+                      <div class="border-t border-slate-100 my-1"></div>
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-accent-red hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">delete</span>
+                        Supprimer
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition-colors">
+                <td class="px-6 py-4">
+                  <div class="w-16 h-12 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shadow-sm">
+                    <img alt="News thumbnail" class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL3r6vgolZumjaXc4oDvK1im1aP4JEncvRF_U_5lfuyCRq9FGTsM1bmL7xljGexzjk3WJnbAXHk_V3SWTUQN3XHRIoKDtnYA_NISX2Rbumoodjv6dsrBv-3TIfy_D7Kkj_x2x1S0Ea9gkLuv2KflqbIujRTPknA5Qg8c1aMtOj5LTpkNczU069wGY6x5-5LpSVjD21G5_aOtZaqy6JUA2PU5xzpFayaO98u6IHwC9jGsb8Sf0hI5p9S1Eezj3y_nPcG6BP3JuEwL8" />
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <p class="text-sm font-bold text-navy-blue line-clamp-1">Nouveau programme de bourses pour les
+                    étudiants congolais</p>
+                  <p class="text-[10px] text-slate-400 font-medium">Auteur: Service Académique</p>
+                </td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-3 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-full uppercase tracking-wider border border-purple-100">Éducation</span>
+                </td>
+                <td class="px-6 py-4 text-xs text-slate-500 font-medium">12 Nov 2024</td>
+                <td class="px-6 py-4">
+                  <div class="flex justify-center">
+                    <span
+                      class="flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold rounded-full uppercase border border-green-100">
+                      <span class="size-1.5 bg-green-600 rounded-full"></span>
+                      Publié
+                    </span>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <div class="relative inline-block dropdown-container">
+                    <button class="p-1 hover:bg-slate-200 rounded-lg transition-colors">
+                      <span class="material-symbols-outlined text-slate-400">more_vert</span>
+                    </button>
+                    <div
+                      class="dropdown-menu absolute right-0 mt-1 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm text-accent-gold">edit</span>
+                        Modifier
+                      </a>
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm text-primary">visibility</span>
+                        Voir l'article
+                      </a>
+                      <div class="border-t border-slate-100 my-1"></div>
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-accent-red hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">delete</span>
+                        Supprimer
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition-colors">
+                <td class="px-6 py-4">
+                  <div class="w-16 h-12 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shadow-sm">
+                    <div class="w-full h-full flex items-center justify-center bg-slate-200 text-slate-400">
+                      <span class="material-symbols-outlined">image</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <p class="text-sm font-bold text-navy-blue line-clamp-1">Communiqué : Recensement de la diaspora à
+                    Saint-Pétersbourg</p>
+                  <p class="text-[10px] text-slate-400 font-medium">Auteur: Service Consulaire</p>
+                </td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-3 py-1 bg-orange-50 text-orange-700 text-[10px] font-bold rounded-full uppercase tracking-wider border border-orange-100">Communauté</span>
+                </td>
+                <td class="px-6 py-4 text-xs text-slate-500 font-medium">08 Nov 2024</td>
+                <td class="px-6 py-4">
+                  <div class="flex justify-center">
+                    <span
+                      class="flex items-center gap-1.5 px-3 py-1 bg-amber-50 text-amber-700 text-[10px] font-bold rounded-full uppercase border border-amber-100">
+                      <span class="size-1.5 bg-amber-600 rounded-full"></span>
+                      Brouillon
+                    </span>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <div class="relative inline-block dropdown-container">
+                    <button class="p-1 hover:bg-slate-200 rounded-lg transition-colors">
+                      <span class="material-symbols-outlined text-slate-400">more_vert</span>
+                    </button>
+                    <div
+                      class="dropdown-menu absolute right-0 mt-1 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm text-accent-gold">edit</span>
+                        Modifier
+                      </a>
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm text-primary">visibility</span>
+                        Voir l'article
+                      </a>
+                      <div class="border-t border-slate-100 my-1"></div>
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-accent-red hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">delete</span>
+                        Supprimer
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition-colors">
+                <td class="px-6 py-4">
+                  <div class="w-16 h-12 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shadow-sm">
+                    <img alt="News thumbnail" class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL3r6vgolZumjaXc4oDvK1im1aP4JEncvRF_U_5lfuyCRq9FGTsM1bmL7xljGexzjk3WJnbAXHk_V3SWTUQN3XHRIoKDtnYA_NISX2Rbumoodjv6dsrBv-3TIfy_D7Kkj_x2x1S0Ea9gkLuv2KflqbIujRTPknA5Qg8c1aMtOj5LTpkNczU069wGY6x5-5LpSVjD21G5_aOtZaqy6JUA2PU5xzpFayaO98u6IHwC9jGsb8Sf0hI5p9S1Eezj3y_nPcG6BP3JuEwL8" />
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <p class="text-sm font-bold text-navy-blue line-clamp-1">Forum Économique Russie-Afrique :
+                    Opportunités pour le Congo</p>
+                  <p class="text-[10px] text-slate-400 font-medium">Auteur: Section Économique</p>
+                </td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full uppercase tracking-wider border border-emerald-100">Économie</span>
+                </td>
+                <td class="px-6 py-4 text-xs text-slate-500 font-medium">05 Nov 2024</td>
+                <td class="px-6 py-4">
+                  <div class="flex justify-center">
+                    <span
+                      class="flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold rounded-full uppercase border border-green-100">
+                      <span class="size-1.5 bg-green-600 rounded-full"></span>
+                      Publié
+                    </span>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <div class="relative inline-block dropdown-container">
+                    <button class="p-1 hover:bg-slate-200 rounded-lg transition-colors">
+                      <span class="material-symbols-outlined text-slate-400">more_vert</span>
+                    </button>
+                    <div
+                      class="dropdown-menu absolute right-0 mt-1 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm text-accent-gold">edit</span>
+                        Modifier
+                      </a>
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm text-primary">visibility</span>
+                        Voir l'article
+                      </a>
+                      <div class="border-t border-slate-100 my-1"></div>
+                      <a class="flex items-center gap-3 px-4 py-2 text-xs font-semibold text-accent-red hover:bg-slate-50"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">delete</span>
+                        Supprimer
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="px-6 py-4 border-t border-slate-100 bg-slate-50/30 flex items-center justify-between">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Affichage de 1-10 sur 142 articles
+            </p>
+            <div class="flex items-center gap-2">
+              <button
+                class="size-8 flex items-center justify-center rounded bg-white border border-slate-200 text-slate-400 hover:text-primary transition-colors disabled:opacity-50"
+                disabled="">
+                <span class="material-symbols-outlined text-lg">chevron_left</span>
+              </button>
+              <button
+                class="size-8 flex items-center justify-center rounded bg-primary text-white text-xs font-bold">1</button>
+              <button
+                class="size-8 flex items-center justify-center rounded bg-white border border-slate-200 text-slate-600 text-xs font-bold hover:bg-slate-50 transition-colors">2</button>
+              <button
+                class="size-8 flex items-center justify-center rounded bg-white border border-slate-200 text-slate-600 text-xs font-bold hover:bg-slate-50 transition-colors">3</button>
+              <span class="text-slate-400 text-xs px-1">...</span>
+              <button
+                class="size-8 flex items-center justify-center rounded bg-white border border-slate-200 text-slate-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-lg">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

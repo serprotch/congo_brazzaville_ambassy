@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Configuration de Nouveau Service | Ambassade du Congo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "navy-blue": "#0A1D37",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "bg-light": "#F8FAFC",
+            "sidebar-text": "#FFFFFF",
+            "main-text": "#1E293B",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+            color: #FFFFFF;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 10px;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="font-display bg-bg-light text-main-text antialiased transition-colors duration-200">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-navy-blue flex flex-col py-6 shrink-0 shadow-xl z-20">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Ambassade du Congo</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-0.5 overflow-y-auto">
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Tableau de bord</span>
+          </a>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Site</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./events.html">Événements</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./news.html">Actualités</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./contact.html">Contacts</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Diaspora</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./liste_diaspora.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./enregistrements.html">Enregistrements</a>
+            </div>
+          </details>
+          <a class="sidebar-active flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./services.html">
+            <span class="material-symbols-outlined text-[20px]">list_alt</span>
+            <span>Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./annonce_et_opportunite.html">
+            <span class="material-symbols-outlined text-[20px]">newspaper</span>
+            <span>Annonces et opportunités</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./messages.html">
+            <span class="material-symbols-outlined text-[20px]">mail</span>
+            <span>Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./sos.html">
+            <span class="material-symbols-outlined text-[20px]">emergency</span>
+            <span>SOS</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./calendar.html">
+            <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+            <span>Calendrier</span>
+          </a>
+          <div class="mt-4 px-6 py-2">
+            <p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Administration</p>
+          </div>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Utilisateurs</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./users.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold" href="./roles.html">Rôles
+                et Permissions</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Paramètres</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+
+            </div>
+          </details>
+        </nav>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-slate-400">Services</span>
+          <span class="material-symbols-outlined text-sm text-slate-400">chevron_right</span>
+          <span class="font-bold text-navy-blue">Créer</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative dropdown-container">
+            <div class="flex items-center gap-3 cursor-pointer">
+              <div class="flex flex-col items-end">
+                <span class="text-sm font-bold text-navy-blue">Agent Consulaire #04</span>
+                <span class="text-[10px] text-accent-green font-mono uppercase font-semibold">En ligne • Moscou</span>
+              </div>
+              <div
+                class="size-10 rounded-lg bg-slate-100 flex items-center justify-center border border-slate-200 overflow-hidden shadow-sm">
+                <img alt="Agent avatar" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+              </div>
+            </div>
+            <div
+              class="dropdown-menu absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+                href="#profil">
+                <span class="material-symbols-outlined text-lg text-primary">account_circle</span>
+                Mon Profil
+              </a>
+              <div class="border-t border-slate-100 my-1"></div>
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-accent-red hover:bg-red-50 transition-colors"
+                href="./login.html">
+                <span class="material-symbols-outlined text-lg">logout</span>
+                Se déconnecter
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto p-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <h2 class="text-2xl font-black text-navy-blue">Création d'un Nouveau Service</h2>
+              <p class="text-slate-500 text-sm mt-1">Définissez les paramètres, tarifs et procédures pour un nouveau
+                service consulaire.</p>
+            </div>
+            <div class="flex gap-3">
+              <button
+                class="px-6 py-2.5 rounded-lg border border-slate-300 text-sm font-bold text-slate-600 hover:bg-slate-50 transition-all">Annuler</button>
+              <button
+                class="px-6 py-2.5 rounded-lg bg-accent-green text-white text-sm font-bold hover:bg-green-700 transition-all shadow-md flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">save</span>
+                Enregistrer le Service
+              </button>
+            </div>
+          </div>
+          <form class="space-y-6">
+            <section class="bg-white border border-slate-200 p-8 rounded-xl shadow-sm mb-6">
+              <div class="flex items-center gap-2 mb-6 text-primary">
+                <span class="material-symbols-outlined">info</span>
+                <h3 class="font-bold text-lg">Informations Générales</h3>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="delay">Délai
+                    de traitement</label>
+                  <input
+                    class="w-full bg-slate-50 border-slate-200 rounded-lg py-2.5 px-4 text-sm focus:border-primary focus:ring-1 focus:ring-primary text-main-text transition-all"
+                    id="delay" placeholder="Ex: 5-7 jours ouvrés" type="text" />
+                </div>
+                <div class="space-y-2">
+                  <label class="input-label" for="category">category</label>
+                  <select class="form-input" id="category">
+                    <option value="">Sélectionnez une catégorie</option>
+                    <option value="visas">Visas</option>
+                    <option value="actes">Actes d'État Civil</option>
+                    <option value="passeports">Passeports &amp; Titres de voyage</option>
+                    <option value="legalisation">Légalisation de Documents</option>
+                  </select>
+                </div>
+              </div>
+            </section>
+            <section class="bg-white border border-slate-200 p-8 rounded-xl shadow-sm mb-6">
+              <div class="flex items-center gap-2 mb-6 text-primary">
+                <span class="material-symbols-outlined">payments</span>
+                <h3 class="font-bold text-lg">Détails Financiers &amp; Temps</h3>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="space-y-2">
+                  <label class="input-label" for="fees-rub">Frais (RUB)</label>
+                  <div class="relative">
+                    <input class="form-input pr-12" id="fees-rub" placeholder="0.00" type="number" min="0" />
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">RUB</span>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label class="input-label" for="fees-usd">Frais (USD)</label>
+                  <div class="relative">
+                    <input class="form-input pr-12" id="fees-usd" placeholder="0.00" type="number" min="0" />
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">USD</span>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label class="input-label" for="delay">Délai de traitement</label>
+                  <div class="relative">
+                    <input class="form-input" id="delay" placeholder="Ex: 5-7 jours ouvrés" type="text" />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="bg-white border border-slate-200 p-8 rounded-xl shadow-sm mb-6">
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-2 text-primary">
+                  <span class="material-symbols-outlined">description</span>
+                  <h3 class="font-bold text-lg">Pièces à fournir</h3>
+                </div>
+                <button class="text-xs font-bold text-primary flex items-center gap-1 hover:underline" type="button">
+                  <span class="material-symbols-outlined text-sm">add_circle</span>
+                  Ajouter un document
+                </button>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex-1 bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-sm text-main-text flex justify-between items-center">
+                    <span>Passeport valide (au moins 6 mois)</span>
+                    <span class="text-[10px] font-bold text-accent-red uppercase tracking-tighter">Obligatoire</span>
+                  </div>
+                  <button class="text-slate-400 hover:text-accent-red transition-colors" type="button">
+                    <span class="material-symbols-outlined">delete</span>
+                  </button>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex-1 bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-sm text-main-text flex justify-between items-center">
+                    <span>Formulaire de demande rempli</span>
+                    <span class="text-[10px] font-bold text-accent-red uppercase tracking-tighter">Obligatoire</span>
+                  </div>
+                  <button class="text-slate-400 hover:text-accent-red transition-colors" type="button">
+                    <span class="material-symbols-outlined">delete</span>
+                  </button>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex-1 bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-sm text-main-text flex justify-between items-center">
+                    <span>Photo d'identité (format 35x45mm)</span>
+                    <span class="text-[10px] font-bold text-accent-red uppercase tracking-tighter">Obligatoire</span>
+                  </div>
+                  <button class="text-slate-400 hover:text-accent-red transition-colors" type="button">
+                    <span class="material-symbols-outlined">delete</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+            <section class="bg-white border border-slate-200 p-8 rounded-xl shadow-sm mb-6">
+              <div class="flex items-center gap-2 mb-6 text-primary">
+                <span class="material-symbols-outlined">account_tree</span>
+                <h3 class="font-bold text-lg">Procédure de demande</h3>
+              </div>
+              <div class="border border-slate-200 rounded-lg overflow-hidden">
+                <div class="bg-slate-50 border-b border-slate-200 p-2 flex items-center gap-2">
+                  <button class="p-1.5 hover:bg-white rounded transition-colors" type="button"><span
+                      class="material-symbols-outlined text-lg">format_bold</span></button>
+                  <button class="p-1.5 hover:bg-white rounded transition-colors" type="button"><span
+                      class="material-symbols-outlined text-lg">format_italic</span></button>
+                  <button class="p-1.5 hover:bg-white rounded transition-colors" type="button"><span
+                      class="material-symbols-outlined text-lg">format_list_bulleted</span></button>
+                  <button class="p-1.5 hover:bg-white rounded transition-colors" type="button"><span
+                      class="material-symbols-outlined text-lg">format_list_numbered</span></button>
+                  <div class="w-px h-6 bg-slate-200 mx-1"></div>
+                  <button class="p-1.5 hover:bg-white rounded transition-colors" type="button"><span
+                      class="material-symbols-outlined text-lg">link</span></button>
+                  <button class="p-1.5 hover:bg-white rounded transition-colors" type="button"><span
+                      class="material-symbols-outlined text-lg">image</span></button>
+                </div>
+                <textarea class="w-full border-none focus:ring-0 p-4 min-h-[200px] text-sm text-main-text"
+                  placeholder="Décrivez les étapes de la procédure étape par étape..."></textarea>
+              </div>
+            </section>
+          </form>
+          <div class="mt-12 flex justify-end gap-4 pb-12">
+            <button
+              class="px-8 py-3 rounded-xl border border-slate-300 text-sm font-bold text-slate-600 hover:bg-slate-50 transition-all">Annuler
+              les modifications</button>
+            <button
+              class="px-8 py-3 rounded-xl bg-accent-green text-white text-sm font-bold hover:bg-green-700 transition-all shadow-lg flex items-center gap-2">
+              <span class="material-symbols-outlined">check_circle</span>
+              Valider et Publier le Service
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

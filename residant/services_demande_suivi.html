@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Suivi des Demandes | Ambassade du Congo en Russie</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "background-light": "#f8fafc",
+            "background-dark": "#111821",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+        }
+        .tab-active {
+            @apply border-primary text-primary dark:border-accent-gold dark:text-accent-gold;
+        }
+    </style>
+</head>
+
+<body
+  class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-primary flex flex-col py-6 shrink-0">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Ambassade du Congo</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Fédération de Russie</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-1">
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="text-sm font-medium">Tableau de Bord</span>
+          </a>
+          <a class="sidebar-active flex items-center gap-4 px-6 py-3 text-white transition-all" href="./services.html">
+            <span class="material-symbols-outlined">description</span>
+            <span class="text-sm font-medium">Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./message.html">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="text-sm font-medium">Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./sos.html">
+            <span class="material-symbols-outlined">emergency</span>
+            <span class="text-sm font-medium">SOS</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./notification.html">
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="text-sm font-medium">Notifications</span>
+          </a>
+        </nav>
+        <div class="mt-auto px-6">
+          <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+            <p class="text-xs text-white/60 mb-2">Besoin d'aide ?</p>
+            <button
+              class="w-full py-2 bg-accent-gold text-primary text-xs font-bold rounded-lg hover:bg-opacity-90 transition-all">Support
+              Technique</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header
+        class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 px-8 py-5 flex justify-between items-center shrink-0">
+        <h2 class="text-2xl font-black text-primary dark:text-white tracking-tight uppercase">Suivi des Demandes de
+          Services</h2>
+        <div class="flex items-center gap-4">
+          <div class="flex flex-col items-end mr-2">
+            <span class="text-sm font-bold text-gray-900 dark:text-white">Jean-Pierre Mokolo</span>
+            <span class="text-[10px] text-gray-400 font-mono">ID: CG-RU-00124</span>
+          </div>
+          <div
+            class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <img alt="User avatar" class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto bg-gray-50/50 dark:bg-background-dark">
+        <div class="max-w-6xl mx-auto p-8">
+          <div class="mb-10">
+            <label class="block text-sm font-bold text-primary dark:text-accent-gold uppercase tracking-wider mb-3"
+              for="track-search">Suivre une demande</label>
+            <div class="relative group">
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">Rechercher</span>
+              <input
+                class="w-full pl-12 pr-4 py-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-primary dark:focus:ring-accent-gold transition-all outline-none text-lg"
+                id="track-search" placeholder="Entrez votre numéro de référence (ex: RD-2023-XXXX)" type="text" />
+            </div>
+          </div>
+          <div class="flex border-b border-gray-200 dark:border-gray-800 mb-8 overflow-x-auto">
+            <button class="px-6 py-3 text-sm font-bold border-b-2 tab-active transition-all whitespace-nowrap">Toutes
+              les demandes</button>
+            <button
+              class="px-6 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-primary transition-all whitespace-nowrap">En
+              attente</button>
+            <button
+              class="px-6 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-primary transition-all whitespace-nowrap">Validées</button>
+            <button
+              class="px-6 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-primary transition-all whitespace-nowrap">Terminées</button>
+          </div>
+          <div class="grid gap-4">
+            <div
+              class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div
+                  class="size-14 bg-primary/5 dark:bg-accent-gold/5 rounded-xl flex items-center justify-center text-primary dark:text-accent-gold">
+                  <span class="material-symbols-outlined text-3xl">badge</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-white">Passeport Biométrique</h3>
+                  <div class="flex items-center gap-4 mt-1">
+                    <span class="text-xs font-mono text-gray-400">Réf: RD-2023-98442</span>
+                    <span class="text-[10px] text-gray-400">•</span>
+                    <span class="text-xs text-gray-500">Soumis le 25 Oct. 2023</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-8">
+                <span
+                  class="px-3 py-1 bg-accent-green/10 text-accent-green text-xs font-bold rounded-full border border-accent-green/20 flex items-center gap-1.5">
+                  <span class="size-1.5 rounded-full bg-accent-green"></span>
+                  Validée
+                </span>
+                <button
+                  class="flex items-center gap-2 px-5 py-2.5 bg-primary/5 hover:bg-primary hover:text-white text-primary text-sm font-bold rounded-lg transition-all border border-primary/10">
+                  Voir les détails
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div
+                  class="size-14 bg-primary/5 dark:bg-accent-gold/5 rounded-xl flex items-center justify-center text-primary dark:text-accent-gold">
+                  <span class="material-symbols-outlined text-3xl">description</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-white">Certificat de Naissance</h3>
+                  <div class="flex items-center gap-4 mt-1">
+                    <span class="text-xs font-mono text-gray-400">Réf: RD-2023-10255</span>
+                    <span class="text-[10px] text-gray-400">•</span>
+                    <span class="text-xs text-gray-500">Soumis le 02 Nov. 2023</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-8">
+                <span
+                  class="px-3 py-1 bg-accent-gold/10 text-accent-gold text-xs font-bold rounded-full border border-accent-gold/20 flex items-center gap-1.5">
+                  <span class="size-1.5 rounded-full bg-accent-gold"></span>
+                  En cours
+                </span>
+                <button
+                  class="flex items-center gap-2 px-5 py-2.5 bg-primary/5 hover:bg-primary hover:text-white text-primary text-sm font-bold rounded-lg transition-all border border-primary/10">
+                  Voir les détails
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div
+                  class="size-14 bg-primary/5 dark:bg-accent-gold/5 rounded-xl flex items-center justify-center text-primary dark:text-accent-gold">
+                  <span class="material-symbols-outlined text-3xl">travel_explore</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-white">Visa de Visite (Famille)</h3>
+                  <div class="flex items-center gap-4 mt-1">
+                    <span class="text-xs font-mono text-gray-400">Réf: RD-2023-08771</span>
+                    <span class="text-[10px] text-gray-400">•</span>
+                    <span class="text-xs text-gray-500">Soumis le 15 Sep. 2023</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-8">
+                <span
+                  class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 text-xs font-bold rounded-full border border-gray-200 dark:border-gray-700 flex items-center gap-1.5">
+                  <span class="size-1.5 rounded-full bg-gray-400"></span>
+                  Terminée
+                </span>
+                <button
+                  class="flex items-center gap-2 px-5 py-2.5 bg-primary/5 hover:bg-primary hover:text-white text-primary text-sm font-bold rounded-lg transition-all border border-primary/10">
+                  Voir les détails
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 text-center max-w-lg mx-auto">
+            <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+              Vous ne trouvez pas votre demande ? Vérifiez que vous avez correctement saisi le numéro de référence reçu
+              par e-mail ou contactez le support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Services Consulaires - Ambassade de la République du Congo en Fédération de Russie</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "background-light": "#f6f7f8",
+            "background-dark": "#111821",
+            "congolese-green": "#009543",
+            "congolese-yellow": "#FBDE4A",
+            "congolese-red": "#DC241F",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+
+    #tab1:checked~#content1,
+    #tab2:checked~#content2,
+    #tab3:checked~#content3,
+    #tab4:checked~#content4 {
+      display: grid;
+    }
+
+    #tab1:checked~.tab-bar label[for="tab1"],
+    #tab2:checked~.tab-bar label[for="tab2"],
+    #tab3:checked~.tab-bar label[for="tab3"],
+    #tab4:checked~.tab-bar label[for="tab4"] {
+      border-bottom-color: #009543;
+      color: #009543;
+      background-color: rgba(0, 149, 67, 0.05);
+    }
+
+    .tab-Contenu {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-background-dark text-[#111418] dark:text-white antialiased">
+  <header
+    class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-10">
+        <a class="flex items-center gap-3" href="./index.html">
+          <img src="./images/logo_ambassy.png" alt="" class="w-14">
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-bold text-primary dark:text-congolese-yellow underline underline-offset-8 decoration-2"
+            href="./news_detail.html">Services</a>
+          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+            href="./news.html">Actualités</a>
+          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+            href="./about.html">Ambassade</a>
+          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+            href="./contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-6">
+        <!--<div class="hidden lg:flex items-center bg-[#f0f2f4] dark:bg-gray-800 rounded-lg px-3 py-1.5 h-10 w-48">
+          <span class="material-symbols-outlined text-[#637288] text-sm">Rechercher</span>
+          <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-[#637288]"
+            placeholder="Rechercher..." type="text" />
+        </div>-->
+        <button
+          class="flex items-center gap-2 bg-primary text-white text-xs font-extrabold px-4 py-2.5 rounded-lg hover:bg-primary/90 transition-all uppercase tracking-widest">
+          <span class="material-symbols-outlined text-sm">translate</span>
+          <span>RU / FR</span>
+        </button>
+      </div>
+    </div>
+    <div class="flex h-1 w-full">
+      <div class="flex-1 bg-congolese-green"></div>
+      <div class="flex-1 bg-congolese-yellow"></div>
+      <div class="flex-1 bg-congolese-red"></div>
+    </div>
+  </header>
+  <main class="min-h-screen">
+    <section class="max-w-[1200px] mx-auto px-6 lg:px-10 pt-16 pb-8">
+      <div class="border-l-4 border-congolese-green pl-6">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-primary dark:text-white mb-4">Services Consulaires</h2>
+        <p class="text-gray-500 dark:text-gray-400 text-lg max-w-2xl">
+          Guide complet des procédures administratives et Services d'accompagnement pour les ressortissants congolais et
+          les visiteurs en Fédération de Russie.
+        </p>
+      </div>
+    </section>
+    <section class="max-w-[1200px] mx-auto px-6 lg:px-10 py-6">
+      <input checked="" class="hidden" id="tab1" name="service-tabs" type="radio" />
+      <input class="hidden" id="tab2" name="service-tabs" type="radio" />
+      <input class="hidden" id="tab3" name="service-tabs" type="radio" />
+      <input class="hidden" id="tab4" name="service-tabs" type="radio" />
+      <div class="tab-bar flex overflow-x-auto border-b border-gray-200 dark:border-gray-800 mb-12 scrollbar-hide">
+        <label
+          class="flex items-center gap-3 px-8 py-5 cursor-pointer border-b-4 border-transparent hover:bg-gray-50 dark:hover:bg-gray-900 transition-all whitespace-nowrap"
+          for="tab1">
+          <span class="material-symbols-outlined">flight_takeoff</span>
+          <span class="font-extrabold text-sm uppercase tracking-wider">Documents de Voyage</span>
+        </label>
+        <label
+          class="flex items-center gap-3 px-8 py-5 cursor-pointer border-b-4 border-transparent hover:bg-gray-50 dark:hover:bg-gray-900 transition-all whitespace-nowrap"
+          for="tab2">
+          <span class="material-symbols-outlined">family_restroom</span>
+          <span class="font-extrabold text-sm uppercase tracking-wider">État Civil</span>
+        </label>
+        <label
+          class="flex items-center gap-3 px-8 py-5 cursor-pointer border-b-4 border-transparent hover:bg-gray-50 dark:hover:bg-gray-900 transition-all whitespace-nowrap"
+          for="tab3">
+          <span class="material-symbols-outlined">description</span>
+          <span class="font-extrabold text-sm uppercase tracking-wider">Visas</span>
+        </label>
+        <label
+          class="flex items-center gap-3 px-8 py-5 cursor-pointer border-b-4 border-transparent hover:bg-gray-50 dark:hover:bg-gray-900 transition-all whitespace-nowrap"
+          for="tab4">
+          <span class="material-symbols-outlined">gavel</span>
+          <span class="font-extrabold text-sm uppercase tracking-wider">Actes Administratifs</span>
+        </label>
+      </div>
+      <div class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-16" id="content1">
+        <div
+          class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
+          <div
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">badge</span>
+          </div>
+          <h4 class="text-xl font-extrabold mb-3">Renouvellement de Passeport</h4>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+            Procédure d'obtention et de renouvellement du passeport biométrique congolais pour les résidents.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800">
+            <a href="./services_detail.html"
+              class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 flex items-center justify-center gap-2 transition-all">
+              <span>Détails et Procédure</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+          <div class="h-1 w-0 bg-congolese-green group-hover:w-full transition-all duration-300 mt-4"></div>
+        </div>
+        <div
+          class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
+          <div
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">emergency_share</span>
+          </div>
+          <h4 class="text-xl font-extrabold mb-3">Laissez-passer</h4>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+            Document de voyage d'urgence délivré en cas de perte ou de vol du passeport pour un retour direct au Congo.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800">
+            <a href="./services_detail.html"
+              class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 flex items-center justify-center gap-2 transition-all">
+              <span>Détails et Procédure</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+          <div class="h-1 w-0 bg-congolese-green group-hover:w-full transition-all duration-300 mt-4"></div>
+        </div>
+      </div>
+      <div class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-16" id="content2">
+        <div
+          class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
+          <div
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">child_care</span>
+          </div>
+          <h4 class="text-xl font-extrabold mb-3">Transcription d'acte de naissance</h4>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+            Enregistrement des naissances survenues en Russie dans les registres d'état civil congolais.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800">
+            <a href="./services_detail.html"
+              class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 flex items-center justify-center gap-2 transition-all">
+              <span>Détails et Procédure</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+          <div class="h-1 w-0 bg-congolese-yellow group-hover:w-full transition-all duration-300 mt-4"></div>
+        </div>
+        <div
+          class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
+          <div
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">favorite</span>
+          </div>
+          <h4 class="text-xl font-extrabold mb-3">Mariage</h4>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+            Formalités pour la célébration ou la transcription d'un mariage civil devant les autorités consulaires.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800">
+            <a href="./services_detail.html"
+              class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 flex items-center justify-center gap-2 transition-all">
+              <span>Détails et Procédure</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+          <div class="h-1 w-0 bg-congolese-yellow group-hover:w-full transition-all duration-300 mt-4"></div>
+        </div>
+      </div>
+      <div class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-16" id="content3">
+        <div
+          class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
+          <div
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">photo_camera</span>
+          </div>
+          <h4 class="text-xl font-extrabold mb-3">Visa Touristique</h4>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+            Pour les citoyens étrangers souhaitant visiter la République du Congo pour le plaisir ou les loisirs.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800">
+            <a href="./services_detail.html"
+              class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 flex items-center justify-center gap-2 transition-all">
+              <span>Détails et Procédure</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+          <div class="h-1 w-0 bg-congolese-red group-hover:w-full transition-all duration-300 mt-4"></div>
+        </div>
+        <div
+          class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
+          <div
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">business_center</span>
+          </div>
+          <h4 class="text-xl font-extrabold mb-3">Visa d'Affaires</h4>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+            Délivré aux voyageurs se rendant au Congo pour des réunions professionnelles, investissements ou commerce.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800">
+            <a href="./services_detail.html"
+              class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 flex items-center justify-center gap-2 transition-all">
+              <span>Détails et Procédure</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+          <div class="h-1 w-0 bg-congolese-red group-hover:w-full transition-all duration-300 mt-4"></div>
+        </div>
+      </div>
+      <div class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-16" id="content4">
+        <div
+          class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
+          <div
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">verified</span>
+          </div>
+          <h4 class="text-xl font-extrabold mb-3">Légalisation</h4>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+            Certification de l'authenticité des signatures apposées sur des Documents officiels russes ou congolais.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800">
+            <a href="./services_detail.html"
+              class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 flex items-center justify-center gap-2 transition-all">
+              <span>Détails et Procédure</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+          <div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-300 mt-4"></div>
+        </div>
+        <div
+          class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
+          <div
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">article</span>
+          </div>
+          <h4 class="text-xl font-extrabold mb-3">Certificat de Coutume</h4>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+            Attestation relative aux lois et coutumes congolaises requise pour certaines formalités en Russie.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800">
+            <a href="./services_detail.html"
+              class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 flex items-center justify-center gap-2 transition-all">
+              <span>Détails et Procédure</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+          <div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-300 mt-4"></div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-[1200px] mx-auto px-6 lg:px-10 py-16">
+      <div
+        class="bg-primary rounded-3xl p-8 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+          <svg class="w-full h-full text-white fill-current" viewBox="0 0 100 100">
+            <path d="M0 0L100 0L100 100L0 100Z" fill="none" stroke="currentColor" stroke-dasharray="2 2"
+              stroke-width="0.5"></path>
+            <circle cx="80" cy="20" fill="none" r="15" stroke="currentColor" stroke-width="1"></circle>
+          </svg>
+        </div>
+        <div class="max-w-xl relative z-10">
+          <h3 class="text-3xl lg:text-4xl font-extrabold mb-6">Besoin d'aide spécifique ?</h3>
+          <p class="text-white/80 text-lg mb-8 leading-relaxed font-medium">
+            Pour toute question non répertoriée ou pour un cas de force majeure, n'hésitez pas à contacter directement
+            le bureau consulaire.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="./contact.html"
+              class="bg-congolese-yellow text-primary font-extrabold py-4 px-8 rounded-lg hover:bg-white transition-colors">Contacter
+              le Consulat</a>
+            <a href="./contact.html"
+              class="bg-transparent border border-white/40 text-white font-extrabold py-4 px-8 rounded-lg hover:bg-white/10 transition-colors">Prendre
+              Rendez-vous</a>
+          </div>
+        </div>
+        <div class="flex-shrink-0 relative z-10">
+          <div class="bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="size-12 rounded-full bg-congolese-green flex items-center justify-center text-white">
+                <span class="material-symbols-outlined">schedule</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-white/60">Section Consulaire</p>
+                <p class="font-bold">Lun - Ven: 09:00 - 14:00</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="size-12 rounded-full bg-congolese-red flex items-center justify-center text-white">
+                <span class="material-symbols-outlined">support_agent</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-white/60">Assistance Téléphonique</p>
+                <p class="font-bold">+7 (499) 236-33-68</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-gray-100 dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 py-12">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="size-8 text-primary dark:text-white">
+              <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4L6 17V31H24V44H42V17L24 4Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <h6 class="text-lg font-extrabold uppercase tracking-tight">Ambassade du Congo</h6>
+          </div>
+          <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm mb-6 leading-relaxed">
+            Mission diplomatique officielle de la République du Congo en Fédération de Russie. Committed to bilateral
+            excellence and serving our citizens abroad.
+          </p>
+          <div class="flex gap-4">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+              <span class="material-symbols-outlined text-xl">language</span>
+            </a>
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+              <span class="material-symbols-outlined text-xl">mail</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Liens Rapides</h6>
+          <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
+            <li><a class="hover:text-primary dark:hover:text-white" href="./services.html">Services</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="./news.html">Actualités</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="./about.html">A propos</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Légal</h6>
+          <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
+            <li><a class="hover:text-primary dark:hover:text-white" href="#">Politique de Confidentialité</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white" href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">© 2026 Ambassade de la République du Congo.
+          Tous rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <div class="h-1 w-6 bg-congolese-green"></div>
+          <div class="h-1 w-6 bg-congolese-yellow"></div>
+          <div class="h-1 w-6 bg-congolese-red"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

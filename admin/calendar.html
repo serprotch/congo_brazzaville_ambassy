@@ -1,0 +1,453 @@
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Calendrier des Rendez-vous Consulaire | Ambassade du Congo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "navy-blue": "#0A1D37",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "bg-light": "#F8FAFC",
+            "sidebar-text": "#FFFFFF",
+            "main-text": "#1E293B",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+            color: #FFFFFF;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: 80px repeat(5, 1fr);
+            grid-template-rows: auto repeat(10, 80px);
+        }
+        .calendar-slot {
+            border-right: 1px solid #E2E8F0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 10px;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="font-display bg-bg-light text-main-text antialiased">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-navy-blue flex flex-col py-6 shrink-0 shadow-xl z-20">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Ambassade du Congo</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-0.5 overflow-y-auto">
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Tableau de bord</span>
+          </a>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Site</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./events.html">Événements</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./news.html">Actualités</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./contact.html">Contacts</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Diaspora</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./liste_diaspora.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./enregistrements.html">Enregistrements</a>
+            </div>
+          </details>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./services.html">
+            <span class="material-symbols-outlined text-[20px]">list_alt</span>
+            <span>Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./annonce_et_opportunite.html">
+            <span class="material-symbols-outlined text-[20px]">newspaper</span>
+            <span>Annonces et opportunités</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./messages.html">
+            <span class="material-symbols-outlined text-[20px]">mail</span>
+            <span>Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./sos.html">
+            <span class="material-symbols-outlined text-[20px]">emergency</span>
+            <span>SOS</span>
+          </a>
+          <a class="sidebar-active flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./calendar.html">
+            <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+            <span>Calendrier</span>
+          </a>
+          <div class="mt-4 px-6 py-2">
+            <p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Administration</p>
+          </div>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Utilisateurs</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./users.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold" href="./roles.html">Rôles
+                et Permissions</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Paramètres</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+
+            </div>
+          </details>
+        </nav>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-slate-400">Calendrier</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative dropdown-container">
+            <div class="flex items-center gap-3 cursor-pointer">
+              <div class="flex flex-col items-end">
+                <span class="text-sm font-bold text-navy-blue">Agent Consulaire #04</span>
+                <span class="text-[10px] text-accent-green font-mono uppercase font-semibold">En ligne • Moscou</span>
+              </div>
+              <div
+                class="size-10 rounded-lg bg-slate-100 flex items-center justify-center border border-slate-200 overflow-hidden shadow-sm">
+                <img alt="Agent avatar" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+              </div>
+            </div>
+            <div
+              class="dropdown-menu absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+                href="#profil">
+                <span class="material-symbols-outlined text-lg text-primary">account_circle</span>
+                Mon Profil
+              </a>
+              <div class="border-t border-slate-100 my-1"></div>
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-accent-red hover:bg-red-50 transition-colors"
+                href="./login.html">
+                <span class="material-symbols-outlined text-lg">logout</span>
+                Se déconnecter
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto p-8 space-y-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-2xl font-black text-navy-blue uppercase tracking-tight">Gestion des Rendez-vous</h1>
+            <p class="text-slate-500 text-sm">Calendrier hebdomadaire des prestations consulaires.</p>
+          </div>
+          <div class="flex gap-3">
+            <a href="./calendar_config.html"
+              class="bg-white border border-slate-200 text-navy-blue px-5 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-slate-50 transition-all">
+              <span class="material-symbols-outlined text-lg">settings</span>
+              <span>Gérer les Disponibilités</span>
+            </a>
+            <a href="./calendar_daily.html"
+              class="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-lg shadow-blue-100 hover:bg-navy-blue transition-all">
+              <span class="material-symbols-outlined text-lg">add</span>
+              <span>Nouveau Rendez-vous</span>
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-center gap-5">
+            <div class="size-12 rounded-full bg-accent-green/10 flex items-center justify-center text-accent-green">
+              <span class="material-symbols-outlined">event_available</span>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">RDV Aujourd'hui</p>
+              <p class="text-2xl font-black text-navy-blue">14</p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-center gap-5">
+            <div class="size-12 rounded-full bg-accent-gold/10 flex items-center justify-center text-accent-gold">
+              <span class="material-symbols-outlined">pending_actions</span>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">En Attente de Confirmation</p>
+              <p class="text-2xl font-black text-navy-blue">08</p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-center gap-5">
+            <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined">date_range</span>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Total Hebdomadaire</p>
+              <p class="text-2xl font-black text-navy-blue">52</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden flex flex-col">
+          <div class="p-4 border-b border-slate-100 flex items-center justify-between bg-white">
+            <div class="flex items-center gap-4">
+              <button class="p-2 hover:bg-slate-100 rounded-lg transition-colors"><span
+                  class="material-symbols-outlined">chevron_left</span></button>
+              <h2 class="font-bold text-navy-blue">Semaine du 18 - 22 Novembre 2024</h2>
+              <button class="p-2 hover:bg-slate-100 rounded-lg transition-colors"><span
+                  class="material-symbols-outlined">chevron_right</span></button>
+            </div>
+            <div class="flex bg-slate-100 p-1 rounded-lg">
+              <button
+                class="px-4 py-1.5 text-xs font-bold text-navy-blue bg-white shadow-sm rounded-md">Semaine</button>
+              <button class="px-4 py-1.5 text-xs font-bold text-slate-500 hover:text-navy-blue">Jour</button>
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <div class="calendar-grid min-w-[900px]">
+              <div class="bg-slate-50 p-4 border-r border-b border-slate-200"></div>
+              <div class="bg-slate-50 p-4 border-r border-b border-slate-200 text-center">
+                <span class="block text-[10px] font-bold text-slate-400 uppercase">Lundi</span>
+                <span class="text-lg font-black text-navy-blue">18</span>
+              </div>
+              <div class="bg-slate-50 p-4 border-r border-b border-slate-200 text-center">
+                <span class="block text-[10px] font-bold text-slate-400 uppercase">Mardi</span>
+                <span class="text-lg font-black text-navy-blue">19</span>
+              </div>
+              <div class="bg-slate-50 p-4 border-r border-b border-slate-200 text-center">
+                <span class="block text-[10px] font-bold text-slate-400 uppercase">Mercredi</span>
+                <span class="text-lg font-black text-navy-blue">20</span>
+              </div>
+              <div class="bg-slate-50 p-4 border-r border-b border-slate-200 text-center">
+                <span class="block text-[10px] font-bold text-slate-400 uppercase">Jeudi</span>
+                <span class="text-lg font-black text-navy-blue">21</span>
+              </div>
+              <div class="bg-slate-50 p-4 border-b border-slate-200 text-center">
+                <span class="block text-[10px] font-bold text-slate-400 uppercase">Vendredi</span>
+                <span class="text-lg font-black text-navy-blue">22</span>
+              </div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                08:00</div>
+              <div class="calendar-slot p-1 relative group">
+                <div
+                  class="bg-accent-green/10 border-l-4 border-accent-green p-2 rounded h-full cursor-pointer hover:bg-accent-green/20 transition-all">
+                  <p class="text-[10px] font-bold text-accent-green uppercase truncate">PASSEPORT</p>
+                  <p class="text-xs font-bold text-navy-blue truncate">M. NGOUABI</p>
+                </div>
+              </div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1">
+                <div
+                  class="bg-primary/10 border-l-4 border-primary p-2 rounded h-full cursor-pointer hover:bg-primary/20 transition-all">
+                  <p class="text-[10px] font-bold text-primary uppercase truncate">VISA AFFAIRES</p>
+                  <p class="text-xs font-bold text-navy-blue truncate">A. IVANOV</p>
+                </div>
+              </div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                09:00</div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1 relative">
+                <div
+                  class="bg-accent-gold/10 border-l-4 border-accent-gold p-2 rounded h-full cursor-pointer hover:bg-accent-gold/20 transition-all">
+                  <p class="text-[10px] font-bold text-accent-gold uppercase truncate">LÉGALISATION</p>
+                  <p class="text-xs font-bold text-navy-blue truncate">S. PETROV</p>
+                </div>
+              </div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1 relative">
+                <div
+                  class="bg-accent-red/10 border-l-4 border-accent-red p-2 rounded h-full cursor-pointer hover:bg-accent-red/20 transition-all">
+                  <p class="text-[10px] font-bold text-accent-red uppercase truncate">SOS URGENCE</p>
+                  <p class="text-xs font-bold text-navy-blue truncate">J. MAKOSSO</p>
+                </div>
+              </div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                10:00</div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1">
+                <div class="bg-accent-green/10 border-l-4 border-accent-green p-2 rounded h-full cursor-pointer">
+                  <p class="text-[10px] font-bold text-accent-green uppercase truncate">PASSEPORT</p>
+                  <p class="text-xs font-bold text-navy-blue truncate">B. TCHICAYA</p>
+                </div>
+              </div>
+              <div class="calendar-slot p-1"></div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                11:00</div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                12:00</div>
+              <div class="calendar-slot col-span-5 bg-slate-50/50 flex items-center justify-center">
+                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Pause Déjeuner</span>
+              </div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                13:00</div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                14:00</div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1">
+                <div class="bg-primary/10 border-l-4 border-primary p-2 rounded h-full cursor-pointer">
+                  <p class="text-[10px] font-bold text-primary uppercase truncate">VISA TOURISME</p>
+                  <p class="text-xs font-bold text-navy-blue truncate">E. SOKOLOV</p>
+                </div>
+              </div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                15:00</div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                16:00</div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                17:00</div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div
+                class="calendar-slot flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                18:00</div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+              <div class="calendar-slot p-1"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-6 flex gap-6 items-center">
+          <div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+            <span class="material-symbols-outlined text-3xl">info</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-primary mb-1">Information de Service</h5>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Les rendez-vous de passeport sont prioritaires les lundis et jeudis matin. Assurez-vous de vérifier la
+              complétude des dossiers avant de valider l'entrée du citoyen dans l'enceinte de l'ambassade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

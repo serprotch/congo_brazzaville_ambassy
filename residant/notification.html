@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Centre de Notifications | Ambassade du Congo en Russie</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "background-light": "#f8fafc",
+            "background-dark": "#111821",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+        }
+        .notification-card {
+            @apply bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-5 rounded-xl transition-all hover:shadow-md flex items-start gap-4 relative overflow-hidden;
+        }
+        .unread-dot {
+            @apply size-2.5 bg-accent-green rounded-full;
+        }
+    </style>
+</head>
+
+<body
+  class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-primary flex flex-col py-6 shrink-0">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Ambassade du Congo</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Fédération de Russie</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-1">
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="text-sm font-medium">Tableau de Bord</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./services.html">
+            <span class="material-symbols-outlined">description</span>
+            <span class="text-sm font-medium">Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./message.html">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="text-sm font-medium">Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-all"
+            href="./sos.html">
+            <span class="material-symbols-outlined">emergency</span>
+            <span class="text-sm font-medium">SOS</span>
+          </a>
+          <a class="sidebar-active flex items-center justify-between px-6 py-3 text-white transition-all" href="./notification.html">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined">notifications</span>
+              <span class="text-sm font-medium">Notifications</span>
+            </div>
+            <span class="bg-accent-gold text-primary text-[10px] font-bold px-1.5 py-0.5 rounded-full">5</span>
+          </a>
+        </nav>
+        <div class="mt-auto px-6">
+          <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+            <p class="text-xs text-white/60 mb-2">Besoin d'aide ?</p>
+            <button
+              class="w-full py-2 bg-accent-gold text-primary text-xs font-bold rounded-lg hover:bg-opacity-90 transition-all">Support
+              Technique</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header
+        class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 px-8 py-5 flex justify-between items-center shrink-0">
+        <h2 class="text-2xl font-black text-primary dark:text-white tracking-tight">Notifications</h2>
+        <div class="flex items-center gap-4">
+          <div class="flex flex-col items-end mr-2">
+            <span class="text-sm font-bold text-gray-900 dark:text-white">Jean-Pierre Mokolo</span>
+            <span class="text-[10px] text-gray-400 font-mono">ID: CG-RU-00124</span>
+          </div>
+          <div
+            class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <img alt="User avatar" class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+          </div>
+        </div>
+      </header>
+      <div class="flex-1 overflow-y-auto p-8 flex flex-col lg:flex-row gap-8">
+        <div class="flex-1 flex flex-col gap-6">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-bold text-primary dark:text-white">Notifications Récentes</h3>
+            <button class="text-xs font-bold text-accent-gold hover:underline flex items-center gap-1">
+              <span class="material-symbols-outlined text-sm">done_all</span>
+              Tout marquer comme lu
+            </button>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="notification-card border-l-4 border-l-accent-green">
+              <div
+                class="size-10 rounded-full bg-accent-green/10 flex items-center justify-center text-accent-green shrink-0">
+                <span class="material-symbols-outlined">check_circle</span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start">
+                  <h4 class="font-bold text-sm text-gray-900 dark:text-white">Validation de dossier</h4>
+                  <div class="unread-dot"></div>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Votre recensement consulaire a été validé. Vous
+                  pouvez désormais accéder aux Services premium.</p>
+                <p class="text-[10px] font-medium text-gray-400 mt-3 uppercase">Il y a 2 heures</p>
+              </div>
+            </div>
+            <div class="notification-card border-l-4 border-l-accent-gold">
+              <div
+                class="size-10 rounded-full bg-accent-gold/10 flex items-center justify-center text-accent-gold shrink-0">
+                <span class="material-symbols-outlined">schedule</span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start">
+                  <h4 class="font-bold text-sm text-gray-900 dark:text-white">Mise à jour de statut</h4>
+                  <div class="unread-dot"></div>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Le statut de votre demande de passeport est
+                  passé à "En cours de traitement".</p>
+                <p class="text-[10px] font-medium text-gray-400 mt-3 uppercase">Il y a 5 heures</p>
+              </div>
+            </div>
+            <div class="notification-card border-l-4 border-l-primary">
+              <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start">
+                  <h4 class="font-bold text-sm text-gray-900 dark:text-white">Nouveau message</h4>
+                  <div class="unread-dot"></div>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Vous avez reçu une réponse de la section visa
+                  concernant votre demande de rendez-vous.</p>
+                <p class="text-[10px] font-medium text-gray-400 mt-3 uppercase">Hier, à 16:45</p>
+              </div>
+            </div>
+            <div class="notification-card opacity-80">
+              <div
+                class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500 shrink-0">
+                <span class="material-symbols-outlined">info</span>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-sm text-gray-900 dark:text-white">Information de service</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">L'ambassade sera fermée le 1er Novembre pour la
+                  Toussaint.</p>
+                <p class="text-[10px] font-medium text-gray-400 mt-3 uppercase">25 Octobre 2023</p>
+              </div>
+            </div>
+            <div class="notification-card opacity-80">
+              <div
+                class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500 shrink-0">
+                <span class="material-symbols-outlined">verified</span>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-sm text-gray-900 dark:text-white">Compte vérifié</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Votre identité numérique a été confirmée avec
+                  succès.</p>
+                <p class="text-[10px] font-medium text-gray-400 mt-3 uppercase">20 Octobre 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-80 flex flex-col gap-6">
+          <div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-6 shadow-sm">
+            <h4 class="font-bold text-primary dark:text-white mb-4 flex items-center gap-2">
+              <span class="material-symbols-outlined text-lg">Paramètres</span>
+              Paramètres
+            </h4>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-medium text-gray-700 dark:text-gray-300">Emails</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input checked="" class="sr-only peer" type="checkbox" />
+                  <div
+                    class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-accent-green">
+                  </div>
+                </label>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-medium text-gray-700 dark:text-gray-300">Push Mobile</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input checked="" class="sr-only peer" type="checkbox" />
+                  <div
+                    class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-accent-green">
+                  </div>
+                </label>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-medium text-gray-700 dark:text-gray-300">SMS d'urgence</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input class="sr-only peer" type="checkbox" />
+                  <div
+                    class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-accent-green">
+                  </div>
+                </label>
+              </div>
+              <button
+                class="w-full mt-4 py-2 border border-gray-200 dark:border-gray-700 text-[10px] font-bold uppercase tracking-wider text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors">
+                Gérer les préférences
+              </button>
+            </div>
+          </div>
+          <div class="bg-primary rounded-xl p-6 text-white overflow-hidden relative shadow-lg">
+            <span class="material-symbols-outlined absolute -right-6 -bottom-6 text-white/10 text-9xl">campaign</span>
+            <h4 class="font-bold text-accent-gold mb-4 flex items-center gap-2 relative z-10">
+              <span class="material-symbols-outlined text-lg">campaign</span>
+              Annonces Importantes
+            </h4>
+            <div class="space-y-4 relative z-10">
+              <div class="border-l-2 border-accent-gold pl-3 py-1">
+                <p class="text-xs font-bold text-white mb-1">Renouvellement des passeports</p>
+                <p class="text-[10px] text-white/70">Nouveaux formulaires disponibles dès le 1er novembre.</p>
+              </div>
+              <div class="border-l-2 border-white/20 pl-3 py-1">
+                <p class="text-xs font-bold text-white mb-1">Recensement électoral</p>
+                <p class="text-[10px] text-white/70">La période d'inscription est prolongée de 15 jours.</p>
+              </div>
+              <a class="inline-flex items-center gap-2 text-accent-gold font-bold text-[10px] uppercase tracking-widest mt-2 hover:underline"
+                href="#">
+                Voir toutes les annonces <span class="material-symbols-outlined text-sm">chevron_right</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

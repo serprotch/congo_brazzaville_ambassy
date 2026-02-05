@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Détails du Service | Ambassade du Congo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d3368",
+            "navy-blue": "#0A1D37",
+            "accent-gold": "#EBA834",
+            "accent-red": "#C23E28",
+            "accent-green": "#009543",
+            "bg-light": "#F8FAFC",
+            "sidebar-text": "#FFFFFF",
+            "main-text": "#1E293B",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #EBA834;
+            color: #FFFFFF;
+        }
+        .Contenu-card {
+            @apply bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 10px;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="font-display bg-bg-light text-main-text antialiased transition-colors duration-200">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-72 bg-navy-blue flex flex-col py-6 shrink-0 shadow-xl z-20">
+      <div class="flex flex-col gap-8 h-full">
+        <div class="px-6 flex items-center gap-3">
+          <div
+            class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
+            <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
+              src="../images/logo_ambassy.png" />
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
+            <p class="text-white/60 text-[10px] font-medium leading-normal uppercase">Ambassade du Congo</p>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-0.5 overflow-y-auto">
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./home.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Tableau de bord</span>
+          </a>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Site</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./events.html">Événements</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./news.html">Actualités</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./contact.html">Contacts</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Diaspora</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./liste_diaspora.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./enregistrements.html">Enregistrements</a>
+            </div>
+          </details>
+          <a class="sidebar-active flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./services.html">
+            <span class="material-symbols-outlined text-[20px]">list_alt</span>
+            <span>Services</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./annonce_et_opportunite.html">
+            <span class="material-symbols-outlined text-[20px]">newspaper</span>
+            <span>Annonces et opportunités</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./messages.html">
+            <span class="material-symbols-outlined text-[20px]">mail</span>
+            <span>Messages</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./sos.html">
+            <span class="material-symbols-outlined text-[20px]">emergency</span>
+            <span>SOS</span>
+          </a>
+          <a class="flex items-center gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 transition-all text-sm font-medium"
+            href="./calendar.html">
+            <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+            <span>Calendrier</span>
+          </a>
+          <div class="mt-4 px-6 py-2">
+            <p class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Administration</p>
+          </div>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Utilisateurs</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold"
+                href="./users.html">Liste</a>
+              <a class="block pl-16 py-2 text-xs text-sidebar-text/60 hover:text-accent-gold" href="./roles.html">Rôles
+                et Permissions</a>
+            </div>
+          </details>
+          <details class="group">
+            <summary
+              class="flex items-center justify-between gap-4 px-6 py-3 text-sidebar-text/70 hover:text-white hover:bg-white/10 cursor-pointer list-none transition-all text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Paramètres</span>
+              </div>
+              <span
+                class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="bg-black/10 py-2">
+
+            </div>
+          </details>
+        </nav>
+      </div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <header class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-slate-400">Services</span>
+          <span class="material-symbols-outlined text-sm text-slate-400">chevron_right</span>
+          <span class="font-bold text-navy-blue">N°1</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative dropdown-container">
+            <div class="flex items-center gap-3 cursor-pointer">
+              <div class="flex flex-col items-end">
+                <span class="text-sm font-bold text-navy-blue">Agent Consulaire #04</span>
+                <span class="text-[10px] text-accent-green font-mono uppercase font-semibold">En ligne • Moscou</span>
+              </div>
+              <div
+                class="size-10 rounded-lg bg-slate-100 flex items-center justify-center border border-slate-200 overflow-hidden shadow-sm">
+                <img alt="Agent avatar" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+              </div>
+            </div>
+            <div
+              class="dropdown-menu absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+                href="#profil">
+                <span class="material-symbols-outlined text-lg text-primary">account_circle</span>
+                Mon Profil
+              </a>
+              <div class="border-t border-slate-100 my-1"></div>
+              <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-accent-red hover:bg-red-50 transition-colors"
+                href="./login.html">
+                <span class="material-symbols-outlined text-lg">logout</span>
+                Se déconnecter
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        class="bg-white border-b border-slate-200 px-8 py-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <span class="material-symbols-outlined text-primary bg-primary/10 p-1.5 rounded-lg">badge</span>
+            <h2 class="text-2xl font-black text-navy-blue tracking-tight">Détails du Service : Renouvellement de
+              Passeport</h2>
+          </div>
+          <p class="text-sm text-slate-500 ml-12">Configuration administrative et processus citoyen pour les titres de
+            voyage.</p>
+        </div>
+        <div class="flex items-center gap-3 ml-12 md:ml-0">
+          <button
+            class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 text-slate-600 rounded-lg text-sm font-bold hover:bg-slate-50 transition-colors">
+            <span class="material-symbols-outlined text-sm">block</span>
+            Désactiver
+          </button>
+          <button
+            class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-navy-blue transition-colors shadow-lg shadow-primary/20">
+            <span class="material-symbols-outlined text-sm">edit</span>
+            Modifier
+          </button>
+        </div>
+      </div>
+      <div class="flex-1 overflow-y-auto p-8">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+          <div class="xl:col-span-2 space-y-8">
+            <div class="content-card">
+              <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <h3 class="font-bold text-navy-blue text-sm uppercase tracking-wider flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary">info</span>
+                  Résumé de la configuration
+                </h3>
+                <span
+                  class="px-2 py-1 rounded text-[10px] font-bold bg-accent-green/10 text-accent-green uppercase border border-accent-green/20">Actif</span>
+              </div>
+              <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col gap-1">
+                  <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">category</span>
+                  <span class="text-sm font-bold text-navy-blue">Documents d'Identité</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Frais Consulaires</span>
+                  <span class="text-sm font-bold text-navy-blue">12,500 RUB</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Délai de
+                    Traitement</span>
+                  <span class="text-sm font-bold text-navy-blue">15 à 30 jours ouvrés</span>
+                </div>
+              </div>
+            </div>
+            <div class="content-card">
+              <div class="px-6 py-4 border-b border-slate-100 bg-slate-50/50">
+                <h3 class="font-bold text-navy-blue text-sm uppercase tracking-wider flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary">description</span>
+                  Pièces à fournir (Checklist)
+                </h3>
+              </div>
+              <div class="p-6">
+                <div class="space-y-4">
+                  <div class="flex items-center gap-4 p-4 rounded-lg bg-slate-50 border border-slate-100">
+                    <span class="material-symbols-outlined text-accent-green">check_circle</span>
+                    <div class="flex-1">
+                      <p class="text-sm font-bold text-navy-blue">Ancien Passeport</p>
+                      <p class="text-[11px] text-slate-500">Original + photocopie des 3 premières pages</p>
+                    </div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Requis</span>
+                  </div>
+                  <div class="flex items-center gap-4 p-4 rounded-lg bg-slate-50 border border-slate-100">
+                    <span class="material-symbols-outlined text-accent-green">check_circle</span>
+                    <div class="flex-1">
+                      <p class="text-sm font-bold text-navy-blue">Preuve de résidence en Russie</p>
+                      <p class="text-[11px] text-slate-500">Visa valide ou titre de séjour (Propiska)</p>
+                    </div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Requis</span>
+                  </div>
+                  <div class="flex items-center gap-4 p-4 rounded-lg bg-slate-50 border border-slate-100">
+                    <span class="material-symbols-outlined text-accent-green">check_circle</span>
+                    <div class="flex-1">
+                      <p class="text-sm font-bold text-navy-blue">4 Photos d'identité</p>
+                      <p class="text-[11px] text-slate-500">Format 3.5cm x 4.5cm, fond blanc</p>
+                    </div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Requis</span>
+                  </div>
+                  <div class="flex items-center gap-4 p-4 rounded-lg bg-slate-50 border border-slate-100">
+                    <span class="material-symbols-outlined text-accent-green">check_circle</span>
+                    <div class="flex-1">
+                      <p class="text-sm font-bold text-navy-blue">Acte de Naissance</p>
+                      <p class="text-[11px] text-slate-500">Copie légalisée de moins de 6 mois</p>
+                    </div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Requis</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-card">
+              <div class="px-6 py-4 border-b border-slate-100 bg-slate-50/50">
+                <h3 class="font-bold text-navy-blue text-sm uppercase tracking-wider flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary">account_tree</span>
+                  Procédure de Demande
+                </h3>
+              </div>
+              <div class="p-8">
+                <div class="relative">
+                  <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-slate-100"></div>
+                  <div class="space-y-10">
+                    <div class="relative pl-12">
+                      <div
+                        class="absolute left-0 size-8 bg-primary rounded-full flex items-center justify-center text-white text-xs font-bold border-4 border-white shadow-sm">
+                        1</div>
+                      <h4 class="text-sm font-bold text-navy-blue mb-1">Dépôt du dossier en ligne</h4>
+                      <p class="text-[11px] text-slate-500 leading-relaxed">Le citoyen remplit le formulaire via son
+                        espace personnel et télécharge les versions scannées des Documents requis pour pré-validation.
+                      </p>
+                    </div>
+                    <div class="relative pl-12">
+                      <div
+                        class="absolute left-0 size-8 bg-primary rounded-full flex items-center justify-center text-white text-xs font-bold border-4 border-white shadow-sm">
+                        2</div>
+                      <h4 class="text-sm font-bold text-navy-blue mb-1">Paiement des frais</h4>
+                      <p class="text-[11px] text-slate-500 leading-relaxed">Après validation par l'agent, le citoyen
+                        procède au paiement par virement ou carte bancaire. Un reçu est généré automatiquement.</p>
+                    </div>
+                    <div class="relative pl-12">
+                      <div
+                        class="absolute left-0 size-8 bg-primary rounded-full flex items-center justify-center text-white text-xs font-bold border-4 border-white shadow-sm">
+                        3</div>
+                      <h4 class="text-sm font-bold text-navy-blue mb-1">Prise de rendez-vous biométrique</h4>
+                      <p class="text-[11px] text-slate-500 leading-relaxed">Le citoyen choisit un créneau pour la
+                        capture des empreintes et de la photo aux locaux de l'ambassade à Moscou.</p>
+                    </div>
+                    <div class="relative pl-12">
+                      <div
+                        class="absolute left-0 size-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-500 text-xs font-bold border-4 border-white shadow-sm">
+                        4</div>
+                      <h4 class="text-sm font-bold text-navy-blue mb-1">Retrait du titre</h4>
+                      <p class="text-[11px] text-slate-500 leading-relaxed">Notification automatique par SMS/Email dès
+                        que le passeport est prêt. Retrait en personne ou via coursier agréé.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-8">
+            <div class="content-card">
+              <div class="px-6 py-4 border-b border-slate-100 bg-slate-50/50">
+                <h3 class="font-bold text-navy-blue text-sm uppercase tracking-wider flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary">query_stats</span>
+                  Volume des Demandes
+                </h3>
+              </div>
+              <div class="p-6">
+                <div class="flex flex-col">
+                  <span class="text-2xl font-black text-navy-blue">142</span>
+                  <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Demandes (3 derniers
+                    mois)</span>
+                  <div class="h-48 flex items-end justify-between gap-4 mt-2">
+                    <div class="flex-1 flex flex-col items-center gap-2">
+                      <div class="w-full bg-slate-100 rounded-t-lg relative group h-[60%]">
+                        <div class="absolute bottom-0 w-full bg-primary/40 rounded-t-lg transition-all h-full"></div>
+                        <div
+                          class="absolute -top-8 left-1/2 -translate-x-1/2 bg-navy-blue text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                          42</div>
+                      </div>
+                      <span class="text-[10px] font-bold text-slate-500 uppercase">Sept</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center gap-2">
+                      <div class="w-full bg-slate-100 rounded-t-lg relative group h-full">
+                        <div class="absolute bottom-0 w-full bg-primary/80 rounded-t-lg transition-all h-[85%]"></div>
+                        <div
+                          class="absolute -top-8 left-1/2 -translate-x-1/2 bg-navy-blue text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                          58</div>
+                      </div>
+                      <span class="text-[10px] font-bold text-slate-500 uppercase">Oct</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center gap-2">
+                      <div class="w-full bg-slate-100 rounded-t-lg relative group h-full">
+                        <div
+                          class="absolute bottom-0 w-full bg-accent-gold rounded-t-lg transition-all h-[70%] animate-pulse">
+                        </div>
+                        <div
+                          class="absolute -top-8 left-1/2 -translate-x-1/2 bg-navy-blue text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                          42</div>
+                      </div>
+                      <span class="text-[10px] font-bold text-slate-500 uppercase">Nov</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-slate-50 p-4 border-t border-slate-100">
+                <p class="text-[10px] text-slate-500 text-center font-medium italic">Tendance : +12% par rapport au
+                  trimestre précédent</p>
+              </div>
+            </div>
+            <div class="content-card bg-navy-blue border-none text-white relative overflow-hidden p-6">
+              <span class="material-symbols-outlined absolute -right-6 -bottom-6 text-white/5 text-9xl">history</span>
+              <h4 class="text-xs font-bold uppercase tracking-widest text-accent-gold mb-4">Informations Système</h4>
+              <div class="space-y-4 relative z-10">
+                <div class="flex justify-between items-center text-[11px]">
+                  <span class="text-white/60">Créé le</span>
+                  <span class="font-bold">12 Janvier 2024</span>
+                </div>
+                <div class="flex justify-between items-center text-[11px]">
+                  <span class="text-white/60">Dernière modification</span>
+                  <span class="font-bold">25 Octobre 2024</span>
+                </div>
+                <div class="flex justify-between items-center text-[11px]">
+                  <span class="text-white/60">Par l'agent</span>
+                  <span class="font-bold">ID #02 (Directeur)</span>
+                </div>
+                <div class="flex justify-between items-center text-[11px]">
+                  <span class="text-white/60">Version</span>
+                  <span class="font-bold">v2.4.0</span>
+                </div>
+              </div>
+            </div>
+            <button
+              class="w-full bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center gap-3 hover:border-accent-red hover:text-accent-red transition-all group">
+              <span class="material-symbols-outlined text-slate-400 group-hover:text-accent-red">delete</span>
+              <span class="text-sm font-bold text-slate-600 group-hover:text-accent-red">Supprimer la
+                configuration</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>
