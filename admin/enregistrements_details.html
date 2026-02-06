@@ -59,6 +59,10 @@
         .dropdown-container:hover .dropdown-menu {
             display: block;
         }
+        .modal-backdrop {
+            background-color: rgba(10, 29, 55, 0.75);
+            backdrop-filter: blur(4px);
+        }
     </style>
 </head>
 
@@ -320,7 +324,7 @@
                         <p class="text-xs font-bold text-navy-blue truncate">Ancien Passeport.pdf</p>
                         <p class="text-[10px] text-slate-500 uppercase font-medium">Page d'identité</p>
                       </div>
-                      <button
+                      <button onclick="openModal(this)"
                         class="bg-white border border-slate-200 px-3 py-1.5 rounded-md text-[10px] font-bold text-primary hover:bg-primary hover:text-white transition-all">Prévisualiser</button>
                     </div>
                   </div>
@@ -335,7 +339,7 @@
                         <p class="text-xs font-bold text-navy-blue truncate">Acte_Naissance_Leg.pdf</p>
                         <p class="text-[10px] text-slate-500 uppercase font-medium">Légalisation</p>
                       </div>
-                      <button
+                      <button onclick="openModal(this)"
                         class="bg-white border border-slate-200 px-3 py-1.5 rounded-md text-[10px] font-bold text-primary hover:bg-primary hover:text-white transition-all">Prévisualiser</button>
                     </div>
                   </div>
@@ -350,7 +354,7 @@
                         <p class="text-xs font-bold text-navy-blue truncate">Preuve_Residence.pdf</p>
                         <p class="text-[10px] text-slate-500 uppercase font-medium">Contrat bail/Univ</p>
                       </div>
-                      <button
+                      <button onclick="openModal(this)"
                         class="bg-white border border-slate-200 px-3 py-1.5 rounded-md text-[10px] font-bold text-primary hover:bg-primary hover:text-white transition-all">Prévisualiser</button>
                     </div>
                   </div>
@@ -424,6 +428,170 @@
     </main>
   </div>
 
+  <!-- Modal de Prévisualisation -->
+  <div id="previewModal"
+    class="fixed inset-0 z-[100] flex items-center justify-center p-8 modal-backdrop hidden opacity-0 transition-opacity duration-300">
+    <div
+      class="bg-white w-full max-w-6xl h-[85vh] rounded-2xl shadow-2xl flex overflow-hidden relative border border-slate-200 scale-95 transition-transform duration-300"
+      id="modalContent">
+      <button onclick="closeModal()"
+        class="absolute top-4 right-4 z-10 size-10 bg-white/90 rounded-full flex items-center justify-center text-slate-500 hover:text-navy-blue hover:bg-white transition-all shadow-md">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="flex-1 bg-slate-900 relative flex items-center justify-center overflow-hidden">
+        <div
+          class="absolute top-6 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-slate-800/80 p-2 rounded-lg border border-white/10 shadow-xl backdrop-blur-md z-10">
+          <button
+            class="size-9 flex items-center justify-center text-white hover:bg-white/10 rounded-md transition-colors">
+            <span class="material-symbols-outlined text-lg">zoom_in</span>
+          </button>
+          <button
+            class="size-9 flex items-center justify-center text-white hover:bg-white/10 rounded-md transition-colors">
+            <span class="material-symbols-outlined text-lg">zoom_out</span>
+          </button>
+          <div class="w-px h-5 bg-white/20 mx-1"></div>
+          <button
+            class="size-9 flex items-center justify-center text-white hover:bg-white/10 rounded-md transition-colors">
+            <span class="material-symbols-outlined text-lg">rotate_left</span>
+          </button>
+          <button
+            class="size-9 flex items-center justify-center text-white hover:bg-white/10 rounded-md transition-colors">
+            <span class="material-symbols-outlined text-lg">rotate_right</span>
+          </button>
+        </div>
+        <div class="w-full h-full p-12 flex items-center justify-center">
+          <img id="modalImage" alt="Document Preview" class="max-w-full max-h-full object-contain shadow-2xl rounded"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Bwp1PrJU7CmAcpo2ELYCoXL-mldGZDegAxovsIHroOJGy1UOcim-lYmLokLGePaaqbBQfsVC1t8vbbLfkvjwS9wKhdc4Z0pRGA-5dr6kLOHNU2Pp7byOLJ1xZ_i4sqeuTx74jBnHM0Zg0ZCrRvfx5MwXWgcuRK3Kcf62KNH-hNRNmKtBeFYJjdkAxssc6d3cNeFn9iiotYFvufyG8CB2lgha2ZgZH7W7hRpDRtGTgeRTJXLxXT50PIhGvRZ37Y8YANvDv7s5rmI" />
+        </div>
+      </div>
+      <div class="w-96 border-l border-slate-200 flex flex-col bg-white">
+        <div class="p-6 border-b border-slate-100">
+          <h3 class="text-lg font-bold text-navy-blue">Vérification de Document</h3>
+          <p id="modalDocName" class="text-xs text-slate-500 font-medium">Document</p>
+        </div>
+        <div class="p-6 flex flex-col gap-8 flex-1 overflow-y-auto">
+          <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-navy-blue uppercase tracking-wide">État d'Authentification</span>
+              <label class="inline-flex items-center cursor-pointer group">
+                <input class="sr-only peer" type="checkbox" />
+                <div
+                  class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent-green relative">
+                </div>
+              </label>
+            </div>
+            <p class="text-[11px] text-slate-500">Marquer ce document comme vérifié et authentique auprès des autorités
+              compétentes.</p>
+          </div>
+          <div class="flex flex-col gap-2 mt-2">
+            <label class="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Notes spécifiques</label>
+            <textarea
+              class="w-full bg-slate-50 border-slate-200 rounded-lg p-3 text-xs focus:border-primary focus:ring-1 focus:ring-primary min-h-[120px]"
+              placeholder="Informations complémentaires..."></textarea>
+          </div>
+        </div>
+        <div class="p-6 border-t border-slate-100 bg-slate-50/50">
+          <button onclick="closeModal()"
+            class="w-full py-3 bg-navy-blue text-white rounded-lg font-bold text-sm hover:bg-primary transition-all shadow-lg shadow-navy-blue/10">
+            Fermer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(button) {
+      const modal = document.getElementById('previewModal');
+      const modalContent = document.getElementById('modalContent');
+      // Set document name based on the clicked item
+      const docName = button.previousElementSibling.firstElementChild.innerText;
+      document.getElementById('modalDocName').innerText = docName;
+
+      modal.classList.remove('hidden');
+      // Small timeout to allow removing hidden class before animating opacity
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('previewModal');
+      const modalContent = document.getElementById('modalContent');
+
+      modal.classList.add('opacity-0');
+      modalContent.classList.add('scale-95');
+
+      // Wait for transition to finish before hiding
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    }
+
+    // Close on backdrop click
+    document.getElementById('previewModal').addEventListener('click', function (e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname.split('/').pop() || 'home.html';
+      const navLinks = document.querySelectorAll('nav a');
+      
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+        
+        // Handle relative paths (e.g., ./home.html or home.html)
+        const linkPath = href.split('/').pop();
+        
+        if (linkPath === currentPath) {
+          // Highlight this link
+          
+          // Check if it is a submenu item
+          const details = link.closest('details');
+          if (details) {
+              // It's a submenu item
+              details.setAttribute('open', '');
+              
+              // Apply submenu active styles
+              link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
+              link.classList.add('text-accent-gold', 'font-bold');
+          } else {
+              // It's a top-level item
+              link.classList.add('sidebar-active');
+          }
+        } else {
+           // Remove active classes from non-matching links to ensure clean state
+           link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
+           
+           // Restore default submenu style if it was previously active (rough approximation)
+           const details = link.closest('details');
+           if (details) {
+               link.classList.add('text-sidebar-text/60');
+           }
+        }
+      });
+      
+      // Cleanup: Remove 'open' from details that DON'T have the active link
+      // This fixes cases where a page might have the wrong menu hardcoded open.
+      document.querySelectorAll('nav details').forEach(details => {
+          const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
+              const href = link.getAttribute('href');
+              return href && href.split('/').pop() === currentPath;
+          });
+          
+          if (!activeLink) {
+              details.removeAttribute('open');
+          }
+      });
+    });
+  </script>
 </body>
+
 
 </html>

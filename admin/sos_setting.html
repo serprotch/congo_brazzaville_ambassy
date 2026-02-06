@@ -439,6 +439,62 @@
     </main>
   </div>
 
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname.split('/').pop() || 'home.html';
+      const navLinks = document.querySelectorAll('nav a');
+      
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+        
+        // Handle relative paths (e.g., ./home.html or home.html)
+        const linkPath = href.split('/').pop();
+        
+        if (linkPath === currentPath) {
+          // Highlight this link
+          
+          // Check if it is a submenu item
+          const details = link.closest('details');
+          if (details) {
+              // It's a submenu item
+              details.setAttribute('open', '');
+              
+              // Apply submenu active styles
+              link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
+              link.classList.add('text-accent-gold', 'font-bold');
+          } else {
+              // It's a top-level item
+              link.classList.add('sidebar-active');
+          }
+        } else {
+           // Remove active classes from non-matching links to ensure clean state
+           link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
+           
+           // Restore default submenu style if it was previously active (rough approximation)
+           const details = link.closest('details');
+           if (details) {
+               link.classList.add('text-sidebar-text/60');
+           }
+        }
+      });
+      
+      // Cleanup: Remove 'open' from details that DON'T have the active link
+      // This fixes cases where a page might have the wrong menu hardcoded open.
+      document.querySelectorAll('nav details').forEach(details => {
+          const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
+              const href = link.getAttribute('href');
+              return href && href.split('/').pop() === currentPath;
+          });
+          
+          if (!activeLink) {
+              details.removeAttribute('open');
+          }
+      });
+    });
+  </script>
 </body>
+
 
 </html>
