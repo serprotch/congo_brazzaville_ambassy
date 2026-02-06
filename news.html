@@ -87,11 +87,27 @@
           <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-[#637288]"
             placeholder="Search Actualités..." type="text" />
         </div> -->
-        <button
-          class="flex items-center gap-2 bg-primary text-white text-xs font-extrabold px-4 py-2.5 rounded-lg hover:bg-primary/90 transition-all uppercase tracking-widest">
-          <span class="material-symbols-outlined text-sm">translate</span>
-          <span>RU / FR</span>
-        </button>
+        <div class="relative group">
+          <button
+            class="flex items-center gap-2 bg-primary text-white text-xs font-extrabold px-4 py-2.5 rounded-lg hover:bg-primary/90 transition-all uppercase tracking-widest">
+            <span class="material-symbols-outlined text-sm">translate</span>
+            <span>Langue</span>
+            <span class="material-symbols-outlined text-sm ml-1">expand_more</span>
+          </button>
+          <div class="absolute right-0 top-full pt-1 w-40 hidden group-hover:block z-50">
+            <div
+              class="bg-white dark:bg-[#111821] rounded-lg shadow-xl border border-gray-100 dark:border-gray-800 overflow-hidden">
+              <a href="#"
+                class="flex items-center gap-3 px-4 py-3 text-sm font-bold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-primary-dark transition-colors">
+                <span class="text-base">🇫🇷</span> Français
+              </a>
+              <a href="#"
+                class="flex items-center gap-3 px-4 py-3 text-sm font-bold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-primary-dark transition-colors">
+                <span class="text-base">🇷🇺</span> Russe
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="flex h-1 w-full">
