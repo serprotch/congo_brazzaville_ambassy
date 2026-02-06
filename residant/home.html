@@ -16,8 +16,9 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
-            "accent-gold": "#EBA834",
+            "primary": "#009543",
+            "primary-dark": "#111821",
+            "accent-gold": "#fcde4a",
             "accent-red": "#C23E28",
             "accent-green": "#009543",
             "background-light": "#f8fafc",
@@ -37,7 +38,7 @@
         }
         .sidebar-active {
             background-color: rgba(255, 255, 255, 0.1);
-            border-left: 4px solid #EBA834;
+            border-left: 4px solid #fcde4a;
         }
         .kpi-card {
             @apply bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-5 rounded-xl shadow-sm flex flex-col gap-2;
@@ -62,7 +63,7 @@
           <div
             class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
             <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
-              src="../images/logo_ambassy.png" />
+              src="../images/logo.jpeg" />
           </div>
           <div class="flex flex-col">
             <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Ambassade du Congo</h1>
@@ -99,7 +100,7 @@
           <div class="p-4 bg-white/5 rounded-xl border border-white/10">
             <p class="text-xs text-white/60 mb-2">Besoin d'aide ?</p>
             <button
-              class="w-full py-2 bg-accent-gold text-primary text-xs font-bold rounded-lg hover:bg-opacity-90 transition-all">Support
+              class="w-full py-2 bg-accent-gold text-primary-dark-dark text-xs font-bold rounded-lg hover:bg-opacity-90 transition-all">Support
               Technique</button>
           </div>
         </div>
@@ -108,7 +109,7 @@
     <main class="flex-1 flex flex-col overflow-hidden">
       <header
         class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 px-8 py-5 flex justify-between items-center shrink-0">
-        <h2 class="text-2xl font-black text-primary dark:text-white tracking-tight">Tableau de Bord</h2>
+        <h2 class="text-2xl font-black text-primary-dark-dark dark:text-white tracking-tight">Tableau de Bord</h2>
 
         <div class="relative dropdown-container">
           <div class="flex items-center gap-4 cursor-pointer">
@@ -118,7 +119,7 @@
               <span class="text-[10px] text-gray-400 font-mono">ID: CG-RU-00124</span>
             </div>
             <div
-              class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-gray-200 dark:border-gray-700 overflow-hidden">
+              class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary-dark-dark border border-gray-200 dark:border-gray-700 overflow-hidden">
               <img alt="User avatar" class="w-full h-full object-cover"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
             </div>
@@ -128,7 +129,8 @@
             class="dropdown-menu absolute right-0 mt-2 w-56 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-700 rounded-lg shadow-xl z-30 py-1">
             <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-gray-800 transition-colors"
               href="#profil">
-              <span class="material-symbols-outlined text-lg text-primary dark:text-white">account_circle</span>
+              <span
+                class="material-symbols-outlined text-lg text-primary-dark-dark dark:text-white">account_circle</span>
               Mon Profil
             </a>
             <div class="border-t border-slate-100 dark:border-gray-800 my-1"></div>
@@ -144,7 +146,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           <div class="kpi-card border-l-4 border-l-primary">
             <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-primary p-2 bg-primary/5 rounded-lg">description</span>
+              <span
+                class="material-symbols-outlined text-primary-dark-dark p-2 bg-primary/5 rounded-lg">description</span>
               <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Demandes de Services</span>
             </div>
             <div class="flex items-baseline gap-2">
@@ -178,7 +181,8 @@
           </div>
           <div class="kpi-card border-l-4 border-l-primary">
             <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-primary p-2 bg-primary/5 rounded-lg">verified_user</span>
+              <span
+                class="material-symbols-outlined text-primary-dark-dark p-2 bg-primary/5 rounded-lg">verified_user</span>
               <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Statut Consulaire</span>
             </div>
             <div class="flex items-baseline gap-2">
@@ -191,7 +195,7 @@
             <div
               class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col">
               <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
-                <h4 class="font-bold text-lg text-primary dark:text-white">Activités Récentes</h4>
+                <h4 class="font-bold text-lg text-primary-dark-dark dark:text-white">Activités Récentes</h4>
                 <button class="text-xs font-bold text-accent-gold hover:underline">Voir tout</button>
               </div>
               <div class="divide-y divide-gray-100 dark:divide-gray-800">
@@ -210,7 +214,7 @@
                 </div>
                 <div class="p-6 flex items-start gap-4">
                   <div
-                    class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                    class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary-dark-dark shrink-0">
                     <span class="material-symbols-outlined">mail</span>
                   </div>
                   <div class="flex-1">
@@ -234,7 +238,9 @@
               </div>
             </div>
             <div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-8">
-              <h4 class="font-bold text-lg text-primary dark:text-white mb-8">Progression de l'Enregistrement</h4>
+              <h4 class="font-bold text-lg text-primary-dark-dark dark:text-white mb-8">Progression de
+                l'Enregistrement
+              </h4>
               <div class="relative flex items-center justify-between w-full">
                 <div class="absolute h-0.5 w-full bg-gray-200 dark:bg-gray-700 top-1/2 -translate-y-1/2 z-0"></div>
                 <div class="absolute h-0.5 w-1/2 bg-accent-green top-1/2 -translate-y-1/2 z-0"></div>
@@ -263,14 +269,15 @@
             </div>
           </div>
           <div class="flex flex-col gap-4">
-            <h4 class="font-bold text-lg text-primary dark:text-white mb-2">Actions Rapides</h4>
+            <h4 class="font-bold text-lg text-primary-dark-dark dark:text-white mb-2">Actions Rapides</h4>
             <button
               class="bg-white dark:bg-gray-900 p-5 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex items-center gap-4 hover:border-accent-gold transition-colors text-left group">
-              <div class="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-lg text-primary">
+              <div class="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-lg text-primary-dark-dark">
                 <span class="material-symbols-outlined">event_available</span>
               </div>
               <div>
-                <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Prendre un
+                <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary-dark-dark transition-colors">
+                  Prendre un
                   RDV</p>
                 <p class="text-xs text-gray-500">Planifier une visite</p>
               </div>
@@ -281,7 +288,8 @@
                 <span class="material-symbols-outlined">newspaper</span>
               </div>
               <div>
-                <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Actualités
+                <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary-dark-dark transition-colors">
+                  Actualités
                 </p>
                 <p class="text-xs text-gray-500">Dernières informations</p>
               </div>
@@ -302,7 +310,8 @@
                 <span class="material-symbols-outlined">support_agent</span>
               </div>
               <div>
-                <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Contacter
+                <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary-dark-dark transition-colors">
+                  Contacter
                   l'Ambassade</p>
                 <p class="text-xs text-gray-500">Assistance et support</p>
               </div>

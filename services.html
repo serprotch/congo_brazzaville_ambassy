@@ -17,7 +17,8 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
+            "primary": "#009543",
+            "primary-dark": "#111821",
             "background-light": "#f6f7f8",
             "background-dark": "#111821",
             "congolese-green": "#009543",
@@ -73,17 +74,23 @@
     class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
       <div class="flex items-center gap-10">
-        <a class="flex items-center gap-3" href="./index.html">
-          <img src="./images/logo_ambassy.png" alt="" class="w-14">
+        <a href="./index.html" class="flex items-center gap-2">
+          <img src="./images/logo.jpeg" alt="" class="w-14">
+          <div class="flex flex-col">
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Ambassade du</p>
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Congo Brazzavile</p>
+            <p class="text-[10px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-[0.2em]">Fédération de
+              Russie</p>
+          </div>
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-bold text-primary dark:text-congolese-yellow underline underline-offset-8 decoration-2"
+          <a class="text-sm font-bold text-primary-dark dark:text-congolese-yellow underline underline-offset-8 decoration-2"
             href="./news_detail.html">Services</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./news.html">Actualités</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./about.html">Ambassade</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./contact.html">Contact</a>
         </nav>
       </div>
@@ -109,7 +116,8 @@
   <main class="min-h-screen">
     <section class="max-w-[1200px] mx-auto px-6 lg:px-10 pt-16 pb-8">
       <div class="border-l-4 border-congolese-green pl-6">
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-primary dark:text-white mb-4">Services Consulaires</h2>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-primary-dark dark:text-white mb-4">Services Consulaires
+        </h2>
         <p class="text-gray-500 dark:text-gray-400 text-lg max-w-2xl">
           Guide complet des procédures administratives et Services d'accompagnement pour les ressortissants congolais et
           les visiteurs en Fédération de Russie.
@@ -151,7 +159,7 @@
         <div
           class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
           <div
-            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">badge</span>
           </div>
           <h4 class="text-xl font-extrabold mb-3">Renouvellement de Passeport</h4>
@@ -170,7 +178,7 @@
         <div
           class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
           <div
-            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">emergency_share</span>
           </div>
           <h4 class="text-xl font-extrabold mb-3">Laissez-passer</h4>
@@ -191,7 +199,7 @@
         <div
           class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
           <div
-            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">child_care</span>
           </div>
           <h4 class="text-xl font-extrabold mb-3">Transcription d'acte de naissance</h4>
@@ -210,7 +218,7 @@
         <div
           class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
           <div
-            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">favorite</span>
           </div>
           <h4 class="text-xl font-extrabold mb-3">Mariage</h4>
@@ -231,7 +239,7 @@
         <div
           class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
           <div
-            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">photo_camera</span>
           </div>
           <h4 class="text-xl font-extrabold mb-3">Visa Touristique</h4>
@@ -250,7 +258,7 @@
         <div
           class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
           <div
-            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">business_center</span>
           </div>
           <h4 class="text-xl font-extrabold mb-3">Visa d'Affaires</h4>
@@ -271,7 +279,7 @@
         <div
           class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
           <div
-            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">verified</span>
           </div>
           <h4 class="text-xl font-extrabold mb-3">Légalisation</h4>
@@ -290,7 +298,7 @@
         <div
           class="group p-8 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl transition-all flex flex-col h-full">
           <div
-            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-14 h-14 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">article</span>
           </div>
           <h4 class="text-xl font-extrabold mb-3">Certificat de Coutume</h4>
@@ -326,10 +334,11 @@
           </p>
           <div class="flex flex-wrap gap-4">
             <a href="./contact.html"
-              class="bg-congolese-yellow text-primary font-extrabold py-4 px-8 rounded-lg hover:bg-white transition-colors">Contacter
+              class="bg-congolese-yellow text-primary-dark font-extrabold py-4 px-8 rounded-lg hover:bg-white transition-colors">Contacter
               le Consulat</a>
             <a href="./contact.html"
-              class="bg-transparent border border-white/40 text-white font-extrabold py-4 px-8 rounded-lg hover:bg-white/10 transition-colors">Envoyez un message</a>
+              class="bg-transparent border border-white/40 text-white font-extrabold py-4 px-8 rounded-lg hover:bg-white/10 transition-colors">Envoyez
+              un message</a>
           </div>
         </div>
         <div class="flex-shrink-0 relative z-10">
@@ -362,7 +371,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-2">
           <div class="flex items-center gap-3 mb-6">
-            <div class="size-8 text-primary dark:text-white">
+            <div class="size-8 text-primary-dark dark:text-white">
               <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 4L6 17V31H24V44H42V17L24 4Z" fill="currentColor"></path>
               </svg>
@@ -374,10 +383,10 @@
             excellence and serving our citizens abroad.
           </p>
           <div class="flex gap-4">
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">language</span>
             </a>
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">mail</span>
             </a>
           </div>
@@ -385,18 +394,19 @@
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Liens Rapides</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="./services.html">Services</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./news.html">Actualités</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./about.html">A propos</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./contact.html">Contact</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./services.html">Services</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./news.html">Actualités</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./about.html">A propos</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Légal</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Politique de Confidentialité</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Cookies</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Politique de Confidentialité</a>
+            </li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Cookies</a></li>
           </ul>
         </div>
       </div>

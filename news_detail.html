@@ -17,7 +17,8 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
+            "primary": "#009543",
+            "primary-dark": "#111821",
             "background-light": "#f6f7f8",
             "background-dark": "#111821",
             "congolese-green": "#009543",
@@ -43,7 +44,7 @@
                 font-family: 'Manrope', sans-serif;
             }
             .prose h2 {
-                @apply text-2xl font-extrabold text-primary dark:text-white mt-10 mb-4;
+                @apply text-2xl font-extrabold text-primary-dark dark:text-white mt-10 mb-4;
             }
             .prose p {
                 @apply text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg;
@@ -60,17 +61,23 @@
     class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
       <div class="flex items-center gap-10">
-        <a class="flex items-center gap-3" href="./index.html">
-          <img src="./images/logo_ambassy.png" alt="" class="w-14">
+        <a href="./index.html" class="flex items-center gap-2">
+          <img src="./images/logo.jpeg" alt="" class="w-14">
+          <div class="flex flex-col">
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Ambassade du</p>
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Congo Brazzavile</p>
+            <p class="text-[10px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-[0.2em]">Fédération de
+              Russie</p>
+          </div>
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./services.html">Services</a>
-          <a class="text-sm font-bold text-primary dark:text-congolese-yellow underline underline-offset-8 decoration-2"
+          <a class="text-sm font-bold text-primary-dark dark:text-congolese-yellow underline underline-offset-8 decoration-2"
             href="./news.html">Actualités</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./about.html">Ambassade</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./contact.html">Contact</a>
         </nav>
       </div>
@@ -96,11 +103,11 @@
   <main>
     <nav class="max-w-[1200px] mx-auto px-6 lg:px-10 py-6">
       <ol class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">
-        <li><a class="hover:text-primary dark:hover:text-white" href="#">Accueil</a></li>
+        <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Accueil</a></li>
         <li><span class="material-symbols-outlined text-sm">chevron_right</span></li>
-        <li><a class="hover:text-primary dark:hover:text-white" href="#">Actualités</a></li>
+        <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Actualités</a></li>
         <li><span class="material-symbols-outlined text-sm">chevron_right</span></li>
-        <li class="text-primary dark:text-congolese-yellow truncate max-w-[200px] md:max-w-none">Economic Ties
+        <li class="text-primary-dark dark:text-congolese-yellow truncate max-w-[200px] md:max-w-none">Economic Ties
           Strengthened</li>
       </ol>
     </nav>
@@ -111,7 +118,8 @@
             <span
               class="inline-block bg-congolese-green/10 text-congolese-green font-extrabold text-[10px] tracking-widest uppercase px-3 py-1 rounded-full">Official
               Announcement</span>
-            <h1 class="text-3xl md:text-5xl font-extrabold text-primary dark:text-white leading-tight tracking-tight">
+            <h1
+              class="text-3xl md:text-5xl font-extrabold text-primary-dark dark:text-white leading-tight tracking-tight">
               Strengthening Economic Ties: Bilateral Meeting Between Congo and Russia in Moscow
             </h1>
             <div class="flex flex-wrap items-center gap-6 text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -219,20 +227,20 @@
                 class="w-full bg-white/10 border-white/20 rounded-lg px-4 py-3 text-sm focus:ring-congolese-yellow focus:border-congolese-yellow placeholder:text-white/40"
                 placeholder="Your email address" type="email" />
               <button
-                class="w-full bg-congolese-yellow text-primary font-extrabold py-3 rounded-lg hover:bg-white transition-colors text-sm">Subscribe
+                class="w-full bg-congolese-yellow text-primary-dark font-extrabold py-3 rounded-lg hover:bg-white transition-colors text-sm">Subscribe
                 Now</button>
             </div>
           </div>
           <div class="border border-gray-200 dark:border-gray-800 p-6 rounded-2xl">
             <h4 class="text-lg font-extrabold mb-6 flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary dark:text-congolese-yellow">attachment</span>
+              <span class="material-symbols-outlined text-primary-dark dark:text-congolese-yellow">attachment</span>
               Resources
             </h4>
             <ul class="space-y-4">
               <li>
                 <a class="flex items-center justify-between group" href="#">
                   <span
-                    class="text-sm font-bold text-gray-600 dark:text-gray-400 group-hover:text-primary dark:group-hover:text-white">Press
+                    class="text-sm font-bold text-gray-600 dark:text-gray-400 group-hover:text-primary-dark dark:group-hover:text-white">Press
                     Kit (PDF)</span>
                   <span class="material-symbols-outlined text-sm text-gray-400">download</span>
                 </a>
@@ -240,7 +248,7 @@
               <li>
                 <a class="flex items-center justify-between group" href="#">
                   <span
-                    class="text-sm font-bold text-gray-600 dark:text-gray-400 group-hover:text-primary dark:group-hover:text-white">Summit
+                    class="text-sm font-bold text-gray-600 dark:text-gray-400 group-hover:text-primary-dark dark:group-hover:text-white">Summit
                     Photos</span>
                   <span class="material-symbols-outlined text-sm text-gray-400">image</span>
                 </a>
@@ -248,7 +256,7 @@
               <li>
                 <a class="flex items-center justify-between group" href="#">
                   <span
-                    class="text-sm font-bold text-gray-600 dark:text-gray-400 group-hover:text-primary dark:group-hover:text-white">Bilateral
+                    class="text-sm font-bold text-gray-600 dark:text-gray-400 group-hover:text-primary-dark dark:group-hover:text-white">Bilateral
                     Trade Stats</span>
                   <span class="material-symbols-outlined text-sm text-gray-400">query_stats</span>
                 </a>
@@ -285,7 +293,7 @@
             <span class="text-xs font-bold text-congolese-green uppercase tracking-widest">Éducation • Oct 05,
               2026</span>
             <h5
-              class="text-xl font-extrabold leading-snug group-hover:text-primary dark:group-hover:text-congolese-yellow transition-colors">
+              class="text-xl font-extrabold leading-snug group-hover:text-primary-dark dark:group-hover:text-congolese-yellow transition-colors">
               Nouvelles Bourses pour les Étudiants Congolais en Russie</h5>
             <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">Announcement of 200
               additional slots for Bachelor and Master programs for the upcoming academic year.</p>
@@ -298,7 +306,7 @@
             <span class="text-xs font-bold text-congolese-green uppercase tracking-widest">Culture • Sept 28,
               2026</span>
             <h5
-              class="text-xl font-extrabold leading-snug group-hover:text-primary dark:group-hover:text-congolese-yellow transition-colors">
+              class="text-xl font-extrabold leading-snug group-hover:text-primary-dark dark:group-hover:text-congolese-yellow transition-colors">
               Célébration de la Fête de l'Indépendance au Cœur de Moscou</h5>
             <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">A vibrant display of
               Congolese culture, music, and cuisine held at the embassy grounds last weekend.</p>
@@ -311,7 +319,7 @@
             <span class="text-xs font-bold text-congolese-green uppercase tracking-widest">Mission • Sept 15,
               2026</span>
             <h5
-              class="text-xl font-extrabold leading-snug group-hover:text-primary dark:group-hover:text-congolese-yellow transition-colors">
+              class="text-xl font-extrabold leading-snug group-hover:text-primary-dark dark:group-hover:text-congolese-yellow transition-colors">
               Annual Consular Performance Review 2026</h5>
             <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">Overview of processed
               applications and service improvements implemented over the last 12 months.</p>
@@ -325,7 +333,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-2">
           <div class="flex items-center gap-3 mb-6">
-            <div class="size-8 text-primary dark:text-white">
+            <div class="size-8 text-primary-dark dark:text-white">
               <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 4L6 17V31H24V44H42V17L24 4Z" fill="currentColor"></path>
               </svg>
@@ -337,10 +345,10 @@
             excellence and serving our citizens abroad.
           </p>
           <div class="flex gap-4">
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">language</span>
             </a>
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">mail</span>
             </a>
           </div>
@@ -348,18 +356,19 @@
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Liens Rapides</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="./services.html">Services</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./news.html">Actualités</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./about.html">A propos</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./contact.html">Contact</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./services.html">Services</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./news.html">Actualités</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./about.html">A propos</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Légal</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Politique de Confidentialité</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Cookies</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Politique de Confidentialité</a>
+            </li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Cookies</a></li>
           </ul>
         </div>
       </div>

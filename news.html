@@ -17,7 +17,8 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
+            "primary": "#009543",
+            "primary-dark": "#111821",
             "background-light": "#f6f7f8",
             "background-dark": "#111821",
             "congolese-green": "#009543",
@@ -60,17 +61,23 @@
     class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
       <div class="flex items-center gap-10">
-        <a class="flex items-center gap-3" href="./index.html">
-          <img src="./images/logo_ambassy.png" alt="" class="w-14">
+        <a href="./index.html" class="flex items-center gap-2">
+          <img src="./images/logo.jpeg" alt="" class="w-14">
+          <div class="flex flex-col">
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Ambassade du</p>
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Congo Brazzavile</p>
+            <p class="text-[10px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-[0.2em]">Fédération de
+              Russie</p>
+          </div>
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./services.html">Services</a>
-          <a class="text-sm font-bold text-primary dark:text-congolese-yellow underline underline-offset-8 decoration-2"
+          <a class="text-sm font-bold text-primary-dark dark:text-congolese-yellow underline underline-offset-8 decoration-2"
             href="./news.html">Actualités</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./about.html">Ambassade</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./contact.html">Contact</a>
         </nav>
       </div>
@@ -98,22 +105,22 @@
       <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-8">Actualités &amp; Portail Média</h1>
       <div class="flex flex-wrap items-center gap-3 border-b border-gray-200 dark:border-gray-800 pb-2">
         <button
-          class="px-6 py-3 text-sm font-extrabold uppercase tracking-widest border-b-2 border-primary dark:border-congolese-yellow text-primary dark:text-congolese-yellow tab-filter active"
+          class="px-6 py-3 text-sm font-extrabold uppercase tracking-widest border-b-2 border-primary dark:border-congolese-yellow text-primary-dark dark:text-congolese-yellow tab-filter active"
           data-filter="all" onclick="filterNews('all')">Toutes les Actualités</button>
         <button
-          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors tab-filter"
+          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary-dark dark:hover:text-white transition-colors tab-filter"
           data-filter="diplomacy" onclick="filterNews('diplomacy')">Diplomatie</button>
         <button
-          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors tab-filter"
+          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary-dark dark:hover:text-white transition-colors tab-filter"
           data-filter="community" onclick="filterNews('community')">Communauté</button>
         <button
-          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors tab-filter"
+          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary-dark dark:hover:text-white transition-colors tab-filter"
           data-filter="culture" onclick="filterNews('culture')">Culture</button>
         <button
-          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors tab-filter"
+          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary-dark dark:hover:text-white transition-colors tab-filter"
           data-filter="economic" onclick="filterNews('economic')">Économie</button>
         <button
-          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors tab-filter"
+          class="px-6 py-3 text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-primary-dark dark:hover:text-white transition-colors tab-filter"
           data-filter="consular" onclick="filterNews('consular')">Consulaire</button>
       </div>
     </div>
@@ -135,13 +142,13 @@
             <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">24 Octobre 2026</span>
           </div>
           <h2
-            class="text-3xl font-extrabold leading-tight mb-6 hover:text-primary dark:hover:text-congolese-yellow cursor-pointer transition-colors">
+            class="text-3xl font-extrabold leading-tight mb-6 hover:text-primary-dark dark:hover:text-congolese-yellow cursor-pointer transition-colors">
             Sommet Historique : Renforcement du Partenariat Stratégique Congo-Russie</h2>
           <p class="text-gray-500 dark:text-gray-400 text-lg mb-8 leading-relaxed">
             Les ambassadeurs et ministres des deux nations se sont réunis à Moscou pour signer un cadre complet pour
             l'échange technologique et le soutien éducatif aux chercheurs congolais.
           </p>
-          <a class="inline-flex items-center gap-2 text-primary dark:text-congolese-yellow font-extrabold text-sm uppercase tracking-widest group"
+          <a class="inline-flex items-center gap-2 text-primary-dark dark:text-congolese-yellow font-extrabold text-sm uppercase tracking-widest group"
             href="#">
             Lire l'article complet
             <span
@@ -166,7 +173,7 @@
                 <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">18 Oct 2026</span>
               </div>
               <h3
-                class="text-xl font-extrabold leading-snug group-hover:text-primary dark:group-hover:text-congolese-yellow transition-colors">
+                class="text-xl font-extrabold leading-snug group-hover:text-primary-dark dark:group-hover:text-congolese-yellow transition-colors">
                 Lancement d'un Nouveau Programme de Bourses pour les Étudiants en STEM</h3>
               <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-3">L'Ambassade annonce un
                 nouveau partenariat avec les principales universités techniques russes pour financer intégralement 50
@@ -185,11 +192,11 @@
             <div class="space-y-3">
               <div class="flex items-center gap-3">
                 <span
-                  class="text-[10px] font-extrabold text-white bg-congolese-yellow text-primary px-2 py-0.5 rounded uppercase tracking-widest">Culture</span>
+                  class="text-[10px] font-extrabold text-white bg-congolese-yellow text-primary-dark px-2 py-0.5 rounded uppercase tracking-widest">Culture</span>
                 <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">15 Oct 2026</span>
               </div>
               <h3
-                class="text-xl font-extrabold leading-snug group-hover:text-primary dark:group-hover:text-congolese-yellow transition-colors">
+                class="text-xl font-extrabold leading-snug group-hover:text-primary-dark dark:group-hover:text-congolese-yellow transition-colors">
                 Exposition des Sapeurs : Le Style Congolais au Cœur de Moscou</h3>
               <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-3">Une exposition de
                 photographie
@@ -213,7 +220,7 @@
                 <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">10 Oct 2026</span>
               </div>
               <h3
-                class="text-xl font-extrabold leading-snug group-hover:text-primary dark:group-hover:text-congolese-yellow transition-colors">
+                class="text-xl font-extrabold leading-snug group-hover:text-primary-dark dark:group-hover:text-congolese-yellow transition-colors">
                 Une Délégation Ministérielle Visite les Chambres de Commerce de Moscou</h3>
               <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-3">Les discussions ont porté
                 sur
@@ -241,7 +248,7 @@
                 <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">05 Oct 2026</span>
               </div>
               <h3
-                class="text-xl font-extrabold leading-snug group-hover:text-primary dark:group-hover:text-congolese-yellow transition-colors">
+                class="text-xl font-extrabold leading-snug group-hover:text-primary-dark dark:group-hover:text-congolese-yellow transition-colors">
                 Regarder : Briefing Diplomatique Mensuel par S.E. Ivan Vangu Ngimbi</h3>
               <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-3">Un résumé vidéo des
                 activités de l'Ambassade au cours du mois passé, incluant les mises à jour consulaires et les événements
@@ -253,10 +260,11 @@
         </div>
         <nav class="flex items-center justify-between border-t border-gray-200 dark:border-gray-800 pt-8 mt-12">
           <div class="hidden sm:block">
-            <p class="text-sm text-gray-500 font-bold">Affichage de <span class="text-primary dark:text-white">1</span>
+            <p class="text-sm text-gray-500 font-bold">Affichage de <span
+                class="text-primary-dark dark:text-white">1</span>
               à
-              <span class="text-primary dark:text-white">4</span> sur <span
-                class="text-primary dark:text-white">32</span> articles
+              <span class="text-primary-dark dark:text-white">4</span> sur <span
+                class="text-primary-dark dark:text-white">32</span> articles
             </p>
           </div>
           <div class="flex gap-2">
@@ -288,11 +296,11 @@
               <div
                 class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 group-hover:border-congolese-yellow transition-colors">
                 <span class="text-[10px] font-bold text-gray-500 uppercase">Nov</span>
-                <span class="text-xl font-extrabold text-primary dark:text-white">28</span>
+                <span class="text-xl font-extrabold text-primary-dark dark:text-white">28</span>
               </div>
               <div>
                 <h5
-                  class="text-sm font-extrabold group-hover:text-primary dark:group-hover:text-congolese-yellow transition-colors">
+                  class="text-sm font-extrabold group-hover:text-primary-dark dark:group-hover:text-congolese-yellow transition-colors">
                   Forum Annuel des Étudiants Congolais</h5>
                 <p class="text-xs text-gray-500 mt-1">Hall Principal Lomonosov MSU</p>
               </div>
@@ -301,11 +309,11 @@
               <div
                 class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 group-hover:border-congolese-green transition-colors">
                 <span class="text-[10px] font-bold text-gray-500 uppercase">Déc</span>
-                <span class="text-xl font-extrabold text-primary dark:text-white">12</span>
+                <span class="text-xl font-extrabold text-primary-dark dark:text-white">12</span>
               </div>
               <div>
                 <h5
-                  class="text-sm font-extrabold group-hover:text-primary dark:group-hover:text-congolese-green transition-colors">
+                  class="text-sm font-extrabold group-hover:text-primary-dark dark:group-hover:text-congolese-green transition-colors">
                   Célébration de la Fête de la République</h5>
                 <p class="text-xs text-gray-500 mt-1">Jardins de l'Ambassade, Moscou</p>
               </div>
@@ -314,37 +322,37 @@
               <div
                 class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 group-hover:border-congolese-red transition-colors">
                 <span class="text-[10px] font-bold text-gray-500 uppercase">Jan</span>
-                <span class="text-xl font-extrabold text-primary dark:text-white">15</span>
+                <span class="text-xl font-extrabold text-primary-dark dark:text-white">15</span>
               </div>
               <div>
                 <h5
-                  class="text-sm font-extrabold group-hover:text-primary dark:group-hover:text-congolese-red transition-colors">
+                  class="text-sm font-extrabold group-hover:text-primary-dark dark:group-hover:text-congolese-red transition-colors">
                   Webinaire sur les Perspectives Économiques</h5>
                 <p class="text-xs text-gray-500 mt-1">Événement Virtuel - Zoom</p>
               </div>
             </div>
           </div>
           <button
-            class="w-full mt-8 py-3 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white dark:hover:bg-congolese-yellow dark:hover:text-primary transition-all">
+            class="w-full mt-8 py-3 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white dark:hover:bg-congolese-yellow dark:hover:text-primary-dark transition-all">
             Voir le Calendrier Complet
           </button>
           <div class="mt-12 pt-10 border-t border-gray-100 dark:border-gray-800">
             <h4 class="text-sm font-extrabold mb-4 uppercase tracking-widest text-gray-400">Archives Mensuelles</h4>
             <ul class="space-y-3">
               <li><a
-                  class="flex items-center justify-between text-sm font-bold text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white"
+                  class="flex items-center justify-between text-sm font-bold text-gray-600 dark:text-gray-400 hover:text-primary-dark dark:hover:text-white"
                   href="#"><span>Septembre 2026</span> <span
                     class="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">12</span></a></li>
               <li><a
-                  class="flex items-center justify-between text-sm font-bold text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white"
+                  class="flex items-center justify-between text-sm font-bold text-gray-600 dark:text-gray-400 hover:text-primary-dark dark:hover:text-white"
                   href="#"><span>Août 2026</span> <span
                     class="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">8</span></a></li>
               <li><a
-                  class="flex items-center justify-between text-sm font-bold text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white"
+                  class="flex items-center justify-between text-sm font-bold text-gray-600 dark:text-gray-400 hover:text-primary-dark dark:hover:text-white"
                   href="#"><span>Juillet 2026</span> <span
                     class="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">15</span></a></li>
               <li><a
-                  class="flex items-center justify-between text-sm font-bold text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white"
+                  class="flex items-center justify-between text-sm font-bold text-gray-600 dark:text-gray-400 hover:text-primary-dark dark:hover:text-white"
                   href="#"><span>Juin 2026</span> <span
                     class="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">10</span></a></li>
             </ul>
@@ -358,7 +366,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-2">
           <div class="flex items-center gap-3 mb-6">
-            <div class="size-8 text-primary dark:text-white">
+            <div class="size-8 text-primary-dark dark:text-white">
               <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 4L6 17V31H24V44H42V17L24 4Z" fill="currentColor"></path>
               </svg>
@@ -371,10 +379,10 @@
             et au service de nos citoyens à l'étranger.
           </p>
           <div class="flex gap-4">
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">language</span>
             </a>
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">mail</span>
             </a>
           </div>
@@ -382,18 +390,19 @@
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Liens Rapides</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="./services.html">Services</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./news.html">Actualités</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./about.html">A propos</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./contact.html">Contact</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./services.html">Services</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./news.html">Actualités</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./about.html">A propos</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Légal</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Politique de Confidentialité</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Cookies</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Politique de Confidentialité</a>
+            </li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Cookies</a></li>
           </ul>
         </div>
       </div>
@@ -415,12 +424,12 @@
       const buttons = document.querySelectorAll('.tab-filter');
       buttons.forEach(btn => {
         // Enlever la classe 'active' de tous les boutons
-        btn.classList.remove('active', 'border-primary', 'dark:border-congolese-yellow', 'text-primary', 'dark:text-congolese-yellow');
+        btn.classList.remove('active', 'border-primary', 'dark:border-congolese-yellow', 'text-primary-dark', 'dark:text-congolese-yellow');
         btn.classList.add('text-gray-500', 'dark:text-gray-400');
 
         // Ajouter la classe 'active' au bouton cliqué
         if (btn.dataset.filter === category) {
-          btn.classList.add('active', 'border-primary', 'dark:border-congolese-yellow', 'text-primary', 'dark:text-congolese-yellow', 'border-b-2');
+          btn.classList.add('active', 'border-primary', 'dark:border-congolese-yellow', 'text-primary-dark', 'dark:text-congolese-yellow', 'border-b-2');
           btn.classList.remove('text-gray-500', 'dark:text-gray-400');
         } else {
           btn.classList.remove('border-b-2');

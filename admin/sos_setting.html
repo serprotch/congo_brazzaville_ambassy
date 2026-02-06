@@ -15,9 +15,10 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
-            "navy-blue": "#0A1D37",
-            "accent-gold": "#EBA834",
+            "primary": "#009543",
+            "primary-dark": "#111821",
+            "navy-blue": "#009543",
+            "accent-gold": "#fcde4a",
             "accent-red": "#C23E28",
             "accent-green": "#009543",
             "bg-light": "#F8FAFC",
@@ -38,7 +39,7 @@
         }
         .sidebar-active {
             background-color: rgba(255, 255, 255, 0.1);
-            border-left: 4px solid #EBA834;
+            border-left: 4px solid #fcde4a;
             color: #FFFFFF;
         }
         .emergency-card {
@@ -74,7 +75,7 @@
           <div
             class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
             <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
-              src="../images/logo_ambassy.png" />
+              src="../images/logo.jpeg" />
           </div>
           <div class="flex flex-col">
             <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
@@ -209,7 +210,7 @@
               class="dropdown-menu absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
               <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
                 href="#profil">
-                <span class="material-symbols-outlined text-lg text-primary">account_circle</span>
+                <span class="material-symbols-outlined text-lg text-primary-dark">account_circle</span>
                 Mon Profil
               </a>
               <div class="border-t border-slate-100 my-1"></div>
@@ -253,7 +254,7 @@
                   class="flex items-center justify-between p-4 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-4">
                     <div
-                      class="size-12 rounded-full bg-slate-100 flex items-center justify-center font-bold text-primary">
+                      class="size-12 rounded-full bg-slate-100 flex items-center justify-center font-bold text-primary-dark">
                       RU</div>
                     <div>
                       <p class="text-sm font-bold text-navy-blue uppercase">Ligne Moscou (Consulaire)</p>
@@ -261,7 +262,7 @@
                     </div>
                   </div>
                   <div class="flex gap-2">
-                    <button class="p-2 text-slate-400 hover:text-primary transition-colors"><span
+                    <button class="p-2 text-slate-400 hover:text-primary-dark transition-colors"><span
                         class="material-symbols-outlined">edit</span></button>
                     <button class="p-2 text-slate-400 hover:text-accent-red transition-colors"><span
                         class="material-symbols-outlined">delete</span></button>
@@ -271,7 +272,7 @@
                   class="flex items-center justify-between p-4 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-4">
                     <div
-                      class="size-12 rounded-full bg-slate-100 flex items-center justify-center font-bold text-primary">
+                      class="size-12 rounded-full bg-slate-100 flex items-center justify-center font-bold text-primary-dark">
                       FR</div>
                     <div>
                       <p class="text-sm font-bold text-navy-blue uppercase">Ligne Support Brazzaville</p>
@@ -279,7 +280,7 @@
                     </div>
                   </div>
                   <div class="flex gap-2">
-                    <button class="p-2 text-slate-400 hover:text-primary transition-colors"><span
+                    <button class="p-2 text-slate-400 hover:text-primary-dark transition-colors"><span
                         class="material-symbols-outlined">edit</span></button>
                     <button class="p-2 text-slate-400 hover:text-accent-red transition-colors"><span
                         class="material-symbols-outlined">delete</span></button>
@@ -289,7 +290,7 @@
                   class="flex items-center justify-between p-4 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-4">
                     <div
-                      class="size-12 rounded-full bg-slate-100 flex items-center justify-center font-bold text-primary">
+                      class="size-12 rounded-full bg-slate-100 flex items-center justify-center font-bold text-primary-dark">
                       ST</div>
                     <div>
                       <p class="text-sm font-bold text-navy-blue uppercase">Cellule de Crise (Saint-Pétersbourg)</p>
@@ -297,7 +298,7 @@
                     </div>
                   </div>
                   <div class="flex gap-2">
-                    <button class="p-2 text-slate-400 hover:text-primary transition-colors"><span
+                    <button class="p-2 text-slate-400 hover:text-primary-dark transition-colors"><span
                         class="material-symbols-outlined">edit</span></button>
                     <button class="p-2 text-slate-400 hover:text-accent-red transition-colors"><span
                         class="material-symbols-outlined">delete</span></button>
@@ -305,7 +306,7 @@
                 </div>
               </div>
               <button
-                class="w-full mt-6 py-3 border-2 border-dashed border-slate-200 text-slate-500 rounded-xl text-sm font-bold hover:bg-slate-50 hover:border-primary/30 hover:text-primary transition-all flex items-center justify-center gap-2">
+                class="w-full mt-6 py-3 border-2 border-dashed border-slate-200 text-slate-500 rounded-xl text-sm font-bold hover:bg-slate-50 hover:border-primary/30 hover:text-primary-dark transition-all flex items-center justify-center gap-2">
                 <span class="material-symbols-outlined">add_circle</span>
                 Ajouter un numéro d'urgence
               </button>
@@ -330,7 +331,7 @@
                   <div class="flex items-start justify-between">
                     <div class="flex gap-4">
                       <div
-                        class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                        class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary-dark group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined">gavel</span>
                       </div>
                       <div>
@@ -346,14 +347,14 @@
                       </div>
                     </div>
                     <span
-                      class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">open_in_new</span>
+                      class="material-symbols-outlined text-slate-300 group-hover:text-primary-dark transition-colors">open_in_new</span>
                   </div>
                 </div>
                 <div class="protocol-item group p-4 border border-slate-200 rounded-xl transition-all cursor-pointer">
                   <div class="flex items-start justify-between">
                     <div class="flex gap-4">
                       <div
-                        class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                        class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary-dark group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined">medical_services</span>
                       </div>
                       <div>
@@ -369,14 +370,14 @@
                       </div>
                     </div>
                     <span
-                      class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">open_in_new</span>
+                      class="material-symbols-outlined text-slate-300 group-hover:text-primary-dark transition-colors">open_in_new</span>
                   </div>
                 </div>
                 <div class="protocol-item group p-4 border border-slate-200 rounded-xl transition-all cursor-pointer">
                   <div class="flex items-start justify-between">
                     <div class="flex gap-4">
                       <div
-                        class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                        class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary-dark group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined">database_off</span>
                       </div>
                       <div>
@@ -392,14 +393,14 @@
                       </div>
                     </div>
                     <span
-                      class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">open_in_new</span>
+                      class="material-symbols-outlined text-slate-300 group-hover:text-primary-dark transition-colors">open_in_new</span>
                   </div>
                 </div>
                 <div class="protocol-item group p-4 border border-slate-200 rounded-xl transition-all cursor-pointer">
                   <div class="flex items-start justify-between">
                     <div class="flex gap-4">
                       <div
-                        class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                        class="size-12 rounded-lg bg-primary/5 flex items-center justify-center text-primary-dark group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined">warning</span>
                       </div>
                       <div>
@@ -415,7 +416,7 @@
                       </div>
                     </div>
                     <span
-                      class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">open_in_new</span>
+                      class="material-symbols-outlined text-slate-300 group-hover:text-primary-dark transition-colors">open_in_new</span>
                   </div>
                 </div>
               </div>
@@ -423,11 +424,11 @@
           </div>
         </div>
         <div class="bg-primary/5 border border-primary/10 rounded-xl p-6 flex gap-6 items-center">
-          <div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+          <div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary-dark shrink-0">
             <span class="material-symbols-outlined text-3xl">info</span>
           </div>
           <div>
-            <h5 class="font-bold text-primary mb-1">Rappel Opérationnel</h5>
+            <h5 class="font-bold text-primary-dark mb-1">Rappel Opérationnel</h5>
             <p class="text-sm text-slate-600 leading-relaxed">
               Toute modification des numéros d'urgence doit être validée par le Chef de Mission avant d'être publiée sur
               le portail public. Les agents de garde doivent avoir une copie physique des protocoles en cas de coupure
@@ -444,53 +445,53 @@
     document.addEventListener('DOMContentLoaded', () => {
       const currentPath = window.location.pathname.split('/').pop() || 'home.html';
       const navLinks = document.querySelectorAll('nav a');
-      
+
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (!href) return;
-        
+
         // Handle relative paths (e.g., ./home.html or home.html)
         const linkPath = href.split('/').pop();
-        
+
         if (linkPath === currentPath) {
           // Highlight this link
-          
+
           // Check if it is a submenu item
           const details = link.closest('details');
           if (details) {
-              // It's a submenu item
-              details.setAttribute('open', '');
-              
-              // Apply submenu active styles
-              link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
-              link.classList.add('text-accent-gold', 'font-bold');
+            // It's a submenu item
+            details.setAttribute('open', '');
+
+            // Apply submenu active styles
+            link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
+            link.classList.add('text-accent-gold', 'font-bold');
           } else {
-              // It's a top-level item
-              link.classList.add('sidebar-active');
+            // It's a top-level item
+            link.classList.add('sidebar-active');
           }
         } else {
-           // Remove active classes from non-matching links to ensure clean state
-           link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
-           
-           // Restore default submenu style if it was previously active (rough approximation)
-           const details = link.closest('details');
-           if (details) {
-               link.classList.add('text-sidebar-text/60');
-           }
+          // Remove active classes from non-matching links to ensure clean state
+          link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
+
+          // Restore default submenu style if it was previously active (rough approximation)
+          const details = link.closest('details');
+          if (details) {
+            link.classList.add('text-sidebar-text/60');
+          }
         }
       });
-      
+
       // Cleanup: Remove 'open' from details that DON'T have the active link
       // This fixes cases where a page might have the wrong menu hardcoded open.
       document.querySelectorAll('nav details').forEach(details => {
-          const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
-              const href = link.getAttribute('href');
-              return href && href.split('/').pop() === currentPath;
-          });
-          
-          if (!activeLink) {
-              details.removeAttribute('open');
-          }
+        const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
+          const href = link.getAttribute('href');
+          return href && href.split('/').pop() === currentPath;
+        });
+
+        if (!activeLink) {
+          details.removeAttribute('open');
+        }
       });
     });
   </script>
