@@ -55,8 +55,8 @@
         <div
           class="flex items-center gap-2 px-3 py-1.5 border border-[#dce0e5] dark:border-gray-700 rounded-full bg-gray-50 dark:bg-gray-800">
           <span class="material-symbols-outlined text-sm text-green-600">lock</span>
-          <span class="text-[10px] font-bold text-[#637288] dark:text-gray-300 uppercase tracking-widest">Secure
-            Form</span>
+          <span class="text-[10px] font-bold text-[#637288] dark:text-gray-300 uppercase tracking-widest">Formulaire
+            Sécurisé</span>
         </div>
       </div>
     </header>
@@ -66,19 +66,19 @@
           <div
             class="inline-flex items-center gap-2 text-primary-dark dark:text-accent-gold mb-4 bg-primary/5 dark:bg-primary/20 px-4 py-1.5 rounded-full border border-primary/10">
             <span class="material-symbols-outlined text-base">verified_user</span>
-            <span class="text-[11px] font-bold uppercase tracking-widest">Official Enregistrement Consulaire</span>
+            <span class="text-[11px] font-bold uppercase tracking-widest">Enregistrement Consulaire Officiel</span>
           </div>
           <h1
             class="text-[#111418] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-2">
             Enregistrement Consulaire</h1>
-          <h2 class="text-[#637288] dark:text-gray-400 text-xl font-semibold">Step 1 of 4: Informations personnelles
+          <h2 class="text-[#637288] dark:text-gray-400 text-xl font-semibold">Étape 1 sur 4 : Informations personnelles
           </h2>
         </div>
         <div
           class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-[#dce0e5] dark:border-gray-800 p-8 mb-10">
           <div class="flex flex-col gap-4">
             <div class="flex items-center justify-between mb-1">
-              <p class="text-[#111418] dark:text-white text-sm font-bold uppercase tracking-wider">Progress</p>
+              <p class="text-[#111418] dark:text-white text-sm font-bold uppercase tracking-wider">Progression</p>
               <p class="text-primary-dark dark:text-accent-gold text-lg font-black">25%</p>
             </div>
             <div class="h-2 w-full rounded-full bg-[#dce0e5] dark:bg-gray-800 overflow-hidden">
@@ -87,9 +87,9 @@
             <div class="grid grid-cols-4 gap-2 text-[9px] font-bold uppercase tracking-wider text-center">
               <span class="text-primary-dark dark:text-accent-gold border-t-2 border-primary pt-2">1. Informations
                 personnelles</span>
-              <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">2. Residence</span>
+              <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">2. Résidence</span>
               <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">3. Documents</span>
-              <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">4. Review</span>
+              <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">4. Vérification</span>
             </div>
           </div>
         </div>
@@ -99,63 +99,85 @@
             <div
               class="border-b border-[#dce0e5] dark:border-gray-800 bg-background-light/30 dark:bg-gray-800/30 px-8 py-5 flex items-center gap-3">
               <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold">person</span>
-              <h2 class="text-[#111418] dark:text-white text-xl font-bold tracking-tight">Identity Détails</h2>
+              <h2 class="text-[#111418] dark:text-white text-xl font-bold tracking-tight">Détails d'Identité</h2>
             </div>
             <div class="p-8 space-y-6">
-              <label class="flex flex-col gap-2">
-                <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Full Nom (Nom complet)</span>
-                <input
-                  class="form-input rounded-lg border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white h-12 px-4 focus:ring-primary"
-                  placeholder="Enter your full name as in passport" required="" type="text" />
-              </label>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <label class="flex flex-col gap-2">
-                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Date of Birth</span>
+                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Nom (Surname)</span>
+                  <input
+                    class="form-input rounded-lg border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white h-12 px-4 focus:ring-primary"
+                    placeholder="Votre nom comme sur le passeport" required="" type="text" />
+                </label>
+                <label class="flex flex-col gap-2">
+                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Prénom (First name)</span>
+                  <input
+                    class="form-input rounded-lg border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white h-12 px-4 focus:ring-primary"
+                    placeholder="Votre prénom comme sur le passeport" required="" type="text" />
+                </label>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <label class="flex flex-col gap-2">
+                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Date de Naissance</span>
                   <input
                     class="form-input rounded-lg border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white h-12 px-4 focus:ring-primary"
                     required="" type="date" />
                 </label>
                 <label class="flex flex-col gap-2">
-                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Gender</span>
+                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Sexe</span>
                   <select
                     class="form-select rounded-lg border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white h-12 px-4 focus:ring-primary">
-                    <option disabled="" selected="" value="">Sélectionner Gender</option>
-                    <option value="male">Male (Masculin)</option>
-                    <option value="female">Female (Féminin)</option>
-                    <option value="other">Other</option>
+                    <option disabled="" selected="" value="">Sélectionner le sexe</option>
+                    <option value="male">Masculin</option>
+                    <option value="female">Féminin</option>
+                    <option value="other">Autre</option>
                   </select>
                 </label>
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <label class="flex flex-col gap-2">
-                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Place of Birth (Congo)</span>
+                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Lieu de Naissance (Congo)</span>
                   <input
                     class="form-input rounded-lg border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white h-12 px-4 focus:ring-primary"
-                    placeholder="City or Province" required="" type="text" />
+                    placeholder="Ville ou Province" required="" type="text" />
                 </label>
                 <label class="flex flex-col gap-2">
-                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Passport Number</span>
+                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Numéro de Passeport</span>
                   <input
                     class="form-input rounded-lg border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white h-12 px-4 focus:ring-primary"
-                    placeholder="e.g. AB123456" required="" type="text" />
+                    placeholder="ex. AB123456" required="" type="text" />
+                </label>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <label class="flex flex-col gap-2">
+                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Date de délivrance</span>
+                  <input
+                    class="form-input rounded-lg border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white h-12 px-4 focus:ring-primary"
+                    required="" type="date" />
+                </label>
+                <label class="flex flex-col gap-2">
+                  <span class="text-[#111418] dark:text-gray-300 text-sm font-bold">Date d'expiration</span>
+                  <input
+                    class="form-input rounded-lg border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white h-12 px-4 focus:ring-primary"
+                    required="" type="date" />
                 </label>
               </div>
             </div>
           </div>
           <div class="flex items-center justify-between pt-8">
             <div class="text-[#637288] text-sm italic">
-              * Tous fields are mandatory for consular records.
+              * Tous les champs sont obligatoires pour les dossiers consulaires.
             </div>
             <div class="flex gap-4">
               <button
                 class="px-6 py-3 rounded-lg text-[#637288] dark:text-gray-400 font-bold text-sm hover:text-primary-dark transition-colors"
                 type="button">
-                Exit Application
+                Quitter la demande
               </button>
               <a href="./step2.html"
                 class="flex items-center gap-2 px-10 py-4 bg-primary rounded-lg text-white font-bold text-base shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
                 type="submit">
-                Enregistrer &amp; Continue
+                Enregistrer &amp; Continuer
                 <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
               </a>
             </div>
@@ -167,9 +189,10 @@
             <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold text-3xl">help_outline</span>
           </div>
           <div>
-            <p class="text-base font-bold text-[#111418] dark:text-white">Need help with Step 1?</p>
+            <p class="text-base font-bold text-[#111418] dark:text-white">Besoin d'aide pour l'Étape 1 ?</p>
             <p class="text-sm text-[#637288] dark:text-gray-400 mt-1 leading-relaxed">
-              Ensure your Nom matches your passport exactly. For technical issues, Contact the consular department at
+              Assurez-vous que votre Nom correspond exactement à votre passeport. Pour des problèmes techniques,
+              contactez le service consulaire à
               <a class="text-primary-dark dark:text-accent-gold font-bold underline"
                 href="mailto:support@ambardc.ru">support@ambardc.ru</a>
             </p>
@@ -181,13 +204,12 @@
       class="mt-auto py-10 px-6 lg:px-40 border-t border-[#dce0e5] dark:border-gray-800 bg-white dark:bg-background-dark text-center">
       <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-2">
-          <span class="text-[10px] font-bold text-[#637288] uppercase tracking-widest">© 2026 Ambassade of the
-            Democratic
-            Republic of Congo in Russia</span>
+          <span class="text-[10px] font-bold text-[#637288] uppercase tracking-widest">© 2026 Ambassade de la
+            République du Congo en Russie</span>
         </div>
         <div class="flex gap-8 text-[10px] font-extrabold text-[#637288] uppercase tracking-widest">
           <a class="hover:text-primary-dark transition-colors" href="#">Politique de Confidentialité</a>
-          <a class="hover:text-primary-dark transition-colors" href="#">Légal Information</a>
+          <a class="hover:text-primary-dark transition-colors" href="#">Mentions Légales</a>
           <a class="hover:text-primary-dark transition-colors" href="#">Contact</a>
         </div>
       </div>
