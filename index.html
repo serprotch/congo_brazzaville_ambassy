@@ -21,7 +21,8 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
+            "primary": "#009543",
+            "primary-dark": "#111821",
             "background-light": "#f6f7f8",
             "background-dark": "#111821",
             "congolese-green": "#009543",
@@ -58,17 +59,23 @@
     class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
       <div class="flex items-center gap-10">
-        <a class="flex items-center gap-3" href="./index.html">
-          <img src="./images/logo_ambassy.png" alt="" class="w-14">
+        <a href="./index.html" class="flex items-center gap-2">
+          <img src="./images/logo.jpeg" alt="" class="w-14">
+          <div class="flex flex-col">
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Ambassade du</p>
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Congo Brazzavile</p>
+            <p class="text-[10px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-[0.2em]">Fédération de
+              Russie</p>
+          </div>
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./services.html">Services</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./news.html">Actualités</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./about.html">Ambassade</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./contact.html">Contact</a>
         </nav>
       </div>
@@ -100,7 +107,7 @@
         style="background-image: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvPSlbHyJ9jZtPuMmjL8yCKAxcQ_scU-5Gqros9QpRc54eSskGJYmXNi-a_rh2j7Icha9p-btWjPdpuSEFNYfaR7imb2qqSt8S-kmPHRLssBrFNRFPLGzCSLvJMEJ53mUKhN2x70lqoFAl3VD6Rme_1W85__RzgjWgVPxY9ce_hP6_JtHe9jvapyaB5os78KZl7FqJl7E2Yid6J6ZycGVtBzhkxuRfzsFbXNINPuYDuiNTIG784Q6gILrlgvvzQFKHuEAVHQYYHKw');">
         <div class="p-8 lg:p-16 w-full lg:max-w-3xl">
           <span
-            class="inline-block bg-congolese-yellow text-primary font-extrabold text-[10px] tracking-widest uppercase px-3 py-1 rounded-full mb-6">Mission
+            class="inline-block bg-congolese-yellow text-primary-dark font-extrabold text-[10px] tracking-widest uppercase px-3 py-1 rounded-full mb-6">Mission
             Diplomatique</span>
           <h2 class="text-white text-4xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
             Renforcer la Coopération entre le Congo et la Russie
@@ -130,11 +137,11 @@
       <div
         class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-l-4 border-congolese-green pl-6">
         <div>
-          <h3 class="text-2xl font-extrabold text-primary dark:text-white">Tâches Consulaires Principales</h3>
+          <h3 class="text-2xl font-extrabold text-primary-dark dark:text-white">Tâches Consulaires Principales</h3>
           <p class="text-gray-500 dark:text-gray-400 text-sm">Traitement efficace pour les nationaux et les visiteurs
           </p>
         </div>
-        <a class="text-primary dark:text-congolese-yellow text-sm font-bold flex items-center gap-1 hover:underline"
+        <a class="text-primary-dark dark:text-congolese-yellow text-sm font-bold flex items-center gap-1 hover:underline"
           href="./services.html">
           Voir Tous les Services <span class="material-symbols-outlined text-sm"></span>
         </a>
@@ -143,7 +150,7 @@
         <div
           class="group p-6 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all">
           <div
-            class="w-12 h-12 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-12 h-12 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">badge</span>
           </div>
           <h4 class="text-lg font-extrabold mb-2">Renouvellement de Passeport</h4>
@@ -155,7 +162,7 @@
         <div
           class="group p-6 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all">
           <div
-            class="w-12 h-12 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-12 h-12 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">flight_takeoff</span>
           </div>
           <h4 class="text-lg font-extrabold mb-2">Demande de Visa</h4>
@@ -167,7 +174,7 @@
         <div
           class="group p-6 bg-white dark:bg-background-dark border border-[#dce0e5] dark:border-gray-800 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all">
           <div
-            class="w-12 h-12 bg-primary/5 dark:bg-white/5 text-primary dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            class="w-12 h-12 bg-primary/5 dark:bg-white/5 text-primary-dark dark:text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined text-3xl">how_to_reg</span>
           </div>
           <h4 class="text-lg font-extrabold mb-2">Enregistrement Consulaire</h4>
@@ -219,7 +226,7 @@
             <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">L'Ambassadeur a rencontré
               des représentants commerciaux russes pour discuter de nouvelles voies de coopération dans le bois et
               l'énergie.</p>
-            <a class="font-bold text-sm text-primary dark:text-congolese-yellow underline underline-offset-4"
+            <a class="font-bold text-sm text-primary-dark dark:text-congolese-yellow underline underline-offset-4"
               href="./news_detail.html">Lire plus</a>
           </div>
           <div class="flex flex-col gap-4">
@@ -232,7 +239,7 @@
             </h5>
             <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">Annonce de 200
               places supplémentaires pour les programmes de Licence et Master pour l'année académique à venir.</p>
-            <a class="font-bold text-sm text-primary dark:text-congolese-yellow underline underline-offset-4"
+            <a class="font-bold text-sm text-primary-dark dark:text-congolese-yellow underline underline-offset-4"
               href="./news_detail.html">Lire plus</a>
           </div>
           <div class="flex flex-col gap-4">
@@ -245,7 +252,7 @@
             </h5>
             <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">Une exposition vibrante de
               culture, musique et cuisine congolaises organisée dans l'enceinte de l'ambassade le week-end dernier.</p>
-            <a class="font-bold text-sm text-primary dark:text-congolese-yellow underline underline-offset-4"
+            <a class="font-bold text-sm text-primary-dark dark:text-congolese-yellow underline underline-offset-4"
               href="./news_detail.html">Lire plus</a>
           </div>
         </div>
@@ -264,14 +271,14 @@
         </div>
         <div class="max-w-xl relative z-10">
           <h3 class="text-3xl lg:text-4xl font-extrabold mb-6">Accès au Portail Citoyen</h3>
-          <p class="text-primary/10 text-lg mb-8 text-white/80 leading-relaxed font-medium">
+          <p class="text-primary-dark/10 text-lg mb-8 text-white/80 leading-relaxed font-medium">
             Êtes-vous un citoyen congolais résidant en Fédération de Russie? Inscrivez-vous sur notre portail numérique
             pour suivre
             les demandes, recevoir des avis officiels et prendre des rendez-vous en ligne.
           </p>
           <div class="flex gap-4">
             <a href="./login.html"
-              class="bg-congolese-yellow text-primary font-extrabold py-4 px-8 rounded-lg hover:bg-white transition-colors">Connexion
+              class="bg-congolese-yellow text-primary-dark font-extrabold py-4 px-8 rounded-lg hover:bg-white transition-colors">Connexion
               au
               Portail</a>
             <a href="./registration/step1.html"
@@ -293,7 +300,7 @@
             </div>
             <div class="flex items-center gap-4">
               <div class="size-12 rounded-full bg-congolese-yellow flex items-center justify-center">
-                <span class="material-symbols-outlined text-primary">public</span>
+                <span class="material-symbols-outlined text-primary-dark">public</span>
               </div>
               <div>
                 <p class="text-xs font-bold uppercase tracking-widest text-white/60">Accès Global</p>
@@ -310,7 +317,7 @@
         <h3 class="text-3xl font-extrabold mb-8">Nous Contacter</h3>
         <div class="space-y-8">
           <div class="flex gap-6">
-            <div class="text-primary dark:text-congolese-yellow">
+            <div class="text-primary-dark dark:text-congolese-yellow">
               <span class="material-symbols-outlined text-3xl">location_on</span>
             </div>
             <div>
@@ -319,7 +326,7 @@
             </div>
           </div>
           <div class="flex gap-6">
-            <div class="text-primary dark:text-congolese-yellow">
+            <div class="text-primary-dark dark:text-congolese-yellow">
               <span class="material-symbols-outlined text-3xl">schedule</span>
             </div>
             <div>
@@ -329,7 +336,7 @@
             </div>
           </div>
           <div class="flex gap-6">
-            <div class="text-primary dark:text-congolese-yellow">
+            <div class="text-primary-dark dark:text-congolese-yellow">
               <span class="material-symbols-outlined text-3xl">call</span>
             </div>
             <div>
@@ -354,7 +361,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-2">
           <div class="flex items-center gap-3 mb-6">
-            <div class="size-8 text-primary dark:text-white">
+            <div class="size-8 text-primary-dark dark:text-white">
               <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 4L6 17V31H24V44H42V17L24 4Z" fill="currentColor"></path>
               </svg>
@@ -367,10 +374,10 @@
             et le service de nos citoyens à l'étranger.
           </p>
           <div class="flex gap-4">
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">language</span>
             </a>
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">mail</span>
             </a>
           </div>
@@ -378,18 +385,19 @@
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Liens Rapides</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="./services.html">Services</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./news.html">Actualités</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./about.html">À propos</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./contact.html">Contact</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./services.html">Services</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./news.html">Actualités</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./about.html">À propos</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Légal</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Politique de Confidentialité</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Cookies</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Politique de Confidentialité</a>
+            </li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Cookies</a></li>
           </ul>
         </div>
       </div>

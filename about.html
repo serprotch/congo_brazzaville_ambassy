@@ -17,7 +17,8 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
+            "primary": "#009543",
+            "primary-dark": "#111821",
             "background-light": "#f6f7f8",
             "background-dark": "#111821",
             "congolese-green": "#009543",
@@ -56,7 +57,7 @@
 
     .tab-link.active {
       border-bottom: 3px solid #009543;
-      color: #0d3368;
+      color: #009543;
     }
   </style>
 </head>
@@ -66,17 +67,23 @@
     class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
       <div class="flex items-center gap-10">
-        <a class="flex items-center gap-3" href="./index.html">
-          <img src="./images/logo_ambassy.png" alt="" class="w-14">
+        <a href="./index.html" class="flex items-center gap-2">
+          <img src="./images/logo.jpeg" alt="" class="w-14">
+          <div class="flex flex-col">
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Ambassade du</p>
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Congo Brazzavile</p>
+            <p class="text-[10px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-[0.2em]">Fédération de
+              Russie</p>
+          </div>
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./news_detail.html">Services</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./news.html">Actualités</a>
-          <a class="text-sm font-bold text-primary dark:text-congolese-yellow border-b-2 border-congolese-green pb-1"
+          <a class="text-sm font-bold text-primary-dark dark:text-congolese-yellow border-b-2 border-congolese-green pb-1"
             href="./about.html">Ambassade</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./contact.html">Contact</a>
         </nav>
       </div>
@@ -127,17 +134,17 @@
             <span class="material-symbols-outlined text-xl">person</span> Mot de l'Ambassadeur
           </button>
           <button
-            class="tab-link py-5 text-sm font-bold text-gray-500 hover:text-primary dark:hover:text-white whitespace-nowrap transition-all flex items-center gap-2"
+            class="tab-link py-5 text-sm font-bold text-gray-500 hover:text-primary-dark dark:hover:text-white whitespace-nowrap transition-all flex items-center gap-2"
             id="tab-missions-vision" onclick="switchTab('missions-vision')">
             <span class="material-symbols-outlined text-xl">flag</span> Missions &amp; Vision
           </button>
           <button
-            class="tab-link py-5 text-sm font-bold text-gray-500 hover:text-primary dark:hover:text-white whitespace-nowrap transition-all flex items-center gap-2"
+            class="tab-link py-5 text-sm font-bold text-gray-500 hover:text-primary-dark dark:hover:text-white whitespace-nowrap transition-all flex items-center gap-2"
             id="tab-organisation" onclick="switchTab('organisation')">
             <span class="material-symbols-outlined text-xl">account_tree</span> Organisation
           </button>
           <button
-            class="tab-link py-5 text-sm font-bold text-gray-500 hover:text-primary dark:hover:text-white whitespace-nowrap transition-all flex items-center gap-2"
+            class="tab-link py-5 text-sm font-bold text-gray-500 hover:text-primary-dark dark:hover:text-white whitespace-nowrap transition-all flex items-center gap-2"
             id="tab-relations" onclick="switchTab('relations')">
             <span class="material-symbols-outlined text-xl">handshake</span> Relations Bilatérales
           </button>
@@ -157,15 +164,15 @@
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPRCLCnT6J_xZM_li21iiUW4uW_jFA39k0s7darcPlfd7WAp3xMzcngiqWkrQ2zNmUXp0AhaV37f36SQegCU7QpaoUDua01dRw480BM3FaAjujMN1NU60qQ7lT1mMxXetYD3pGzK0ExD366msj5m-ENXX62ZLRx7u5DOyR9bUeX7_kbsRTBgA_F9TxYYY_NEGvvgQ7AcCVe3v73TVBcNPeekPX1tcsyBsyUYyafGDq16Hb6csTRyJEg9wB5LgyNMUyrLC38WiBqh8" />
               </div>
               <div class="mt-6 text-center md:text-left">
-                <h4 class="text-xl font-extrabold text-primary dark:text-white">S.E.M. L'Ambassadeur
+                <h4 class="text-xl font-extrabold text-primary-dark dark:text-white">S.E.M. L'Ambassadeur
                 </h4>
                 <p class="text-sm font-bold text-congolese-green uppercase tracking-widest mt-1">
                   Plénipotentiaire</p>
               </div>
             </div>
             <div class="w-full md:w-2/3">
-              <span class="material-symbols-outlined text-6xl text-primary/10 mb-4 block">format_quote</span>
-              <h3 class="text-3xl font-extrabold mb-6 text-primary dark:text-white">Bienvenue à
+              <span class="material-symbols-outlined text-6xl text-primary-dark/10 mb-4 block">format_quote</span>
+              <h3 class="text-3xl font-extrabold mb-6 text-primary-dark dark:text-white">Bienvenue à
                 l'Ambassade</h3>
               <div class="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
                 <p>C'est avec un immense honneur que je vous souhaite la bienvenue sur le portail
@@ -182,7 +189,7 @@
                   consulaires.</p>
               </div>
               <div class="mt-10 pt-8 border-t border-gray-100 dark:border-gray-800">
-                <p class="italic font-bold text-primary dark:text-white">"La fraternité au service de la
+                <p class="italic font-bold text-primary-dark dark:text-white">"La fraternité au service de la
                   diplomatie et du progrès."</p>
               </div>
             </div>
@@ -190,7 +197,7 @@
         </div>
         <div class="tab-content space-y-16" id="missions-vision">
           <div class="text-center mb-12">
-            <h3 class="text-3xl font-extrabold text-primary dark:text-white mb-4">Notre Vision Stratégique
+            <h3 class="text-3xl font-extrabold text-primary-dark dark:text-white mb-4">Notre Vision Stratégique
             </h3>
             <p class="text-gray-500 max-w-2xl mx-auto">Promouvoir les intérêts de la République du Congo et
               assurer la protection de ses ressortissants sur le territoire de la Fédération de Russie.
@@ -211,7 +218,7 @@
             <div
               class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
               <div
-                class="w-14 h-14 bg-primary/10 text-primary dark:text-white rounded-xl flex items-center justify-center mb-6">
+                class="w-14 h-14 bg-primary/10 text-primary-dark dark:text-white rounded-xl flex items-center justify-center mb-6">
                 <span class="material-symbols-outlined text-3xl">groups</span>
               </div>
               <h4 class="text-xl font-extrabold mb-4">Protection Consulaire</h4>
@@ -222,7 +229,7 @@
             <div
               class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
               <div
-                class="w-14 h-14 bg-congolese-yellow/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                class="w-14 h-14 bg-congolese-yellow/10 text-primary-dark rounded-xl flex items-center justify-center mb-6">
                 <span class="material-symbols-outlined text-3xl">trending_up</span>
               </div>
               <h4 class="text-xl font-extrabold mb-4">Diplomatie Économique</h4>
@@ -254,10 +261,10 @@
               <div class="space-y-8">
                 <div class="flex gap-6 items-start">
                   <div
-                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary-dark dark:text-white">
                     1</div>
                   <div>
-                    <h5 class="font-extrabold text-lg text-primary dark:text-white">La Chancellerie
+                    <h5 class="font-extrabold text-lg text-primary-dark dark:text-white">La Chancellerie
                       Diplomatique</h5>
                     <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Cœur de la mission,
                       elle assure le suivi des dossiers politiques et la liaison avec le Ministère
@@ -266,10 +273,10 @@
                 </div>
                 <div class="flex gap-6 items-start">
                   <div
-                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary-dark dark:text-white">
                     2</div>
                   <div>
-                    <h5 class="font-extrabold text-lg text-primary dark:text-white">Le Service
+                    <h5 class="font-extrabold text-lg text-primary-dark dark:text-white">Le Service
                       Consulaire</h5>
                     <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Délivrance des visas,
                       passeports, cartes consulaires, actes de naissance et légalisation de
@@ -278,10 +285,10 @@
                 </div>
                 <div class="flex gap-6 items-start">
                   <div
-                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary-dark dark:text-white">
                     3</div>
                   <div>
-                    <h5 class="font-extrabold text-lg text-primary dark:text-white">Le Service
+                    <h5 class="font-extrabold text-lg text-primary-dark dark:text-white">Le Service
                       Culturel &amp; Académique</h5>
                     <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Gestion des étudiants
                       boursiers, suivi des inscriptions universitaires et promotion des échanges
@@ -290,10 +297,10 @@
                 </div>
                 <div class="flex gap-6 items-start">
                   <div
-                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary-dark dark:text-white">
                     4</div>
                   <div>
-                    <h5 class="font-extrabold text-lg text-primary dark:text-white">L'Attaché de
+                    <h5 class="font-extrabold text-lg text-primary-dark dark:text-white">L'Attaché de
                       Défense</h5>
                     <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Coordination de la
                       coopération militaire et sécuritaire entre les deux pays.</p>
@@ -301,10 +308,10 @@
                 </div>
                 <div class="flex gap-6 items-start">
                   <div
-                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary dark:text-white">
+                    class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center font-bold text-primary-dark dark:text-white">
                     5</div>
                   <div>
-                    <h5 class="font-extrabold text-lg text-primary dark:text-white">Le Service
+                    <h5 class="font-extrabold text-lg text-primary-dark dark:text-white">Le Service
                       Administratif et Financier</h5>
                     <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Gestion interne des
                       ressources humaines et du patrimoine de l'Ambassade.</p>
@@ -316,10 +323,10 @@
         </div>
         <div class="tab-content space-y-10" id="relations">
           <div class="prose prose-lg dark:prose-invert max-w-none">
-            <h3 class="text-3xl font-extrabold text-primary dark:text-white mb-8">Plus de 60 ans de
+            <h3 class="text-3xl font-extrabold text-primary-dark dark:text-white mb-8">Plus de 60 ans de
               Coopération Fraternelle</h3>
             <div class="bg-primary/5 border-l-4 border-congolese-yellow p-8 rounded-r-2xl mb-10">
-              <p class="text-primary dark:text-white font-bold leading-relaxed">Les relations
+              <p class="text-primary-dark dark:text-white font-bold leading-relaxed">Les relations
                 diplomatiques entre la République du Congo et la Fédération de Russie (alors Union
                 Soviétique) ont été établies le 16 mars 1964.</p>
             </div>
@@ -359,7 +366,7 @@
             href="./contact.html">
             <span class="material-symbols-outlined">mail</span> Contactez-nous
           </a>
-          <a class="inline-flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-primary dark:text-white font-bold py-4 px-8 rounded-lg hover:bg-gray-50 transition-all"
+          <a class="inline-flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-primary-dark dark:text-white font-bold py-4 px-8 rounded-lg hover:bg-gray-50 transition-all"
             href="./contact.html">
             <span class="material-symbols-outlined">help</span> Foire aux Questions
           </a>
@@ -372,7 +379,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-2">
           <div class="flex items-center gap-3 mb-6">
-            <div class="size-8 text-primary dark:text-white">
+            <div class="size-8 text-primary-dark dark:text-white">
               <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 4L6 17V31H24V44H42V17L24 4Z" fill="currentColor"></path>
               </svg>
@@ -384,10 +391,10 @@
             excellence and serving our citizens abroad.
           </p>
           <div class="flex gap-4">
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">language</span>
             </a>
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">mail</span>
             </a>
           </div>
@@ -395,18 +402,19 @@
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Liens Rapides</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="./services.html">Services</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./news.html">Actualités</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./about.html">A propos</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./contact.html">Contact</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./services.html">Services</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./news.html">Actualités</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./about.html">A propos</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Légal</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Politique de Confidentialité</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Cookies</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Politique de Confidentialité</a>
+            </li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Cookies</a></li>
           </ul>
         </div>
       </div>
@@ -432,7 +440,7 @@
       document.querySelectorAll('.tab-link').forEach(link => {
         link.classList.remove('active');
         link.classList.add('text-gray-500');
-        link.classList.remove('text-primary');
+        link.classList.remove('text-primary-dark');
       });
       // Show selected content
       document.getElementById(tabId).classList.add('active');
@@ -440,7 +448,7 @@
       const activeLink = document.getElementById('tab-' + tabId);
       activeLink.classList.add('active');
       activeLink.classList.remove('text-gray-500');
-      activeLink.classList.add('text-primary');
+      activeLink.classList.add('text-primary-dark');
       // Smooth scroll to top of content if on mobile
       if (window.innerWidth < 768) {
         const tabsNav = document.querySelector('.sticky');

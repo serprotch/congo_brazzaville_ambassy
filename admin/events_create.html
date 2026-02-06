@@ -16,9 +16,10 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
-            "navy-blue": "#0A1D37",
-            "accent-gold": "#EBA834",
+            "primary": "#009543",
+            "primary-dark": "#111821",
+            "navy-blue": "#009543",
+            "accent-gold": "#fcde4a",
             "accent-red": "#C23E28",
             "accent-green": "#009543",
             "bg-light": "#F8FAFC",
@@ -39,7 +40,7 @@
         }
         .sidebar-active {
             background-color: rgba(255, 255, 255, 0.1);
-            border-left: 4px solid #EBA834;
+            border-left: 4px solid #fcde4a;
             color: #FFFFFF;
         }
 
@@ -73,7 +74,7 @@
           <div
             class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
             <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
-              src="../images/logo_ambassy.png" />
+              src="../images/logo.jpeg" />
           </div>
           <div class="flex flex-col">
             <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
@@ -208,7 +209,7 @@
               class="dropdown-menu absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
               <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
                 href="#profil">
-                <span class="material-symbols-outlined text-lg text-primary">account_circle</span>
+                <span class="material-symbols-outlined text-lg text-primary-dark">account_circle</span>
                 Mon Profil
               </a>
               <div class="border-t border-slate-100 my-1"></div>
@@ -244,13 +245,13 @@
                   <label class="block text-[10px] text-slate-400 font-bold uppercase mb-2">Description détaillée</label>
                   <div class="border border-slate-200 rounded-lg overflow-hidden">
                     <div class="bg-slate-50 border-b border-slate-200 px-4 py-2 flex items-center gap-4">
-                      <button class="text-slate-600 hover:text-primary" type="button"><span
+                      <button class="text-slate-600 hover:text-primary-dark" type="button"><span
                           class="material-symbols-outlined text-lg">format_bold</span></button>
-                      <button class="text-slate-600 hover:text-primary" type="button"><span
+                      <button class="text-slate-600 hover:text-primary-dark" type="button"><span
                           class="material-symbols-outlined text-lg">format_italic</span></button>
-                      <button class="text-slate-600 hover:text-primary" type="button"><span
+                      <button class="text-slate-600 hover:text-primary-dark" type="button"><span
                           class="material-symbols-outlined text-lg">format_list_bulleted</span></button>
-                      <button class="text-slate-600 hover:text-primary" type="button"><span
+                      <button class="text-slate-600 hover:text-primary-dark" type="button"><span
                           class="material-symbols-outlined text-lg">link</span></button>
                     </div>
                     <textarea class="w-full border-none focus:ring-0 text-sm px-4 py-4 rich-text-editor"
@@ -292,7 +293,7 @@
                   <div
                     class="border-2 border-dashed border-slate-200 rounded-xl aspect-video flex flex-col items-center justify-center bg-slate-50 hover:bg-slate-100 transition-colors cursor-pointer group">
                     <span
-                      class="material-symbols-outlined text-slate-300 group-hover:text-primary text-4xl mb-2">image</span>
+                      class="material-symbols-outlined text-slate-300 group-hover:text-primary-dark text-4xl mb-2">image</span>
                     <p class="text-xs text-slate-400 font-medium">Glissez ou cliquez pour uploader</p>
                     <p class="text-[9px] text-slate-300 mt-1 uppercase">PNG, JPG (Max 2MB)</p>
                   </div>
@@ -330,7 +331,8 @@
                         type="checkbox" />
                     </div>
                     <div class="flex flex-col">
-                      <span class="text-sm font-bold text-navy-blue group-hover:text-primary transition-colors">Notifier
+                      <span
+                        class="text-sm font-bold text-navy-blue group-hover:text-primary-dark transition-colors">Notifier
                         la diaspora</span>
                       <span class="text-[10px] text-slate-400">Envoyer une alerte par Email et mobile</span>
                     </div>
@@ -349,7 +351,7 @@
         </button>
         <div class="flex items-center gap-4">
           <button
-            class="px-6 py-2.5 rounded-lg text-sm font-bold text-primary hover:bg-blue-50 transition-all flex items-center gap-2 border border-slate-200"
+            class="px-6 py-2.5 rounded-lg text-sm font-bold text-primary-dark hover:bg-blue-50 transition-all flex items-center gap-2 border border-slate-200"
             type="button">
             <span class="material-symbols-outlined text-lg">visibility</span>
             Prévisualiser
@@ -370,53 +372,53 @@
     document.addEventListener('DOMContentLoaded', () => {
       const currentPath = window.location.pathname.split('/').pop() || 'home.html';
       const navLinks = document.querySelectorAll('nav a');
-      
+
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (!href) return;
-        
+
         // Handle relative paths (e.g., ./home.html or home.html)
         const linkPath = href.split('/').pop();
-        
+
         if (linkPath === currentPath) {
           // Highlight this link
-          
+
           // Check if it is a submenu item
           const details = link.closest('details');
           if (details) {
-              // It's a submenu item
-              details.setAttribute('open', '');
-              
-              // Apply submenu active styles
-              link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
-              link.classList.add('text-accent-gold', 'font-bold');
+            // It's a submenu item
+            details.setAttribute('open', '');
+
+            // Apply submenu active styles
+            link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
+            link.classList.add('text-accent-gold', 'font-bold');
           } else {
-              // It's a top-level item
-              link.classList.add('sidebar-active');
+            // It's a top-level item
+            link.classList.add('sidebar-active');
           }
         } else {
-           // Remove active classes from non-matching links to ensure clean state
-           link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
-           
-           // Restore default submenu style if it was previously active (rough approximation)
-           const details = link.closest('details');
-           if (details) {
-               link.classList.add('text-sidebar-text/60');
-           }
+          // Remove active classes from non-matching links to ensure clean state
+          link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
+
+          // Restore default submenu style if it was previously active (rough approximation)
+          const details = link.closest('details');
+          if (details) {
+            link.classList.add('text-sidebar-text/60');
+          }
         }
       });
-      
+
       // Cleanup: Remove 'open' from details that DON'T have the active link
       // This fixes cases where a page might have the wrong menu hardcoded open.
       document.querySelectorAll('nav details').forEach(details => {
-          const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
-              const href = link.getAttribute('href');
-              return href && href.split('/').pop() === currentPath;
-          });
-          
-          if (!activeLink) {
-              details.removeAttribute('open');
-          }
+        const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
+          const href = link.getAttribute('href');
+          return href && href.split('/').pop() === currentPath;
+        });
+
+        if (!activeLink) {
+          details.removeAttribute('open');
+        }
       });
     });
   </script>

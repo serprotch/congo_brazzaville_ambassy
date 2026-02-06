@@ -17,10 +17,11 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
+            "primary": "#009543",
+            "primary-dark": "#111821",
             "background-light": "#f6f7f8",
             "background-dark": "#111821",
-            "accent-gold": "#EBA834",
+            "accent-gold": "#fcde4a",
             "Succès-green": "#10b981",
           },
           fontFamily: {
@@ -69,7 +70,8 @@
           class="mt-10 p-6 bg-background-light dark:bg-gray-800/50 rounded-xl border border-dashed border-[#dce0e5] dark:border-gray-700 w-full">
           <p class="text-[10px] font-bold text-[#637288] dark:text-gray-500 uppercase tracking-widest mb-1">Numéro de
             Référence</p>
-          <p class="text-2xl font-mono font-black text-primary dark:text-accent-gold tracking-wider">CG-MOS-2026-8842
+          <p class="text-2xl font-mono font-black text-primary-dark dark:text-accent-gold tracking-wider">
+            CG-MOS-2026-8842
           </p>
           <p class="mt-2 text-xs text-[#637288] dark:text-gray-400">Veuillez conserver ce numéro pour toute
             correspondance future.</p>
@@ -77,20 +79,20 @@
         <div class="mt-10 w-full flex flex-col sm:flex-row gap-4">
           <a class="flex-1 flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
             href="/">
-            <span class="material-symbols-outlined text-xl">Accueil</span>
+            <span class="material-symbols-outlined text-xl">home</span>
             Retour à l'accueil
           </a>
           <button
             class="flex items-center justify-center gap-2 px-6 py-4 border border-[#dce0e5] dark:border-gray-700 text-[#111418] dark:text-white font-bold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             onclick="window.print()">
-            <span class="material-symbols-outlined text-xl">Imprimer</span>
+            <span class="material-symbols-outlined text-xl">print</span>
             Imprimer le reçu
           </button>
         </div>
       </div>
       <div
         class="bg-background-light/50 dark:bg-gray-800/30 px-8 py-6 border-t border-[#dce0e5] dark:border-gray-800 flex items-start gap-4">
-        <span class="material-symbols-outlined text-primary dark:text-accent-gold">verified_user</span>
+        <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold">verified_user</span>
         <div class="text-left">
           <p class="text-xs font-bold text-[#111418] dark:text-white">Portail Diplomatique Sécurisé</p>
           <p class="text-[11px] text-[#637288] dark:text-gray-400 leading-tight">Vos données sont traitées conformément
@@ -99,7 +101,7 @@
       </div>
     </div>
     <p class="mt-8 text-sm text-[#637288] dark:text-gray-400">
-      Besoin d'assistance ? Contactez-nous à <a class="text-primary dark:text-accent-gold font-bold underline"
+      Besoin d'assistance ? Contactez-nous à <a class="text-primary-dark dark:text-accent-gold font-bold underline"
         href="mailto:support@ambardc.ru">support@ambardc.ru</a>
     </p>
   </div>
@@ -110,9 +112,9 @@
           du Congo en Fédération de Russie</span>
       </div>
       <div class="flex gap-8 text-[10px] font-extrabold text-[#637288] uppercase tracking-widest">
-        <a class="hover:text-primary transition-colors" href="#">Politique de Confidentialité</a>
-        <a class="hover:text-primary transition-colors" href="#">Frais Consulaires</a>
-        <a class="hover:text-primary transition-colors" href="#">Conditions d'Utilisation</a>
+        <a class="hover:text-primary-dark transition-colors" href="#">Politique de Confidentialité</a>
+        <a class="hover:text-primary-dark transition-colors" href="#">Frais Consulaires</a>
+        <a class="hover:text-primary-dark transition-colors" href="#">Conditions d'Utilisation</a>
       </div>
     </div>
   </footer>

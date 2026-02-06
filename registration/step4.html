@@ -17,10 +17,11 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
+            "primary": "#009543",
+            "primary-dark": "#111821",
             "background-light": "#f6f7f8",
             "background-dark": "#111821",
-            "accent-gold": "#EBA834",
+            "accent-gold": "#fcde4a",
           },
           fontFamily: {
             "display": ["Manrope", "sans-serif"]
@@ -33,7 +34,7 @@
   <style type="text/tailwindcss">
     body { font-family: 'Manrope', sans-serif; }
         .form-checkbox:focus { ring: 0 !important; outline: Aucun !important; }
-        .form-checkbox { @apply rounded border-gray-300 text-primary focus:ring-primary; }
+        .form-checkbox { @apply rounded border-gray-300 text-primary-dark focus:ring-primary; }
     </style>
 </head>
 
@@ -43,15 +44,13 @@
     <header
       class="sticky top-0 z-50 w-full border-b border-solid border-[#dce0e5] dark:border-[#2d3748] bg-white dark:bg-background-dark px-6 lg:px-40 py-4">
       <div class="flex items-center justify-between max-w-[1200px] mx-auto">
-        <a href="../index.html" class="flex items-center gap-4">
-          <div
-            class="size-10 flex items-center justify-center bg-primary rounded-lg text-white shadow-lg shadow-primary/20">
-            <span class="material-symbols-outlined text-2xl">account_balance</span>
-          </div>
-          <div>
-            <h2 class="text-[#111418] dark:text-white text-lg font-extrabold leading-tight tracking-tight">Ambassade of
-              Congo</h2>
-            <p class="text-[9px] uppercase tracking-[0.2em] text-[#637288] font-bold">Moscow, Russian Federation</p>
+        <a href="../index.html" class="flex items-center gap-2">
+          <img src="../images/logo.jpeg" alt="" class="w-14">
+          <div class="flex flex-col">
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Ambassade du</p>
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Congo Brazzavile</p>
+            <p class="text-[10px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-[0.2em]">Fédération de
+              Russie</p>
           </div>
         </a>
         <div
@@ -67,8 +66,9 @@
         <div class="text-center mb-12">
           <div
             class="inline-flex items-center gap-2 px-3 py-1 bg-primary/5 dark:bg-primary/20 rounded-full border border-primary/10 mb-4">
-            <span class="material-symbols-outlined text-primary dark:text-accent-gold text-sm">verified</span>
-            <span class="text-[10px] font-bold text-primary dark:text-accent-gold uppercase tracking-[0.2em]">Official
+            <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold text-sm">verified</span>
+            <span
+              class="text-[10px] font-bold text-primary-dark dark:text-accent-gold uppercase tracking-[0.2em]">Official
               Enregistrement Consulaire</span>
           </div>
           <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight mb-2">Consular
@@ -80,16 +80,17 @@
           <div class="flex flex-col gap-4">
             <div class="flex items-center justify-between mb-1">
               <p class="text-[#111418] dark:text-white text-sm font-bold uppercase tracking-wider">Progress</p>
-              <p class="text-primary dark:text-accent-gold text-lg font-black">100%</p>
+              <p class="text-primary-dark dark:text-accent-gold text-lg font-black">100%</p>
             </div>
             <div class="h-2 w-full rounded-full bg-[#dce0e5] dark:bg-gray-800 overflow-hidden">
               <div class="h-full rounded-full bg-primary" style="width: 100%;"></div>
             </div>
             <div class="grid grid-cols-4 gap-2 text-[9px] font-bold uppercase tracking-wider text-center">
-              <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">1. Informations personnelles</span>
+              <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">1. Informations
+                personnelles</span>
               <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">2. Residence</span>
               <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">3. Documents</span>
-              <span class="text-primary dark:text-accent-gold border-t-2 border-primary pt-2">4. Review</span>
+              <span class="text-primary-dark dark:text-accent-gold border-t-2 border-primary pt-2">4. Review</span>
             </div>
           </div>
         </div>
@@ -99,13 +100,14 @@
             <div
               class="border-b border-[#dce0e5] dark:border-gray-800 bg-background-light/50 dark:bg-gray-800/30 px-6 py-4 flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary dark:text-accent-gold">person</span>
-                <h3 class="text-[#111418] dark:text-white text-lg font-bold tracking-tight">Informations personnelles</h3>
+                <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold">person</span>
+                <h3 class="text-[#111418] dark:text-white text-lg font-bold tracking-tight">Informations personnelles
+                </h3>
               </div>
               <button
-                class="flex items-center gap-1 text-xs font-bold text-primary dark:text-accent-gold hover:opacity-70 transition-opacity"
+                class="flex items-center gap-1 text-xs font-bold text-primary-dark dark:text-accent-gold hover:opacity-70 transition-opacity"
                 type="button">
-                <span class="material-symbols-outlined text-sm">Modifier</span> Modifier
+                <span class="material-symbols-outlined text-sm">edit</span> Modifier
               </button>
             </div>
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
@@ -132,14 +134,14 @@
             <div
               class="border-b border-[#dce0e5] dark:border-gray-800 bg-background-light/50 dark:bg-gray-800/30 px-6 py-4 flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary dark:text-accent-gold">location_on</span>
+                <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold">location_on</span>
                 <h3 class="text-[#111418] dark:text-white text-lg font-bold tracking-tight">Residence &amp; Occupation
                 </h3>
               </div>
               <button
-                class="flex items-center gap-1 text-xs font-bold text-primary dark:text-accent-gold hover:opacity-70 transition-opacity"
+                class="flex items-center gap-1 text-xs font-bold text-primary-dark dark:text-accent-gold hover:opacity-70 transition-opacity"
                 type="button">
-                <span class="material-symbols-outlined text-sm">Modifier</span> Modifier
+                <span class="material-symbols-outlined text-sm">edit</span> Modifier
               </button>
             </div>
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
@@ -170,19 +172,19 @@
             <div
               class="border-b border-[#dce0e5] dark:border-gray-800 bg-background-light/50 dark:bg-gray-800/30 px-6 py-4 flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary dark:text-accent-gold">attachment</span>
+                <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold">attachment</span>
                 <h3 class="text-[#111418] dark:text-white text-lg font-bold tracking-tight">Uploaded Documents</h3>
               </div>
               <button
-                class="flex items-center gap-1 text-xs font-bold text-primary dark:text-accent-gold hover:opacity-70 transition-opacity"
+                class="flex items-center gap-1 text-xs font-bold text-primary-dark dark:text-accent-gold hover:opacity-70 transition-opacity"
                 type="button">
-                <span class="material-symbols-outlined text-sm">Modifier</span> Modifier
+                <span class="material-symbols-outlined text-sm">edit</span> Modifier
               </button>
             </div>
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div
                 class="flex items-center gap-3 p-3 bg-background-light dark:bg-gray-800 rounded-lg border border-[#dce0e5] dark:border-gray-700">
-                <span class="material-symbols-outlined text-primary dark:text-accent-gold">description</span>
+                <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold">description</span>
                 <div class="flex-1 overflow-hidden">
                   <p class="text-xs font-bold truncate">passport_bio_page.pdf</p>
                   <p class="text-[10px] text-[#637288]">1.2 MB</p>
@@ -191,7 +193,7 @@
               </div>
               <div
                 class="flex items-center gap-3 p-3 bg-background-light dark:bg-gray-800 rounded-lg border border-[#dce0e5] dark:border-gray-700">
-                <span class="material-symbols-outlined text-primary dark:text-accent-gold">badge</span>
+                <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold">badge</span>
                 <div class="flex-1 overflow-hidden">
                   <p class="text-xs font-bold truncate">residence_permit.jpg</p>
                   <p class="text-[10px] text-[#637288]">2.4 MB</p>
@@ -203,7 +205,7 @@
           <div class="p-6 bg-primary/5 dark:bg-primary/20 rounded-xl border border-primary/20">
             <label class="flex items-start gap-4 cursor-pointer">
               <input
-                class="form-checkbox mt-1 size-5 rounded border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 text-primary focus:ring-primary"
+                class="form-checkbox mt-1 size-5 rounded border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 text-primary-dark focus:ring-primary"
                 required="" type="checkbox" />
               <span class="text-sm font-medium leading-relaxed dark:text-gray-300">
                 I certify that Tous the information provided in this application is accurate and complete to the best of
@@ -222,16 +224,16 @@
             </a>
             <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
               <button
-                class="w-full sm:w-auto px-6 py-3.5 text-[#637288] dark:text-gray-400 font-bold text-sm hover:text-primary transition-colors"
+                class="w-full sm:w-auto px-6 py-3.5 text-[#637288] dark:text-gray-400 font-bold text-sm hover:text-primary-dark transition-colors"
                 type="button">
                 Enregistrer Draft
               </button>
-              <button
+              <a href="./success_registration.html"
                 class="w-full sm:w-auto flex items-center justify-center gap-2 px-10 py-3.5 bg-primary rounded-lg text-white font-bold text-sm shadow-lg shadow-primary/20 hover:bg-[#09254d] transition-all"
                 type="submit">
                 Soumettre l'enregistrement
                 <span class="material-symbols-outlined text-[18px]">send</span>
-              </button>
+              </a>
             </div>
           </div>
         </form>
@@ -252,13 +254,14 @@
       class="mt-auto py-10 px-6 lg:px-40 border-t border-[#dce0e5] dark:border-gray-800 bg-white dark:bg-background-dark text-center">
       <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-2">
-          <span class="text-[10px] font-bold text-[#637288] uppercase tracking-widest">© 2026 Ambassade of the Democratic
+          <span class="text-[10px] font-bold text-[#637288] uppercase tracking-widest">© 2026 Ambassade of the
+            Democratic
             Republic of Congo in Russia</span>
         </div>
         <div class="flex gap-8 text-[10px] font-extrabold text-[#637288] uppercase tracking-widest">
-          <a class="hover:text-primary transition-colors" href="#">Politique de Confidentialité</a>
-          <a class="hover:text-primary transition-colors" href="#">Légal Information</a>
-          <a class="hover:text-primary transition-colors" href="#">Contact</a>
+          <a class="hover:text-primary-dark transition-colors" href="#">Politique de Confidentialité</a>
+          <a class="hover:text-primary-dark transition-colors" href="#">Légal Information</a>
+          <a class="hover:text-primary-dark transition-colors" href="#">Contact</a>
         </div>
       </div>
     </footer>

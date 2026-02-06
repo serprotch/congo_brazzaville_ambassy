@@ -15,9 +15,10 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
-            "navy-blue": "#0A1D37",
-            "accent-gold": "#EBA834",
+            "primary": "#009543",
+            "primary-dark": "#111821",
+            "navy-blue": "#009543",
+            "accent-gold": "#fcde4a",
             "accent-red": "#C23E28",
             "accent-green": "#009543",
             "bg-light": "#F8FAFC",
@@ -38,7 +39,7 @@
         }
         .sidebar-active {
             background-color: rgba(255, 255, 255, 0.1);
-            border-left: 4px solid #EBA834;
+            border-left: 4px solid #fcde4a;
             color: #FFFFFF !important;
         }
         .config-card {
@@ -77,7 +78,7 @@
           <div
             class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
             <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
-              src="../images/logo_ambassy.png" />
+              src="../images/logo.jpeg" />
           </div>
           <div class="flex flex-col">
             <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
@@ -212,7 +213,7 @@
               class="dropdown-menu absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1">
               <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
                 href="#profil">
-                <span class="material-symbols-outlined text-lg text-primary">account_circle</span>
+                <span class="material-symbols-outlined text-lg text-primary-dark">account_circle</span>
                 Mon Profil
               </a>
               <div class="border-t border-slate-100 my-1"></div>
@@ -236,7 +237,7 @@
             <div class="config-card">
               <div class="p-5 border-b border-slate-100 bg-white flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                  <div class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                  <div class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary-dark">
                     <span class="material-symbols-outlined text-xl">contact_phone</span>
                   </div>
                   <h2 class="font-bold text-navy-blue">Coordonnées Officielles</h2>
@@ -410,53 +411,53 @@
     document.addEventListener('DOMContentLoaded', () => {
       const currentPath = window.location.pathname.split('/').pop() || 'home.html';
       const navLinks = document.querySelectorAll('nav a');
-      
+
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (!href) return;
-        
+
         // Handle relative paths (e.g., ./home.html or home.html)
         const linkPath = href.split('/').pop();
-        
+
         if (linkPath === currentPath) {
           // Highlight this link
-          
+
           // Check if it is a submenu item
           const details = link.closest('details');
           if (details) {
-              // It's a submenu item
-              details.setAttribute('open', '');
-              
-              // Apply submenu active styles
-              link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
-              link.classList.add('text-accent-gold', 'font-bold');
+            // It's a submenu item
+            details.setAttribute('open', '');
+
+            // Apply submenu active styles
+            link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
+            link.classList.add('text-accent-gold', 'font-bold');
           } else {
-              // It's a top-level item
-              link.classList.add('sidebar-active');
+            // It's a top-level item
+            link.classList.add('sidebar-active');
           }
         } else {
-           // Remove active classes from non-matching links to ensure clean state
-           link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
-           
-           // Restore default submenu style if it was previously active (rough approximation)
-           const details = link.closest('details');
-           if (details) {
-               link.classList.add('text-sidebar-text/60');
-           }
+          // Remove active classes from non-matching links to ensure clean state
+          link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
+
+          // Restore default submenu style if it was previously active (rough approximation)
+          const details = link.closest('details');
+          if (details) {
+            link.classList.add('text-sidebar-text/60');
+          }
         }
       });
-      
+
       // Cleanup: Remove 'open' from details that DON'T have the active link
       // This fixes cases where a page might have the wrong menu hardcoded open.
       document.querySelectorAll('nav details').forEach(details => {
-          const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
-              const href = link.getAttribute('href');
-              return href && href.split('/').pop() === currentPath;
-          });
-          
-          if (!activeLink) {
-              details.removeAttribute('open');
-          }
+        const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
+          const href = link.getAttribute('href');
+          return href && href.split('/').pop() === currentPath;
+        });
+
+        if (!activeLink) {
+          details.removeAttribute('open');
+        }
       });
     });
   </script>

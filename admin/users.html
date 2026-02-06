@@ -15,9 +15,10 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
-            "navy-blue": "#0A1D37",
-            "accent-gold": "#EBA834",
+            "primary": "#009543",
+            "primary-dark": "#111821",
+            "navy-blue": "#009543",
+            "accent-gold": "#fcde4a",
             "accent-red": "#C23E28",
             "accent-green": "#009543",
             "bg-light": "#F8FAFC",
@@ -38,12 +39,12 @@
         }
         .sidebar-active {
             background-color: rgba(255, 255, 255, 0.1);
-            border-left: 4px solid #EBA834;
+            border-left: 4px solid #fcde4a;
             color: #FFFFFF;
         }
         .sidebar-sub-active {
             @apply font-bold text-white;
-            border-left: 2px solid #EBA834;
+            border-left: 2px solid #fcde4a;
         }
         ::-webkit-scrollbar {
             width: 6px;
@@ -80,7 +81,7 @@
           <div
             class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
             <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
-              src="../images/logo_ambassy.png" />
+              src="../images/logo.jpeg" />
           </div>
           <div class="flex flex-col">
             <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Espace Admin</h1>
@@ -228,7 +229,7 @@
                 Utilisateurs</p>
               <h3 class="text-2xl font-black text-navy-blue">12</h3>
             </div>
-            <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+            <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary-dark">
               <span class="material-symbols-outlined text-2xl">group</span>
             </div>
           </div>
@@ -303,7 +304,7 @@
                   </td>
                   <td class="px-6 py-4">
                     <button
-                      class="text-primary hover:bg-primary/5 px-3 py-1.5 rounded-md text-sm font-bold flex items-center gap-1 transition-all">
+                      class="text-primary-dark hover:bg-primary/5 px-3 py-1.5 rounded-md text-sm font-bold flex items-center gap-1 transition-all">
                       <span class="material-symbols-outlined text-sm">edit</span> Modifier
                     </button>
                   </td>
@@ -328,7 +329,7 @@
                   </td>
                   <td class="px-6 py-4">
                     <button
-                      class="text-primary hover:bg-primary/5 px-3 py-1.5 rounded-md text-sm font-bold flex items-center gap-1 transition-all">
+                      class="text-primary-dark hover:bg-primary/5 px-3 py-1.5 rounded-md text-sm font-bold flex items-center gap-1 transition-all">
                       <span class="material-symbols-outlined text-sm">edit</span> Modifier
                     </button>
                   </td>
@@ -353,7 +354,7 @@
                   </td>
                   <td class="px-6 py-4">
                     <button
-                      class="text-primary hover:bg-primary/5 px-3 py-1.5 rounded-md text-sm font-bold flex items-center gap-1 transition-all">
+                      class="text-primary-dark hover:bg-primary/5 px-3 py-1.5 rounded-md text-sm font-bold flex items-center gap-1 transition-all">
                       <span class="material-symbols-outlined text-sm">edit</span> Modifier
                     </button>
                   </td>
@@ -378,7 +379,7 @@
                   </td>
                   <td class="px-6 py-4">
                     <button
-                      class="text-primary hover:bg-primary/5 px-3 py-1.5 rounded-md text-sm font-bold flex items-center gap-1 transition-all">
+                      class="text-primary-dark hover:bg-primary/5 px-3 py-1.5 rounded-md text-sm font-bold flex items-center gap-1 transition-all">
                       <span class="material-symbols-outlined text-sm">edit</span> Modifier
                     </button>
                   </td>
@@ -407,53 +408,53 @@
     document.addEventListener('DOMContentLoaded', () => {
       const currentPath = window.location.pathname.split('/').pop() || 'home.html';
       const navLinks = document.querySelectorAll('nav a');
-      
+
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (!href) return;
-        
+
         // Handle relative paths (e.g., ./home.html or home.html)
         const linkPath = href.split('/').pop();
-        
+
         if (linkPath === currentPath) {
           // Highlight this link
-          
+
           // Check if it is a submenu item
           const details = link.closest('details');
           if (details) {
-              // It's a submenu item
-              details.setAttribute('open', '');
-              
-              // Apply submenu active styles
-              link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
-              link.classList.add('text-accent-gold', 'font-bold');
+            // It's a submenu item
+            details.setAttribute('open', '');
+
+            // Apply submenu active styles
+            link.classList.remove('text-sidebar-text/60', 'text-sidebar-text/70');
+            link.classList.add('text-accent-gold', 'font-bold');
           } else {
-              // It's a top-level item
-              link.classList.add('sidebar-active');
+            // It's a top-level item
+            link.classList.add('sidebar-active');
           }
         } else {
-           // Remove active classes from non-matching links to ensure clean state
-           link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
-           
-           // Restore default submenu style if it was previously active (rough approximation)
-           const details = link.closest('details');
-           if (details) {
-               link.classList.add('text-sidebar-text/60');
-           }
+          // Remove active classes from non-matching links to ensure clean state
+          link.classList.remove('sidebar-active', 'text-accent-gold', 'font-bold');
+
+          // Restore default submenu style if it was previously active (rough approximation)
+          const details = link.closest('details');
+          if (details) {
+            link.classList.add('text-sidebar-text/60');
+          }
         }
       });
-      
+
       // Cleanup: Remove 'open' from details that DON'T have the active link
       // This fixes cases where a page might have the wrong menu hardcoded open.
       document.querySelectorAll('nav details').forEach(details => {
-          const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
-              const href = link.getAttribute('href');
-              return href && href.split('/').pop() === currentPath;
-          });
-          
-          if (!activeLink) {
-              details.removeAttribute('open');
-          }
+        const activeLink = Array.from(details.querySelectorAll('a')).find(link => {
+          const href = link.getAttribute('href');
+          return href && href.split('/').pop() === currentPath;
+        });
+
+        if (!activeLink) {
+          details.removeAttribute('open');
+        }
       });
     });
   </script>

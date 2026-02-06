@@ -17,10 +17,11 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
+            "primary": "#009543",
+            "primary-dark": "#111821",
             "background-light": "#f6f7f8",
             "background-dark": "#111821",
-            "accent-gold": "#EBA834",
+            "accent-gold": "#fcde4a",
           },
           fontFamily: {
             "display": ["Manrope", "sans-serif"]
@@ -32,7 +33,7 @@
   </script>
   <style type="text/tailwindcss">
     body { font-family: 'Manrope', sans-serif; }
-        .form-input:focus, .form-Sélectionner:focus { border-color: #0d3368 !important; ring: 0 !important; outline: Aucun !important; box-shadow: 0 0 0 2px rgba(13, 51, 104, 0.1) !important; }
+        .form-input:focus, .form-Sélectionner:focus { border-color: #009543 !important; ring: 0 !important; outline: Aucun !important; box-shadow: 0 0 0 2px rgba(13, 51, 104, 0.1) !important; }
     </style>
 </head>
 
@@ -42,15 +43,13 @@
     <header
       class="sticky top-0 z-50 w-full border-b border-solid border-[#dce0e5] dark:border-[#2d3748] bg-white dark:bg-background-dark px-6 lg:px-40 py-4">
       <div class="flex items-center justify-between max-w-[1200px] mx-auto">
-        <a href="../index.html" class="flex items-center gap-4">
-          <div
-            class="size-10 flex items-center justify-center bg-primary rounded-lg text-white shadow-lg shadow-primary/20">
-            <span class="material-symbols-outlined text-2xl">account_balance</span>
-          </div>
-          <div>
-            <h2 class="text-[#111418] dark:text-white text-lg font-extrabold leading-tight tracking-tight">Ambassade of
-              Congo</h2>
-            <p class="text-[9px] uppercase tracking-[0.2em] text-[#637288] font-bold">Moscow, Russian Federation</p>
+        <a href="../index.html" class="flex items-center gap-2">
+          <img src="../images/logo.jpeg" alt="" class="w-14">
+          <div class="flex flex-col">
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Ambassade du</p>
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Congo Brazzavile</p>
+            <p class="text-[10px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-[0.2em]">Fédération de
+              Russie</p>
           </div>
         </a>
         <div
@@ -67,7 +66,8 @@
           <div
             class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 dark:bg-primary/20 border border-primary/10 mb-6">
             <span class="size-2 rounded-full bg-primary animate-pulse"></span>
-            <span class="text-[10px] font-black uppercase tracking-[0.15em] text-primary dark:text-accent-gold">Official
+            <span
+              class="text-[10px] font-black uppercase tracking-[0.15em] text-primary-dark dark:text-accent-gold">Official
               Enregistrement Consulaire</span>
           </div>
           <h1 class="text-[#0f172a] dark:text-white text-4xl md:text-5xl font-black tracking-tight mb-4">Consular
@@ -80,14 +80,16 @@
           <div class="flex flex-col gap-4">
             <div class="flex items-center justify-between mb-1">
               <p class="text-[#111418] dark:text-white text-sm font-bold uppercase tracking-wider">Progress</p>
-              <p class="text-primary dark:text-accent-gold text-lg font-black">50%</p>
+              <p class="text-primary-dark dark:text-accent-gold text-lg font-black">50%</p>
             </div>
             <div class="h-2 w-full rounded-full bg-[#dce0e5] dark:bg-gray-800 overflow-hidden">
               <div class="h-full rounded-full bg-primary" style="width: 50%;"></div>
             </div>
             <div class="grid grid-cols-4 gap-2 text-[9px] font-bold uppercase tracking-wider text-center">
-              <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">1. Informations personnelles</span>
-              <span class="text-primary dark:text-accent-gold border-t-2 border-primary pt-2">2. Residence</span>
+              <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">1. Informations
+                personnelles</span>
+              <span class="text-primary-dark dark:text-accent-gold border-t-2 border-primary pt-2">2.
+                Residence</span>
               <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">3. Documents</span>
               <span class="text-[#637288] opacity-40 border-t-2 border-transparent pt-2">4. Review</span>
             </div>
@@ -98,7 +100,7 @@
             class="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-[#e2e8f0] dark:border-gray-800 overflow-hidden">
             <div
               class="border-b border-[#e2e8f0] dark:border-gray-800 bg-slate-50/50 dark:bg-gray-800/30 px-8 py-5 flex items-center gap-3">
-              <span class="material-symbols-outlined text-primary dark:text-accent-gold">location_on</span>
+              <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold">location_on</span>
               <h2 class="text-[#0f172a] dark:text-white text-lg font-bold tracking-tight uppercase tracking-wide">
                 Residence in Russia</h2>
             </div>
@@ -147,7 +149,7 @@
             class="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-[#e2e8f0] dark:border-gray-800 overflow-hidden">
             <div
               class="border-b border-[#e2e8f0] dark:border-gray-800 bg-slate-50/50 dark:bg-gray-800/30 px-8 py-5 flex items-center gap-3">
-              <span class="material-symbols-outlined text-primary dark:text-accent-gold">work</span>
+              <span class="material-symbols-outlined text-primary-dark dark:text-accent-gold">work</span>
               <h2 class="text-[#0f172a] dark:text-white text-lg font-bold tracking-tight uppercase tracking-wide">
                 Occupation Statut</h2>
             </div>
@@ -159,7 +161,7 @@
                 <div
                   class="flex gap-2 p-1.5 bg-slate-100 dark:bg-gray-800 rounded-xl w-full max-w-sm mx-auto border border-[#e2e8f0] dark:border-gray-700">
                   <button
-                    class="flex-1 py-3 px-4 bg-white dark:bg-gray-700 shadow-sm rounded-lg text-primary dark:text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-transparent"
+                    class="flex-1 py-3 px-4 bg-white dark:bg-gray-700 shadow-sm rounded-lg text-primary-dark dark:text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-transparent"
                     type="button">
                     <span class="material-symbols-outlined text-[18px]">school</span> Student
                   </button>
@@ -209,7 +211,7 @@
           <p class="text-sm text-[#64748b] dark:text-gray-400 leading-relaxed">
             Need assistance with your registration?<br />
             <span class="font-medium">Contact the consular department at</span><br />
-            <a class="inline-flex items-center gap-1.5 text-primary dark:text-accent-gold font-black mt-2 hover:underline underline-offset-4"
+            <a class="inline-flex items-center gap-1.5 text-primary-dark dark:text-accent-gold font-black mt-2 hover:underline underline-offset-4"
               href="mailto:support@ambardc.ru">
               <span class="material-symbols-outlined text-sm">mail</span>
               support@ambardc.ru
@@ -222,13 +224,14 @@
       class="mt-auto py-10 px-6 lg:px-40 border-t border-[#dce0e5] dark:border-gray-800 bg-white dark:bg-background-dark text-center">
       <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-2">
-          <span class="text-[10px] font-bold text-[#637288] uppercase tracking-widest">© 2026 Ambassade of the Democratic
+          <span class="text-[10px] font-bold text-[#637288] uppercase tracking-widest">© 2026 Ambassade of the
+            Democratic
             Republic of Congo in Russia</span>
         </div>
         <div class="flex gap-8 text-[10px] font-extrabold text-[#637288] uppercase tracking-widest">
-          <a class="hover:text-primary transition-colors" href="#">Politique de Confidentialité</a>
-          <a class="hover:text-primary transition-colors" href="#">Légal Information</a>
-          <a class="hover:text-primary transition-colors" href="#">Contact</a>
+          <a class="hover:text-primary-dark transition-colors" href="#">Politique de Confidentialité</a>
+          <a class="hover:text-primary-dark transition-colors" href="#">Légal Information</a>
+          <a class="hover:text-primary-dark transition-colors" href="#">Contact</a>
         </div>
       </div>
     </footer>

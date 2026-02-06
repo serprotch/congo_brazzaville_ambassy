@@ -16,8 +16,9 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
-            "accent-gold": "#EBA834",
+            "primary": "#009543",
+            "primary-dark": "#111821",
+            "accent-gold": "#fcde4a",
             "accent-red": "#C23E28",
             "accent-green": "#009543",
             "background-light": "#f8fafc",
@@ -37,10 +38,10 @@
         }
         .sidebar-active {
             background-color: rgba(255, 255, 255, 0.1);
-            border-left: 4px solid #EBA834;
+            border-left: 4px solid #fcde4a;
         }
         .tab-active {
-            @apply border-primary text-primary dark:border-accent-gold dark:text-accent-gold;
+            @apply border-primary text-primary-dark dark:border-accent-gold dark:text-accent-gold;
         }
     
     .dropdown-menu {
@@ -62,7 +63,7 @@
           <div
             class="size-10 bg-white rounded-full flex items-center justify-center p-1.5 shadow-lg overflow-hidden shrink-0">
             <img alt="Coat of arms of the Republic of Congo" class="w-full h-full object-contain"
-              src="../images/logo_ambassy.png" />
+              src="../images/logo.jpeg" />
           </div>
           <div class="flex flex-col">
             <h1 class="text-white text-sm font-bold leading-tight uppercase tracking-wider">Ambassade du Congo</h1>
@@ -99,7 +100,7 @@
           <div class="p-4 bg-white/5 rounded-xl border border-white/10">
             <p class="text-xs text-white/60 mb-2">Besoin d'aide ?</p>
             <button
-              class="w-full py-2 bg-accent-gold text-primary text-xs font-bold rounded-lg hover:bg-opacity-90 transition-all">Support
+              class="w-full py-2 bg-accent-gold text-primary-dark text-xs font-bold rounded-lg hover:bg-opacity-90 transition-all">Support
               Technique</button>
           </div>
         </div>
@@ -108,30 +109,34 @@
     <main class="flex-1 flex flex-col overflow-hidden">
       <header
         class="bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 px-8 py-5 flex justify-between items-center shrink-0">
-        <h2 class="text-2xl font-black text-primary dark:text-white tracking-tight uppercase">Suivi des Demandes de
+        <h2 class="text-2xl font-black text-primary-dark dark:text-white tracking-tight uppercase">Suivi des
+          Demandes de
           Services</h2>
-        
+
         <div class="relative dropdown-container">
           <div class="flex items-center gap-4 cursor-pointer">
 
-          <div class="flex flex-col items-end mr-2">
-            <span class="text-sm font-bold text-gray-900 dark:text-white">Jean-Pierre Mokolo</span>
-            <span class="text-[10px] text-gray-400 font-mono">ID: CG-RU-00124</span>
+            <div class="flex flex-col items-end mr-2">
+              <span class="text-sm font-bold text-gray-900 dark:text-white">Jean-Pierre Mokolo</span>
+              <span class="text-[10px] text-gray-400 font-mono">ID: CG-RU-00124</span>
+            </div>
+            <div
+              class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary-dark border border-gray-200 dark:border-gray-700 overflow-hidden">
+              <img alt="User avatar" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
+            </div>
+
           </div>
           <div
-            class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-gray-200 dark:border-gray-700 overflow-hidden">
-            <img alt="User avatar" class="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA892zd7-XzWnWyEcBUHUEVR_d4gYhlm08INKWYhhxRquNFryF22lMKvtoHm3uUQSmC-gjZlraixwFTiAIqBee9_DmpiUNjvwBj6oDvgB9p42-4oLxssVC4gEuN6cVQEClcwfhWNOw2ihnDedNufcX4cirUmydl7ktJG6osK4NaNRa0ey9N8iZosNiDIjzanacAkKkomgXEoinOE7dhVaXwiY0Fi3PZXP8dv-EP7enujolJCp3IfXpYS6x6qR11Epg4odaSo105R9A" />
-          </div>
-        
-          </div>
-          <div class="dropdown-menu absolute right-0 mt-2 w-56 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-700 rounded-lg shadow-xl z-30 py-1">
-            <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-gray-800 transition-colors" href="#profil">
-              <span class="material-symbols-outlined text-lg text-primary dark:text-white">account_circle</span>
+            class="dropdown-menu absolute right-0 mt-2 w-56 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-700 rounded-lg shadow-xl z-30 py-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-gray-800 transition-colors"
+              href="#profil">
+              <span class="material-symbols-outlined text-lg text-primary-dark dark:text-white">account_circle</span>
               Mon Profil
             </a>
             <div class="border-t border-slate-100 dark:border-gray-800 my-1"></div>
-            <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-accent-red hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors" href="../login.html">
+            <a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-accent-red hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors"
+              href="../login.html">
               <span class="material-symbols-outlined text-lg">logout</span>
               Se déconnecter
             </a>
@@ -141,11 +146,11 @@
       <div class="flex-1 overflow-y-auto bg-gray-50/50 dark:bg-background-dark">
         <div class="max-w-6xl mx-auto p-8">
           <div class="mb-10">
-            <label class="block text-sm font-bold text-primary dark:text-accent-gold uppercase tracking-wider mb-3"
+            <label class="block text-sm font-bold text-primary-dark dark:text-accent-gold uppercase tracking-wider mb-3"
               for="track-search">Suivre une demande</label>
             <div class="relative group">
               <span
-                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">Rechercher</span>
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary-dark transition-colors">Rechercher</span>
               <input
                 class="w-full pl-12 pr-4 py-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-primary dark:focus:ring-accent-gold transition-all outline-none text-lg"
                 id="track-search" placeholder="Entrez votre numéro de référence (ex: RD-2026-XXXX)" type="text" />
@@ -155,19 +160,19 @@
             <button class="px-6 py-3 text-sm font-bold border-b-2 tab-active transition-all whitespace-nowrap">Toutes
               les demandes</button>
             <button
-              class="px-6 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-primary transition-all whitespace-nowrap">En
+              class="px-6 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-primary-dark transition-all whitespace-nowrap">En
               attente</button>
             <button
-              class="px-6 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-primary transition-all whitespace-nowrap">Validées</button>
+              class="px-6 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-primary-dark transition-all whitespace-nowrap">Validées</button>
             <button
-              class="px-6 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-primary transition-all whitespace-nowrap">Terminées</button>
+              class="px-6 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-primary-dark transition-all whitespace-nowrap">Terminées</button>
           </div>
           <div class="grid gap-4">
             <div
               class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between">
               <div class="flex items-center gap-6">
                 <div
-                  class="size-14 bg-primary/5 dark:bg-accent-gold/5 rounded-xl flex items-center justify-center text-primary dark:text-accent-gold">
+                  class="size-14 bg-primary/5 dark:bg-accent-gold/5 rounded-xl flex items-center justify-center text-primary-dark dark:text-accent-gold">
                   <span class="material-symbols-outlined text-3xl">badge</span>
                 </div>
                 <div>
@@ -186,7 +191,7 @@
                   Validée
                 </span>
                 <button
-                  class="flex items-center gap-2 px-5 py-2.5 bg-primary/5 hover:bg-primary hover:text-white text-primary text-sm font-bold rounded-lg transition-all border border-primary/10">
+                  class="flex items-center gap-2 px-5 py-2.5 bg-primary/5 hover:bg-primary hover:text-white text-primary-dark text-sm font-bold rounded-lg transition-all border border-primary/10">
                   Voir les détails
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </button>
@@ -196,7 +201,7 @@
               class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between">
               <div class="flex items-center gap-6">
                 <div
-                  class="size-14 bg-primary/5 dark:bg-accent-gold/5 rounded-xl flex items-center justify-center text-primary dark:text-accent-gold">
+                  class="size-14 bg-primary/5 dark:bg-accent-gold/5 rounded-xl flex items-center justify-center text-primary-dark dark:text-accent-gold">
                   <span class="material-symbols-outlined text-3xl">description</span>
                 </div>
                 <div>
@@ -215,7 +220,7 @@
                   En cours
                 </span>
                 <button
-                  class="flex items-center gap-2 px-5 py-2.5 bg-primary/5 hover:bg-primary hover:text-white text-primary text-sm font-bold rounded-lg transition-all border border-primary/10">
+                  class="flex items-center gap-2 px-5 py-2.5 bg-primary/5 hover:bg-primary hover:text-white text-primary-dark text-sm font-bold rounded-lg transition-all border border-primary/10">
                   Voir les détails
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </button>
@@ -225,7 +230,7 @@
               class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between">
               <div class="flex items-center gap-6">
                 <div
-                  class="size-14 bg-primary/5 dark:bg-accent-gold/5 rounded-xl flex items-center justify-center text-primary dark:text-accent-gold">
+                  class="size-14 bg-primary/5 dark:bg-accent-gold/5 rounded-xl flex items-center justify-center text-primary-dark dark:text-accent-gold">
                   <span class="material-symbols-outlined text-3xl">travel_explore</span>
                 </div>
                 <div>
@@ -244,7 +249,7 @@
                   Terminée
                 </span>
                 <button
-                  class="flex items-center gap-2 px-5 py-2.5 bg-primary/5 hover:bg-primary hover:text-white text-primary text-sm font-bold rounded-lg transition-all border border-primary/10">
+                  class="flex items-center gap-2 px-5 py-2.5 bg-primary/5 hover:bg-primary hover:text-white text-primary-dark text-sm font-bold rounded-lg transition-all border border-primary/10">
                   Voir les détails
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </button>

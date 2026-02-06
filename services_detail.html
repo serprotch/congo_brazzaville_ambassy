@@ -17,7 +17,8 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#0d3368",
+            "primary": "#009543",
+            "primary-dark": "#111821",
             "background-light": "#f6f7f8",
             "background-dark": "#111821",
             "congolese-green": "#009543",
@@ -69,17 +70,23 @@
     class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
       <div class="flex items-center gap-10">
-        <a class="flex items-center gap-3" href="./index.html">
-          <img src="./images/logo_ambassy.png" alt="" class="w-14">
+        <a href="./index.html" class="flex items-center gap-2">
+          <img src="./images/logo.jpeg" alt="" class="w-14">
+          <div class="flex flex-col">
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Ambassade du</p>
+            <p class="text-[12px] font-extrabold uppercase tracking-wider leading-none">Congo Brazzavile</p>
+            <p class="text-[10px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-[0.2em]">Fédération de
+              Russie</p>
+          </div>
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-bold text-primary dark:text-congolese-yellow underline underline-offset-8 decoration-2"
+          <a class="text-sm font-bold text-primary-dark dark:text-congolese-yellow underline underline-offset-8 decoration-2"
             href="./news_detail.html">Services</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./news.html">Actualités</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./about.html">Ambassade</a>
-          <a class="text-sm font-bold hover:text-primary dark:hover:text-congolese-yellow transition-colors"
+          <a class="text-sm font-bold hover:text-primary-dark dark:hover:text-congolese-yellow transition-colors"
             href="./contact.html">Contact</a>
         </nav>
       </div>
@@ -106,11 +113,11 @@
     <section class="bg-[#f8f9fa] dark:bg-gray-900/50 py-10 border-b border-gray-200 dark:border-gray-800">
       <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
         <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">
-          <a class="hover:text-primary" href="#">Accueil</a>
+          <a class="hover:text-primary-dark" href="#">Accueil</a>
           <span class="material-symbols-outlined text-sm">chevron_right</span>
-          <a class="hover:text-primary" href="#">Services</a>
+          <a class="hover:text-primary-dark" href="#">Services</a>
           <span class="material-symbols-outlined text-sm">chevron_right</span>
-          <span class="text-primary dark:text-white">Passeport</span>
+          <span class="text-primary-dark dark:text-white">Passeport</span>
         </nav>
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
           <div class="max-w-3xl">
@@ -119,7 +126,8 @@
                 class="px-3 py-1 bg-congolese-green/10 text-congolese-green text-[10px] font-extrabold uppercase tracking-widest rounded">Document
                 de Voyage</span>
             </div>
-            <h2 class="text-4xl lg:text-5xl font-extrabold text-primary dark:text-white mb-6">Renouvellement de
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-primary-dark dark:text-white mb-6">Renouvellement
+              de
               Passeport Biométrique</h2>
             <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed">
               Le passeport congolais est un document de voyage sécurisé. Son renouvellement est obligatoire en cas
@@ -149,16 +157,16 @@
           <div
             class="service-tabs flex border-b border-gray-200 dark:border-gray-800 mb-8 overflow-x-auto scrollbar-hide">
             <label
-              class="px-6 py-4 cursor-pointer border-b-2 border-transparent text-gray-500 hover:text-primary transition-all whitespace-nowrap text-sm font-bold uppercase tracking-wider"
+              class="px-6 py-4 cursor-pointer border-b-2 border-transparent text-gray-500 hover:text-primary-dark transition-all whitespace-nowrap text-sm font-bold uppercase tracking-wider"
               for="tab-docs">Pièces à fournir</label>
             <label
-              class="px-6 py-4 cursor-pointer border-b-2 border-transparent text-gray-500 hover:text-primary transition-all whitespace-nowrap text-sm font-bold uppercase tracking-wider"
+              class="px-6 py-4 cursor-pointer border-b-2 border-transparent text-gray-500 hover:text-primary-dark transition-all whitespace-nowrap text-sm font-bold uppercase tracking-wider"
               for="tab-fees">Frais de chancellerie</label>
             <label
-              class="px-6 py-4 cursor-pointer border-b-2 border-transparent text-gray-500 hover:text-primary transition-all whitespace-nowrap text-sm font-bold uppercase tracking-wider"
+              class="px-6 py-4 cursor-pointer border-b-2 border-transparent text-gray-500 hover:text-primary-dark transition-all whitespace-nowrap text-sm font-bold uppercase tracking-wider"
               for="tab-time">Délai de traitement</label>
             <label
-              class="px-6 py-4 cursor-pointer border-b-2 border-transparent text-gray-500 hover:text-primary transition-all whitespace-nowrap text-sm font-bold uppercase tracking-wider"
+              class="px-6 py-4 cursor-pointer border-b-2 border-transparent text-gray-500 hover:text-primary-dark transition-all whitespace-nowrap text-sm font-bold uppercase tracking-wider"
               for="tab-steps">Procédure</label>
           </div>
           <div class="tab-content-panel space-y-8" id="content-docs">
@@ -169,28 +177,28 @@
               </h3>
               <ul class="space-y-4">
                 <li class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
-                  <span class="material-symbols-outlined text-primary mt-1">history_edu</span>
+                  <span class="material-symbols-outlined text-primary-dark mt-1">history_edu</span>
                   <div>
                     <p class="font-bold">Ancien passeport</p>
                     <p class="text-sm text-gray-500">Original + copie des pages d'identification.</p>
                   </div>
                 </li>
                 <li class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
-                  <span class="material-symbols-outlined text-primary mt-1">contact_page</span>
+                  <span class="material-symbols-outlined text-primary-dark mt-1">contact_page</span>
                   <div>
                     <p class="font-bold">Acte de naissance</p>
                     <p class="text-sm text-gray-500">Copie légalisée de l'acte de naissance congolais.</p>
                   </div>
                 </li>
                 <li class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
-                  <span class="material-symbols-outlined text-primary mt-1">photo_camera</span>
+                  <span class="material-symbols-outlined text-primary-dark mt-1">photo_camera</span>
                   <div>
                     <p class="font-bold">Photos d'identité</p>
                     <p class="text-sm text-gray-500">4 photos récentes (format 4x4, fond blanc, visage dégagé).</p>
                   </div>
                 </li>
                 <li class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
-                  <span class="material-symbols-outlined text-primary mt-1">badge</span>
+                  <span class="material-symbols-outlined text-primary-dark mt-1">badge</span>
                   <div>
                     <p class="font-bold">Carte de séjour en Russie</p>
                     <p class="text-sm text-gray-500">Copie du visa ou du titre de séjour russe en cours de validité.</p>
@@ -209,7 +217,7 @@
                 <div class="p-6 border border-gray-100 dark:border-gray-800 rounded-xl">
                   <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Passeport Adulte</p>
                   <div class="flex items-baseline gap-2">
-                    <span class="text-3xl font-extrabold text-primary dark:text-white">12,000</span>
+                    <span class="text-3xl font-extrabold text-primary-dark dark:text-white">12,000</span>
                     <span class="text-lg font-bold">RUB</span>
                   </div>
                   <p class="text-sm text-gray-500 mt-2">Équivalent approx. 130 USD</p>
@@ -218,13 +226,13 @@
                   <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Passeport Enfant (-12 ans)
                   </p>
                   <div class="flex items-baseline gap-2">
-                    <span class="text-3xl font-extrabold text-primary dark:text-white">8,500</span>
+                    <span class="text-3xl font-extrabold text-primary-dark dark:text-white">8,500</span>
                     <span class="text-lg font-bold">RUB</span>
                   </div>
                   <p class="text-sm text-gray-500 mt-2">Équivalent approx. 95 USD</p>
                 </div>
               </div>
-              <div class="mt-8 p-4 bg-primary/5 rounded-lg flex gap-3 italic text-sm text-primary">
+              <div class="mt-8 p-4 bg-primary/5 rounded-lg flex gap-3 italic text-sm text-primary-dark">
                 <span class="material-symbols-outlined">info</span>
                 <p>Les frais sont payables uniquement par virement bancaire ou carte bancaire au guichet de la
                   chancellerie. Les espèces ne sont pas acceptées.</p>
@@ -239,7 +247,7 @@
               </h3>
               <div class="flex items-center gap-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
                 <div
-                  class="size-16 rounded-full bg-white dark:bg-gray-700 flex items-center justify-center text-primary dark:text-white shadow-sm">
+                  class="size-16 rounded-full bg-white dark:bg-gray-700 flex items-center justify-center text-primary-dark dark:text-white shadow-sm">
                   <span class="material-symbols-outlined text-3xl">calendar_month</span>
                 </div>
                 <div>
@@ -255,7 +263,7 @@
           <div class="tab-content-panel space-y-8" id="content-steps">
             <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8">
               <h3 class="text-xl font-extrabold mb-8 flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary">route</span>
+                <span class="material-symbols-outlined text-primary-dark">route</span>
                 Étapes de la demande
               </h3>
               <div class="space-y-12 relative">
@@ -321,7 +329,7 @@
                   <span class="text-sm font-bold">Formulaire de demande</span>
                 </div>
                 <span
-                  class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">download_for_offline</span>
+                  class="material-symbols-outlined text-gray-400 group-hover:text-primary-dark transition-colors">download_for_offline</span>
               </a>
               <a class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl transition-colors group"
                 href="#">
@@ -330,13 +338,13 @@
                   <span class="text-sm font-bold">Guide des formalités</span>
                 </div>
                 <span
-                  class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">download_for_offline</span>
+                  class="material-symbols-outlined text-gray-400 group-hover:text-primary-dark transition-colors">download_for_offline</span>
               </a>
             </div>
           </div>
           <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6">
             <h3
-              class="font-extrabold text-primary dark:text-white uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
+              class="font-extrabold text-primary-dark dark:text-white uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
               <span class="material-symbols-outlined text-sm">help</span>
               Questions Fréquentes
             </h3>
@@ -357,7 +365,7 @@
                   validité de 5 ans pour les adultes et les enfants.</p>
               </div>
             </div>
-            <a class="block text-center mt-8 text-xs font-extrabold text-primary uppercase tracking-widest hover:underline"
+            <a class="block text-center mt-8 text-xs font-extrabold text-primary-dark uppercase tracking-widest hover:underline"
               href="#">Voir toute la FAQ</a>
           </div>
           <div class="bg-congolese-green/5 border border-congolese-green/20 rounded-2xl p-6">
@@ -390,7 +398,7 @@
           </p>
           <div class="flex flex-wrap gap-4">
             <a href="./contact.html"
-              class="bg-congolese-yellow text-primary font-extrabold py-4 px-8 rounded-lg hover:bg-white transition-colors">Contacter
+              class="bg-congolese-yellow text-primary-dark font-extrabold py-4 px-8 rounded-lg hover:bg-white transition-colors">Contacter
               le Consulat</a>
             <a href="./contact.html"
               class="bg-transparent border border-white/40 text-white font-extrabold py-4 px-8 rounded-lg hover:bg-white/10 transition-colors">Prendre
@@ -427,7 +435,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <div class="col-span-2">
           <div class="flex items-center gap-3 mb-6">
-            <div class="size-8 text-primary dark:text-white">
+            <div class="size-8 text-primary-dark dark:text-white">
               <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 4L6 17V31H24V44H42V17L24 4Z" fill="currentColor"></path>
               </svg>
@@ -439,10 +447,10 @@
             excellence and serving our citizens abroad.
           </p>
           <div class="flex gap-4">
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">language</span>
             </a>
-            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary transition-colors" href="#">
+            <a class="p-2 bg-white dark:bg-gray-800 rounded-lg hover:text-primary-dark transition-colors" href="#">
               <span class="material-symbols-outlined text-xl">mail</span>
             </a>
           </div>
@@ -450,18 +458,19 @@
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Liens Rapides</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="./services.html">Services</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./news.html">Actualités</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./about.html">A propos</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="./contact.html">Contact</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./services.html">Services</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./news.html">Actualités</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./about.html">A propos</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="./contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
           <h6 class="font-extrabold mb-6 uppercase text-xs tracking-widest text-gray-400">Légal</h6>
           <ul class="space-y-4 text-sm font-bold text-gray-600 dark:text-gray-400">
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Politique de Confidentialité</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
-            <li><a class="hover:text-primary dark:hover:text-white" href="#">Cookies</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Politique de Confidentialité</a>
+            </li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Conditions d'Utilisation</a></li>
+            <li><a class="hover:text-primary-dark dark:hover:text-white" href="#">Cookies</a></li>
           </ul>
         </div>
       </div>
